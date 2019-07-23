@@ -31,3 +31,10 @@
 <nav id="menu">
   <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 </nav>
+
+
+<!-- Parts of original footer.php -->
+
+<div id="copyright">
+  &copy; <?php echo esc_html( date_i18n( __( 'Y', 'blankslate' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
+</div>
