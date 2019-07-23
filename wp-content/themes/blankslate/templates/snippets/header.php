@@ -11,7 +11,7 @@
   <div id="wrapper" class="hfeed">
 
     <header id="header">
-      <div id="nav_main" class="d--flex text--lg w--50 dev-bg--1">
+      <div id="nav_main" class="d--flex text--lg w--100 dev-bg--1">
 
         <div class="f1 dev-bg--2">
           <div class="d--flex v">
