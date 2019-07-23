@@ -35,6 +35,12 @@ a.lg,
   font-size: 2rem;
 }
 
+span.list::after {
+  content: ",";
+}
+span.list:last-of-type::after {
+  content: "";
+}
 /* ****************************** */
 
 .w--100 {
@@ -84,3 +90,7 @@ a.lg,
 }
 
 /* ****************************** */
+
+.text--lg {
+  font-size: 2rem;
+}
