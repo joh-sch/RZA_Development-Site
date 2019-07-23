@@ -13,7 +13,7 @@
     <header id="header">
       <div id="nav_main" class="d--flex text--lg w--100 dev-bg--1">
 
-        <div class="f1 dev-bg--2">
+        <div class="f1">
           <div class="d--flex v">
             <?php 
               $menu = wp_get_nav_menu_object('Hauptmenü');  
