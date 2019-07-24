@@ -1,1 +1,1 @@
-!function(t){t(document).on("click","#postload",function(n){n.preventDefault(),t.ajax({url:ajaxcontent.ajaxurl,type:"post",data:{action:"ajax_content"},success:function(t){alert(t)},error:function(t){alert("Error")}})})}(jQuery);
+!function(t){t(document).on("click","#postload",function(a){a.preventDefault(),cat=t(this).attr("data-content-cat"),t.ajax({url:ajaxcontent.ajaxurl,type:"post",data:{action:"ajax_content",query_vars:ajaxcontent.query_vars,cat:cat},success:function(a){t("#content_left").append(a)}})})}(jQuery);

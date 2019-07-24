@@ -20,8 +20,10 @@ add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
     wp_enqueue_script( 'jquery' );
     
     wp_enqueue_script( 'ajax-content',  get_template_directory_uri() . '/js/ajax-content.js', array( 'jquery' ), '1.0', true );
+    global $wp_query;
     wp_localize_script( 'ajax-content', 'ajaxcontent', array(
-      'ajaxurl' => admin_url( 'admin-ajax.php' )
+      'ajaxurl' => admin_url( 'admin-ajax.php' ),
+      'query_vars' => json_encode( $wp_query->query )
     ));
   }
 
@@ -35,7 +37,15 @@ add_action( 'wp_ajax_nopriv_ajax_content', 'my_ajax_content' );
 add_action( 'wp_ajax_ajax_content', 'my_ajax_content' );
 
 function my_ajax_content() {
-    echo get_bloginfo( 'title' );
+    $args = array('cat' => 6, 'posts_per_page' => 10);
+    $loop = new WP_Query($args); 
+    
+    while ( $loop->have_posts() ) { 
+      $loop->the_post(); 
+      the_title();
+      the_content();
+    }
+
     die();
 }
 //////////////////////////////

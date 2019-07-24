@@ -1,18 +1,24 @@
 // Setting up event
 (function($) {
+  function find_content_cat(element) {
+    return element.attr("data-content-cat");
+  }
+
   $(document).on("click", "#postload", function(event) {
     event.preventDefault();
+
+    cat = find_content_cat($(this));
+
     $.ajax({
       url: ajaxcontent.ajaxurl,
       type: "post",
       data: {
-        action: "ajax_content"
+        action: "ajax_content",
+        query_vars: ajaxcontent.query_vars,
+        cat: cat
       },
-      success: function(result) {
-        alert(result);
-      },
-      error: function(result) {
-        alert("Error");
+      success: function(content) {
+        $("#content_left").append(content);
       }
     });
   });
