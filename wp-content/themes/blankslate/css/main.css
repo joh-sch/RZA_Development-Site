@@ -29,7 +29,8 @@ Main styling & visual behavior
   min-height: 100vh;
 }
 
-.content-item {
+.content-item,
+.content-item p {
   margin-bottom: 1.33rem;
 }
 

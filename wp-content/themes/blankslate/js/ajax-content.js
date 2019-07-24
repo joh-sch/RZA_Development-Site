@@ -6,9 +6,9 @@
 
   $(document).on("click", ".content-link", function(event) {
     event.preventDefault();
-
+    //
     cat = find_content_cat($(this));
-
+    //
     $.ajax({
       url: ajaxcontent.ajaxurl,
       type: "post",

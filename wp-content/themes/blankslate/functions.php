@@ -14,7 +14,6 @@ add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
 
 
 // Load additional CSS & JS
-
   function blankslate_load_scripts() {
     wp_enqueue_style( 'blankslate-style', get_stylesheet_uri() );
     wp_enqueue_script( 'jquery' );
@@ -28,7 +27,6 @@ add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
   }
 
   wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css',false,'1.0','all');
-
 //////////////////////////////
 
 
@@ -37,13 +35,21 @@ add_action( 'wp_ajax_nopriv_ajax_content', 'my_ajax_content' );
 add_action( 'wp_ajax_ajax_content', 'my_ajax_content' );
 
 function my_ajax_content() {
-    $args = array('cat' => $_POST['cat']);
-    $loop = new WP_Query($args); 
+    $cat  = $_POST['cat'];
     //
-    while ( $loop->have_posts() ) { 
-      $loop->the_post();
+    if ($cat == 'Agentur' || $cat == 'Kontakt') {
+      $page = get_page_by_title($cat);
+      $content = '<div class="content-item text--def">' . $page->post_content . '</div>';
+      echo $content;
+    } else {
+      $args = array('cat' => $cat);
+      $loop = new WP_Query($args); 
       //
-      get_template_part( 'content' );
+      while ( $loop->have_posts() ) { 
+        $loop->the_post();
+        //
+        get_template_part( 'content' );
+      }
     }
     //
     die();
