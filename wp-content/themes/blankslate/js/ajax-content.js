@@ -18,6 +18,7 @@
         cat: cat
       },
       success: function(content) {
+        $("#content_left").empty();
         $("#content_left").append(content);
       }
     });
