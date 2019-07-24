@@ -1,0 +1,1 @@
+!function(t){t(document).on("click","#postload",function(n){n.preventDefault(),t.ajax({url:ajaxcontent.ajaxurl,type:"post",data:{action:"ajax_content"},success:function(t){alert(t)},error:function(t){alert("Error")}})})}(jQuery);
