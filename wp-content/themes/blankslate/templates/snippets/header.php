@@ -37,7 +37,8 @@
               foreach ( (array) $menu_items as $key => $menu_item ) {
                 $title = $menu_item->title;
                 $url = $menu_item->url;
-                $menu_link = '<span class="list"><a>' . $title . '</a></span>';
+                $cat = $menu_item->object_id;
+                $menu_link = '<span class="list" data-content-cat="' . $cat . '" ><a>' . $title . '</a></span>';
 
                 echo $menu_link;
               }
