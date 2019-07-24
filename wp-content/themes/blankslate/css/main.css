@@ -29,6 +29,10 @@ Main styling & visual behavior
   min-height: 100vh;
 }
 
+.content-item {
+  margin-bottom: 1.33rem;
+}
+
 /* ****************************** */
 
 a {
@@ -132,8 +136,4 @@ h2 {
 
 .text--def {
   font-size: 1.33rem;
-}
-
-.content-item p {
-  margin-bottom: 1.33rem;
 }

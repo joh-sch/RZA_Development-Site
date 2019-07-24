@@ -41,9 +41,9 @@ function my_ajax_content() {
     $loop = new WP_Query($args); 
     //
     while ( $loop->have_posts() ) { 
-      $loop->the_post(); 
-      the_title();
-      the_content();
+      $loop->the_post();
+      //
+      get_template_part( 'content' );
     }
     //
     die();
