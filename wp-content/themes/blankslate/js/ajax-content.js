@@ -4,7 +4,7 @@
     return element.attr("data-content-cat");
   }
 
-  $(document).on("click", "#postload", function(event) {
+  $(document).on("click", ".content-link", function(event) {
     event.preventDefault();
 
     cat = find_content_cat($(this));

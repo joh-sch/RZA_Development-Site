@@ -38,7 +38,7 @@
                 $title = $menu_item->title;
                 $url = $menu_item->url;
                 $cat = $menu_item->object_id;
-                $menu_link = '<span class="list" data-content-cat="' . $cat . '" ><a>' . $title . '</a></span>';
+                $menu_link = '<span class="list content-link" data-content-cat="' . $cat . '" ><a>' . $title . '</a></span>';
 
                 echo $menu_link;
               }
