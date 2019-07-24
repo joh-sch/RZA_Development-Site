@@ -1,0 +1,1 @@
+!function(t){t(document).on("click",".content-link",function(n){n.preventDefault(),cat=t(this).attr("data-content-cat"),t.ajax({url:ajaxcontent.ajaxurl,type:"post",data:{action:"ajax_content",query_vars:ajaxcontent.query_vars,cat:cat},success:function(n){t("#content_left").empty(),t("#content_left").append(n)}})})}(jQuery);
