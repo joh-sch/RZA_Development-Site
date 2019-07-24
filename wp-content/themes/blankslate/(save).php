@@ -38,3 +38,32 @@
 <div id="copyright">
   &copy; <?php echo esc_html( date_i18n( __( 'Y', 'blankslate' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 </div>
+
+
+<!-- Content loops -->
+
+<?php query_posts('cat=6'); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <div id="post-<?php the_ID(); ?>" class="<?php foreach((get_the_category()) as $category){echo $category->name;} ?> content-item text--def">
+    <h2><?php the_title(); ?></h2>
+    <?php the_content(); ?>
+  </div>
+<?php endwhile; endif; ?>
+<?php wp_reset_query(); ?>
+
+
+<div id="ajax-posts" class="row">
+  <?php
+    $args = array('cat' => 6, 'posts_per_page' => 10);
+    $loop = new WP_Query($args); 
+  ?>
+  
+  <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+    <div id="post-<?php the_ID(); ?>" class="<?php foreach((get_the_category()) as $category){echo $category->name;} ?> content-item text--def">
+      <h2><?php the_title(); ?></h2>
+      <?php the_content(); ?>
+    </div>
+  <?php endwhile; ?>
+
+  <?php wp_reset_postdata(); ?>
+</div>

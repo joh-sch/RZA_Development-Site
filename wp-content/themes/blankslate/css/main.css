@@ -34,7 +34,8 @@ Main styling & visual behavior
 a {
   cursor: pointer;
 }
-a:hover {
+a:hover,
+a.active {
   color: red;
 }
 
