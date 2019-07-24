@@ -6,7 +6,7 @@
     <section id="content_left" class="w--50 px--2 pt--10">
 
       <div>
-        <button id="postload" data-content-type="news" data-content-cat="6">Load posts</button>
+        <button id="postload" data-content-type="news" data-content-cat="5">Load posts</button>
       </div>
 
       <!-- Content Items -->

@@ -37,15 +37,15 @@ add_action( 'wp_ajax_nopriv_ajax_content', 'my_ajax_content' );
 add_action( 'wp_ajax_ajax_content', 'my_ajax_content' );
 
 function my_ajax_content() {
-    $args = array('cat' => 6, 'posts_per_page' => 10);
+    $args = array('cat' => $_POST['cat']);
     $loop = new WP_Query($args); 
-    
+    //
     while ( $loop->have_posts() ) { 
       $loop->the_post(); 
       the_title();
       the_content();
     }
-
+    //
     die();
 }
 //////////////////////////////
