@@ -80,7 +80,8 @@
             cellAlign: "left",
             contain: true,
             pageDots: false,
-            wrapAround: true
+            wrapAround: true,
+            draggable: false
           });
           $("#content_left").removeClass("hidden--content");
         }, 300);
