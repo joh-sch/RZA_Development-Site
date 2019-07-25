@@ -32,8 +32,14 @@
           $("#content_left").attr("data-namespace", namespace);
         }
         // Change content
-        $("#content_left").empty();
-        $("#content_left").append(content);
+        $("#content_left").addClass("hidden--content");
+        setTimeout(function() {
+          $("#content_left").empty();
+          $("#content_left").append(content);
+        }, 275);
+        setTimeout(function() {
+          $("#content_left").removeClass("hidden--content");
+        }, 300);
       }
     });
   });
