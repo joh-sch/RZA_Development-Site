@@ -56,7 +56,6 @@ Main styling & visual behavior
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2rem;
 
-  background-color: #2196f3;
   padding: 2rem;
 }
 .grid-container > div {
