@@ -39,11 +39,17 @@
                 $url = $menu_item->url;
                 $cat = $menu_item->object_id;
 
+                if ($title == 'News') {
+                  $status = 'active';
+                } else {
+                  $status = 'inactive';
+                }
+
                 if($title == 'Agentur' || $title == 'Kontakt') {
                   $menu_link = '<span class="list content-link" data-content-cat="' . $title . '" ><a>' . $title . '</a></span>';
                   echo $menu_link;
                 } else {
-                  $menu_link = '<span class="list content-link" data-content-cat="' . $cat . '" ><a>' . $title . '</a></span>';
+                  $menu_link = '<span class="list content-link" data-content-cat="' . $cat . '" ><a class="' . $status . '">' . $title . '</a></span>';
                   echo $menu_link;
                 }
                 
