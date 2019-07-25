@@ -3,7 +3,7 @@
   <main id="content" class="d--flex">
     
     <!-- Content Sections -->
-    <section id="content_left" class="w--50 px--2 pt--10">
+    <section id="content_left" data-namespace="" class="w--50 px--2 pt--10">
     </section>
 
     <section id="content_right" class="w--50">
