@@ -9,6 +9,8 @@
   $(document).on("click", ".content-link", function(event) {
     event.preventDefault();
     //
+    var gridItems = $(".grid-item.actor");
+    gridItems.removeClass("active");
     var navLinks = $(".content-link a");
     navLinks.removeClass("active");
     $(this)
@@ -51,6 +53,8 @@
     var actor_id = $(this).attr("id");
     var post_id = $(this).data("post-id");
     //
+    var navLinks = $(".content-link a");
+    navLinks.removeClass("active");
     var gridItems = $(".grid-item.actor");
     gridItems.removeClass("active");
     $(this).addClass("active");
