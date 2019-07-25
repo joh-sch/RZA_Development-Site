@@ -1,12 +1,16 @@
 <article id="post-<?php the_ID(); ?>" class="content-item actor text--def">
 
+  <?php $images = get_attached_media( 'image' ); ?>
+
   <header>
     <div class="actor-carousel">
-      <div class="carousel-cell">
-        <img src="https://www.fillmurray.com/g/1000/1000">
-      </div>
-      <div class="carousel-cell">...</div>
-      <div class="carousel-cell">...</div>
+      
+      <?php foreach ( $images as $image ): ?>
+        <div class="carousel-cell">
+          <img src="<?php echo wp_get_attachment_url($image->ID) ?>">
+        </div>
+      <?php endforeach; ?>
+      
     </div>
   </header>
 
