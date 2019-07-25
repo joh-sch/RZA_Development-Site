@@ -14,7 +14,19 @@
       <?php endwhile; ?>
     </section>
 
-    <section id="content_right" class="w--50">
+    <section id="content_right" class="w--50 text--def">
+      <div class="grid-container">
+
+        <?php
+          $args = array('cat' => 7);
+          $loop = new WP_Query($args); 
+        ?>
+
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+          <?php get_template_part( 'content-actor' ); ?>
+        <?php endwhile; ?>
+        
+      </div>
     </section>
 
   </main>
