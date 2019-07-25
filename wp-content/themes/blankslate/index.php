@@ -3,7 +3,15 @@
   <main id="content" class="d--flex">
     
     <!-- Content Sections -->
-    <section id="content_left" data-namespace="" class="w--50 px--2 pt--10">
+    <section id="content_left" data-namespace="News" class="w--50 px--2 pt--10">
+      <?php
+        $args = array('cat' => 6);
+        $loop = new WP_Query($args); 
+      ?>
+
+      <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+        <?php get_template_part( 'content' ); ?>
+      <?php endwhile; ?>
     </section>
 
     <section id="content_right" class="w--50">

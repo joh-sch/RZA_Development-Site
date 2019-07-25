@@ -24,6 +24,8 @@ add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
       'ajaxurl' => admin_url( 'admin-ajax.php' ),
       'query_vars' => json_encode( $wp_query->query )
     ));
+
+    wp_enqueue_script( 'init-menu',  get_template_directory_uri() . '/js/init-menu.js', array( 'jquery' ), '1.0', true );
   }
 
   wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css',false,'1.0','all');

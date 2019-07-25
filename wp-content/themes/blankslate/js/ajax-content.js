@@ -5,8 +5,6 @@
     return element.attr("data-content-cat");
   }
 
-  function set_active_menu_entry() {}
-
   // AJAX function
   $(document).on("click", ".content-link", function(event) {
     event.preventDefault();
