@@ -17,54 +17,15 @@
     <section id="content_right" class="w--50">
       <div class="grid-container">
 
-        <div class="grid-item">
-          <figure > 
-            <img src="https://placeimg.com/480/680/any">
-          </figure>
-        </div>
-        
-        <div class="grid-item">
-          <figure > 
-            <img src="https://placeimg.com/480/680/any">
-          </figure>
-        </div>
-        
-        <div class="grid-item">
-          <figure > 
-            <img src="https://placeimg.com/480/680/any">
-          </figure>
-        </div>
-        
-        <div class="grid-item">
-          <figure > 
-            <img src="https://placeimg.com/480/680/any">
-          </figure>
-        </div>
+        <?php
+          $args = array('cat' => 7);
+          $loop = new WP_Query($args); 
+        ?>
 
-        <div class="grid-item">
-          <figure > 
-            <img src="https://placeimg.com/480/680/any">
-          </figure>
-        </div>
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+          <?php get_template_part( 'content-actor' ); ?>
+        <?php endwhile; ?>
         
-        <div class="grid-item">
-          <figure > 
-            <img src="https://placeimg.com/480/680/any">
-          </figure>
-        </div>
-        
-        <div class="grid-item">
-          <figure > 
-            <img src="https://placeimg.com/480/680/any">
-          </figure>
-        </div>
-        
-        <div class="grid-item">
-          <figure > 
-            <img src="https://placeimg.com/480/680/any">
-          </figure>
-        </div>
-
       </div>
     </section>
 
