@@ -18,12 +18,12 @@
             <?php 
               $menu = wp_get_nav_menu_object('Hauptmenü');  
               $menu_items = wp_get_nav_menu_items($menu->term_id);
-
+              //
               foreach ( (array) $menu_items as $key => $menu_item ) {
                 $title = $menu_item->title;
                 $url = $menu_item->url;
                 $menu_link = '<a class="align-left">' . $title . '</a>';
-
+                //
                 echo $menu_link;
               }
             ?>
@@ -38,13 +38,7 @@
                 $title = $menu_item->title;
                 $url = $menu_item->url;
                 $cat = $menu_item->object_id;
-
-                // if ($title == 'News') {
-                //   $status = 'active';
-                // } else {
-                //   $status = 'inactive';
-                // }
-
+                //
                 if($title == 'Agentur' || $title == 'Kontakt') {
                   $menu_link = '<span class="list content-link" data-content-cat="' . $title . '" ><a>' . $title . '</a></span>';
                   echo $menu_link;
@@ -52,7 +46,6 @@
                   $menu_link = '<span class="list content-link" data-content-cat="' . $cat . '" ><a data-namespace="' . $title . '">' . $title . '</a></span>';
                   echo $menu_link;
                 }
-                
               }
             ?>
           </div>
