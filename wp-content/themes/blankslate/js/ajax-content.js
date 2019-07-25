@@ -47,11 +47,29 @@
 })(jQuery);
 
 // Function to fetch actor-page contetn
-
 (function($) {
   $(document).on("click", ".grid-item.actor", function(event) {
     var actor_id = $(this).attr("id");
+    var post_id = $(this).data("post-id");
     //
-    alert(actor_id + "was clicked");
+    $.ajax({
+      url: ajaxcontent.ajaxurl,
+      type: "post",
+      data: {
+        action: "ajax_content_actor",
+        query_vars: ajaxcontent.query_vars,
+        post: post_id
+      },
+      success: function(content) {
+        $("#content_left").addClass("hidden--content");
+        setTimeout(function() {
+          $("#content_left").empty();
+          $("#content_left").append(content);
+        }, 275);
+        setTimeout(function() {
+          $("#content_left").removeClass("hidden--content");
+        }, 300);
+      }
+    });
   });
 })(jQuery);
