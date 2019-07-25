@@ -12,7 +12,7 @@
 
   <div>
     <h2><?php the_title(); ?></h2>
-    <?php the_content(); ?>
+    <?php echo preg_replace('/<img[^>]+./','',get_the_content()); ?>
   </div>
   
 </article> 
