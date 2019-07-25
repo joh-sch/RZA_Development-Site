@@ -78,7 +78,9 @@
         setTimeout(function() {
           $(".actor-carousel").flickity({
             cellAlign: "left",
-            contain: true
+            contain: true,
+            pageDots: false,
+            wrapAround: true
           });
           $("#content_left").removeClass("hidden--content");
         }, 300);
