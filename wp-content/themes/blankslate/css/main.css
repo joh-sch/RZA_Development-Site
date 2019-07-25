@@ -67,7 +67,8 @@ Main styling & visual behavior
 .grid-item.active {
   color: white;
 }
-.grid-item img {
+.grid-item img,
+.carousel-cell img {
   max-width: 100%;
   line-height: 0;
 }
@@ -185,6 +186,10 @@ h2 {
   width: 100%;
   height: 50vh;
   background: #8c8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ****************************** */
