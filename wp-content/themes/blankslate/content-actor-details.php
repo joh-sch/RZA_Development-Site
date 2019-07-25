@@ -1,9 +1,11 @@
 <article id="post-<?php the_ID(); ?>" class="content-item actor text--def">
 
   <header>
-    <figure > 
-      <img src="<?php the_post_thumbnail_url(); ?>">
-    </figure>
+    <div class="actor-carousel">
+      <div class="carousel-cell">...</div>
+      <div class="carousel-cell">...</div>
+      <div class="carousel-cell">...</div>
+    </div>
   </header>
 
   <div>

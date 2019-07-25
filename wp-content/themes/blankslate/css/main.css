@@ -175,3 +175,18 @@ h2 {
 .text--def {
   font-size: 1.33rem;
 }
+
+/* ****************************** */
+
+.actor-carousel {
+}
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8c8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* ****************************** */
