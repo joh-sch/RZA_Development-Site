@@ -15,6 +15,57 @@
     </section>
 
     <section id="content_right" class="w--50">
+      <div class="grid-container">
+
+        <div class="grid-item">
+          <figure > 
+            <img src="https://placeimg.com/480/680/any">
+          </figure>
+        </div>
+        
+        <div class="grid-item">
+          <figure > 
+            <img src="https://placeimg.com/480/680/any">
+          </figure>
+        </div>
+        
+        <div class="grid-item">
+          <figure > 
+            <img src="https://placeimg.com/480/680/any">
+          </figure>
+        </div>
+        
+        <div class="grid-item">
+          <figure > 
+            <img src="https://placeimg.com/480/680/any">
+          </figure>
+        </div>
+
+        <div class="grid-item">
+          <figure > 
+            <img src="https://placeimg.com/480/680/any">
+          </figure>
+        </div>
+        
+        <div class="grid-item">
+          <figure > 
+            <img src="https://placeimg.com/480/680/any">
+          </figure>
+        </div>
+        
+        <div class="grid-item">
+          <figure > 
+            <img src="https://placeimg.com/480/680/any">
+          </figure>
+        </div>
+        
+        <div class="grid-item">
+          <figure > 
+            <img src="https://placeimg.com/480/680/any">
+          </figure>
+        </div>
+
+      </div>
     </section>
 
   </main>
