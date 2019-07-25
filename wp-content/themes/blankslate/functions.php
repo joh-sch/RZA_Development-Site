@@ -36,6 +36,9 @@ add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
 add_action( 'wp_ajax_nopriv_ajax_content', 'my_ajax_content' );
 add_action( 'wp_ajax_ajax_content', 'my_ajax_content' );
 
+add_action( 'wp_ajax_nopriv_ajax_content_actor', 'my_ajax_content_actor' );
+add_action( 'wp_ajax_ajax_content_actor', 'my_ajax_content_actor' );
+
 function my_ajax_content() {
     $cat  = $_POST['cat'];
     //
@@ -56,6 +59,19 @@ function my_ajax_content() {
     //
     die();
 }
+
+function my_ajax_content_actor() {
+  $post_id  = $_POST['post'];
+  //
+  global $post; 
+  $post = get_post($post_id); 
+  setup_postdata($post);
+  get_template_part( 'content-actor-details' );
+  //
+  die();
+}
+
+
 //////////////////////////////
 
 add_action( 'wp_footer', 'blankslate_footer_scripts' );
