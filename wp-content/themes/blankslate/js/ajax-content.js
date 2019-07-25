@@ -1,4 +1,5 @@
-// Setting up event
+// Function to fetch subpage-content (Agentur, Kontakt, News)
+
 (function($) {
   // Utility functions
   function find_content_cat(element) {
@@ -42,5 +43,15 @@
         }, 300);
       }
     });
+  });
+})(jQuery);
+
+// Function to fetch actor-page contetn
+
+(function($) {
+  $(document).on("click", ".grid-item.actor", function(event) {
+    var actor_id = $(this).attr("id");
+    //
+    alert(actor_id + "was clicked");
   });
 })(jQuery);
