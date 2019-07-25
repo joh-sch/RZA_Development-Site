@@ -5,7 +5,6 @@
   function find_content_cat(element) {
     return element.attr("data-content-cat");
   }
-
   // AJAX function
   $(document).on("click", ".content-link", function(event) {
     event.preventDefault();
@@ -51,6 +50,10 @@
   $(document).on("click", ".grid-item.actor", function(event) {
     var actor_id = $(this).attr("id");
     var post_id = $(this).data("post-id");
+    //
+    var gridItems = $(".grid-item.actor");
+    gridItems.removeClass("active");
+    $(this).addClass("active");
     //
     $.ajax({
       url: ajaxcontent.ajaxurl,

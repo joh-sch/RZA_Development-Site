@@ -58,10 +58,14 @@ Main styling & visual behavior
 
   padding: 2rem;
 }
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-}
 
+.grid-item:hover {
+  cursor: pointer;
+  color: white;
+}
+.grid-item.active {
+  color: white;
+}
 .grid-item img {
   max-width: 100%;
   line-height: 0;
