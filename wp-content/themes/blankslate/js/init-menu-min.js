@@ -1,0 +1,1 @@
+function set_active_menu_entry(){var e=jQuery("#content_left").data("namespace");jQuery("a[data-namespace='"+e+"']").addClass("active")}jQuery(document).ready(function(e){set_active_menu_entry()});

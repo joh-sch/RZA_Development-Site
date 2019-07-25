@@ -12,15 +12,50 @@ register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'blankslate' 
 }
 add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
 
-// Load additional CSS & JS
 
+// Load additional CSS & JS
   function blankslate_load_scripts() {
-  wp_enqueue_style( 'blankslate-style', get_stylesheet_uri() );
-  wp_enqueue_script( 'jquery' );
+    wp_enqueue_style( 'blankslate-style', get_stylesheet_uri() );
+    wp_enqueue_script( 'jquery' );
+    
+    wp_enqueue_script( 'ajax-content',  get_template_directory_uri() . '/js/ajax-content.js', array( 'jquery' ), '1.0', true );
+    global $wp_query;
+    wp_localize_script( 'ajax-content', 'ajaxcontent', array(
+      'ajaxurl' => admin_url( 'admin-ajax.php' ),
+      'query_vars' => json_encode( $wp_query->query )
+    ));
+
+    wp_enqueue_script( 'init-menu',  get_template_directory_uri() . '/js/init-menu.js', array( 'jquery' ), '1.0', true );
   }
 
-  wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/main.css',false,'1.0','all');
+  wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css',false,'1.0','all');
+//////////////////////////////
 
+
+// Custom AJAX functionalities
+add_action( 'wp_ajax_nopriv_ajax_content', 'my_ajax_content' );
+add_action( 'wp_ajax_ajax_content', 'my_ajax_content' );
+
+function my_ajax_content() {
+    $cat  = $_POST['cat'];
+    //
+    if ($cat == 'Agentur' || $cat == 'Kontakt') {
+      $page = get_page_by_title($cat);
+      $content = '<div class="content-item text--def">' . $page->post_content . '</div>';
+      echo $content;
+    } else {
+      $args = array('cat' => $cat);
+      $loop = new WP_Query($args); 
+      //
+      while ( $loop->have_posts() ) { 
+        $loop->the_post();
+        //
+        get_template_part( 'content' );
+      }
+    }
+    //
+    die();
+}
 //////////////////////////////
 
 add_action( 'wp_footer', 'blankslate_footer_scripts' );

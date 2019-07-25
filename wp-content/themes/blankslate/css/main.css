@@ -29,12 +29,32 @@ Main styling & visual behavior
   min-height: 100vh;
 }
 
+#content_left div,
+#content_left article,
+#content_right div,
+#content_right article {
+  transition: opacity 0.25s;
+}
+
+.content-item,
+.content-item p {
+  margin-bottom: 1.33rem;
+}
+
+/* ****************************** */
+
+.hidden--content > div,
+.hidden--content > article {
+  opacity: 0;
+}
+
 /* ****************************** */
 
 a {
   cursor: pointer;
 }
-a:hover {
+a:hover,
+a.active {
   color: red;
 }
 
@@ -131,8 +151,4 @@ h2 {
 
 .text--def {
   font-size: 1.33rem;
-}
-
-p.content {
-  margin-bottom: 1.33rem;
 }
