@@ -3,7 +3,7 @@
   <main id="content" class="d--flex">
     
     <!-- Content Sections -->
-    <section id="content_left" data-namespace="News" class="w--50 px--2 pt--10">
+    <section id="content_left" data-namespace="News" class="w--50">
       <?php
         $args = array('cat' => 6);
         $loop = new WP_Query($args); 
