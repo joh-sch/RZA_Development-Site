@@ -14,7 +14,7 @@
     </div>
   </header>
 
-  <div>
+  <div class="px--2 pt--2">
     <h2><?php the_title(); ?></h2>
     <?php echo preg_replace('/<img[^>]+./','',get_the_content()); ?>
   </div>

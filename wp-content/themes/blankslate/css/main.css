@@ -37,9 +37,21 @@ Main styling & visual behavior
 }
 
 .content-item,
-.content-item p,
-.content-item header {
+.content-item p {
   margin-bottom: 1.33rem;
+}
+
+.content-item.actor {
+}
+
+/* ****************************** */
+
+.z--high {
+  z-index: 10;
+}
+
+.z--up {
+  z-index: 1;
 }
 
 /* ****************************** */

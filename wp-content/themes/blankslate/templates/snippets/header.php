@@ -10,7 +10,7 @@
 
   <div id="wrapper" class="hfeed">
 
-    <header id="header">
+    <header id="header" class="z--up">
       <div id="nav_main" class="d--flex text--lg w--100 dev-bg--1">
 
         <div class="f1">
