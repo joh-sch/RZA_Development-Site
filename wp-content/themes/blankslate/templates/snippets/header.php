@@ -11,6 +11,10 @@
   <div id="wrapper" class="hfeed">
 
     <header id="header" class="z--high">
+      <button id="button_nav" class="text text--lg" onclick="toggle_menu()">
+        +
+      </button>
+      
       <div id="nav_main" class="d--flex text--lg w--100 dev-bg--1">
 
         <div class="f1">

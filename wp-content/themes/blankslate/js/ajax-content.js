@@ -68,6 +68,7 @@
         post: post_id
       },
       success: function(content) {
+        hide_menu();
         $("#content_left").addClass("hidden--content");
         //
         setTimeout(function() {

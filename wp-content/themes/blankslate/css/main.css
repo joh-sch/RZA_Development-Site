@@ -62,6 +62,11 @@ Main styling & visual behavior
   opacity: 0;
 }
 
+.hidden--off {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* ****************************** */
 
 .grid-container {
@@ -113,6 +118,15 @@ span.list:last-of-type::after {
 button {
   border: none;
   padding: 0;
+}
+
+button.text:hover {
+  cursor: pointer;
+  color: red;
+}
+
+#button_nav {
+  position: absolute;
 }
 
 /* ****************************** */
