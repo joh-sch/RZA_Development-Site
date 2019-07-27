@@ -1,0 +1,86 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: 25. July 2019 13:14
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.3.18
+WORDPRESS:	5.2.2
+PHP INFO:	7.2.14 | SAPI: apache2handler
+SERVER:		Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.14 mod_ssl/2.2.34 OpenSSL/1.0.2o DAV/2 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.9 Perl/v5.24.0 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 4294967296 (128M default) 
+MEMORY STACK: 4MB
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP(query limit - 100)
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Not Supported
+TABLES: total:13 | filtered:0 | create:13
+FILTERED: []
+SQL CREATED: 20190724_rambazambaagentur_3f2034178424f7c02392_20190725131411_database.sql
+SQL FILE SIZE: 336.56KB (344634)
+SQL FILE TIME: 2019-07-25 13:14:17
+SQL RUNTIME: 0.20 sec.
+
+********************************************************************************
+ARCHIVE (ZIP):
+********************************************************************************
+ARCHIVE DIR:  /Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site
+ARCHIVE FILE: 20190724_rambazambaagentur_3f2034178424f7c02392_20190725131411_archive.zip
+FILTERS: *OFF*
+DIRS:
+	not set
+FILES:
+	not set
+EXTS:  not set
+----------------------------------------
+COMPRESSING
+SIZE:	95.72MB
+STATS:	Dirs 518 | Files 5,289
+SQL ADDED: 20190724_rambazambaagentur_3f2034178424f7c02392_20190725131411_database.sql
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 5807
+    [filename] => /Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/wp-snapshots/tmp/20190724_rambazambaagentur_3f2034178424f7c02392_20190725131411_archive.zip
+    [comment] => 
+)
+
+FILE ADDED TO ZIP: 5806
+COMPRESSION RESULT: '1'
+COMPRESSED SIZE: 61.64MB
+ARCHIVE RUNTIME: 37.65 sec.
+MEMORY STACK: 6MB
+building installer
+add_extra_files1
+add_extra_files2
+add_extra_files3
+add_extra_files4
+Doing archive file check
+add_extra_files5
+add_extra_files6
+add_extra_files8
+Successfully opened zip /Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/wp-snapshots/tmp/20190724_rambazambaagentur_3f2034178424f7c02392_20190725131411_archive.zip
+Adding enhanced installer files to archive using ZipArchive
+Installer files added to archive
+Added to archive
+After ziparchive close when adding installer
+
+********************************************************************************
+INTEGRITY CHECKS:
+********************************************************************************
+SQL FILE: 336.56KB
+INSTALLER FILE: 57.72KB
+ARCHIVE FILE: 63.02MB 
+EXPECTED FILE/DIRECTORY COUNT: 5,807
+ACTUAL FILE/DIRECTORY COUNT: 5,806
+ARCHIVE CONSISTENCY TEST: Pass
+
+********************************************************************************
+RECORD ID:[2]
+TOTAL PROCESS RUNTIME: 42.11 sec.
+PEAK PHP MEMORY USED: 8MB
+DONE PROCESSING => 20190724_rambazambaagentur 25. July 2019 13:14
+
