@@ -1,0 +1,1 @@
+jQuery(document).ready(function(t){Split(["#content_left","#content_right"],{gutterSize:8,cursor:"col-resize"})});

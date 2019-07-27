@@ -255,3 +255,27 @@ h2 {
   margin: 0 0 2rem 2rem;
 }
 /* ****************************** */
+
+.gutter {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  cursor: col-resize;
+  background-image: url("../grips/vertical.png");
+}
+
+.gutter.gutter-vertical {
+  cursor: row-resize;
+  background-image: url("../grips/horizontal.png");
+}
+
+.split.split-horizontal,
+.gutter.gutter-horizontal {
+  height: 100vh;
+  float: left;
+
+  background: gray;
+}
