@@ -72,10 +72,14 @@ Main styling & visual behavior
 .grid-container {
   display: grid;
 
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   grid-gap: 2rem;
 
   padding: 2rem;
+}
+
+.grid-item.actor {
+  min-width: 175px;
 }
 
 .grid-item:hover {
