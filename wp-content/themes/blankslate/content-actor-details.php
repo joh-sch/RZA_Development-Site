@@ -4,6 +4,7 @@
 
   <header>
     <div class="actor-carousel-overlay z--up">
+      <div class="slider-counter text--def">1/3</div>
       <button class="slider-button prev" onclick="slider_prev()"></button>
       <button class="slider-button next" onclick="slider_next()"></button>
     </div>

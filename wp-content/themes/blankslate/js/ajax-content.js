@@ -95,11 +95,20 @@
 
 // Custom slider-UI-functions
 
+function slider_update_counter() {
+  var counter = jQuery(".slider-counter");
+  var flkty = $sliderActor.data("flickity");
+  var slideNumber = flkty.selectedIndex + 1;
+  counter.html(slideNumber + "/" + flkty.slides.length);
+}
+
 function slider_next() {
   $sliderActor.flickity("next");
+  slider_update_counter();
 }
 function slider_prev() {
   $sliderActor.flickity("previous");
+  slider_update_counter();
 }
 
 function slider_home_next() {
