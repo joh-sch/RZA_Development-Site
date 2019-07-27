@@ -31,6 +31,7 @@ add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
     ));
 
     wp_enqueue_script( 'init-menu',  get_template_directory_uri() . '/js/init-menu.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'init-split',  get_template_directory_uri() . '/js/init-split.js', array(), '1.0', true );
   }
   
   wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css',false,'1.0','all');
