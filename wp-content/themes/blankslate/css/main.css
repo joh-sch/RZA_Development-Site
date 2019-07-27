@@ -41,7 +41,8 @@ Main styling & visual behavior
   margin-bottom: 1.33rem;
 }
 
-.content-item.actor {
+.content-item.actor header {
+  position: relative;
 }
 
 /* ****************************** */
@@ -106,6 +107,14 @@ span.list::after {
 span.list:last-of-type::after {
   content: "";
 }
+
+/* ****************************** */
+
+button {
+  border: none;
+  padding: 0;
+}
+
 /* ****************************** */
 
 .w--100 {
@@ -204,4 +213,24 @@ h2 {
   align-items: center;
 }
 
+.actor-carousel-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.actor-carousel-overlay .slider-button {
+  position: absolute;
+
+  width: 20%;
+  height: 100%;
+
+  background: transparent;
+}
+.actor-carousel-overlay .slider-button.prev {
+  cursor: w-resize;
+}
+.actor-carousel-overlay .slider-button.next {
+  right: 0;
+  cursor: e-resize;
+}
 /* ****************************** */

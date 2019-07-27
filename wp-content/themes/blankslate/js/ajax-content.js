@@ -76,12 +76,14 @@
         }, 275);
         //
         setTimeout(function() {
-          $(".actor-carousel").flickity({
+          window.$sliderActor = $(".actor-carousel").flickity({
             cellAlign: "left",
             contain: true,
             pageDots: false,
+            prevNextButtons: false,
             wrapAround: true,
-            draggable: false
+            draggable: false,
+            lazyLoad: 2
           });
           $("#content_left").removeClass("hidden--content");
         }, 300);
@@ -89,3 +91,44 @@
     });
   });
 })(jQuery);
+
+// Custom slider-UI-functions
+
+function slider_next() {
+  $sliderActor.flickity("next");
+}
+function slider_prev() {
+  $sliderActor.flickity("previous");
+}
+
+function slider_home_next() {
+  $sliderHome.flickity("next");
+  //
+  var slider = $(".main-carousel");
+  var sliderCover = $(".main-carousel-cover");
+  var activeSlide = $(".carousel-cell-link.is-selected");
+  var activeSlide_id = activeSlide.attr("id");
+  //
+  if (activeSlide.hasClass("video")) {
+    sliderCover.addClass("hidden-full");
+    //
+    var videoControls = activeSlide.children(".video-overlay");
+    var playerIndex = activeSlide_id.replace("player_", "");
+    //
+    videoControls.removeClass("hidden-op");
+    players[playerIndex].play();
+    if (namespace == "home") {
+      toggle_ui_white();
+    }
+  } else {
+    if (sliderCover.hasClass("hidden-full")) {
+      sliderCover.removeClass("hidden-full");
+      $(".video-overlay").addClass("hidden-op");
+      toggle_ui_white();
+      //
+      $.each(players, function(index, value) {
+        this.pause();
+      });
+    }
+  }
+}

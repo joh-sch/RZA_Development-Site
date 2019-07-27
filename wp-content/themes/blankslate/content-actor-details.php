@@ -3,14 +3,16 @@
   <?php $images = get_attached_media( 'image' ); ?>
 
   <header>
+    <div class="actor-carousel-overlay z--up">
+      <button class="slider-button prev" onclick="slider_prev()"></button>
+      <button class="slider-button next" onclick="slider_next()"></button>
+    </div>
     <div class="actor-carousel">
-      
       <?php foreach ( $images as $image ): ?>
         <div class="carousel-cell">
           <img src="<?php echo wp_get_attachment_url($image->ID) ?>">
         </div>
       <?php endforeach; ?>
-      
     </div>
   </header>
 
