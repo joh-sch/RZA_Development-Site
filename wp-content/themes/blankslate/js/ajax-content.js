@@ -40,6 +40,7 @@
           $("#content_left").append(content);
         }, 275);
         setTimeout(function() {
+          $("#content_left").addClass("noActor");
           $("#content_left").removeClass("hidden--content");
         }, 300);
       }
@@ -47,7 +48,7 @@
   });
 })(jQuery);
 
-// Function to fetch actor-page contetn
+// Function to fetch actor-page content
 (function($) {
   $(document).on("click", ".grid-item.actor", function(event) {
     var actor_id = $(this).attr("id");
@@ -86,6 +87,7 @@
             draggable: false,
             lazyLoad: 2
           });
+          $("#content_left").removeClass("noActor");
           $("#content_left").removeClass("hidden--content");
         }, 300);
       }

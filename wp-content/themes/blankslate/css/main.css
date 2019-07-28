@@ -29,6 +29,12 @@ Main styling & visual behavior
   min-height: 100vh;
 }
 
+#content_left.noActor {
+  padding-top: 10rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 #content_left div,
 #content_left article,
 #content_right div,
