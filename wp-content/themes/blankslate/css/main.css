@@ -16,6 +16,10 @@ Main styling & visual behavior
 }
 
 /* ****************************** */
+body {
+  height: 100vh;
+  overflow: hidden;
+}
 
 #header {
   position: fixed;
@@ -29,6 +33,10 @@ Main styling & visual behavior
   min-height: 100vh;
 }
 
+#content_left {
+  height: 100vh;
+  overflow: scroll;
+}
 #content_left.noActor {
   padding-top: 10rem;
   padding-left: 2rem;
