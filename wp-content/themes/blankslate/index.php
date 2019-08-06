@@ -18,7 +18,7 @@
       <div class="grid-container">
 
         <?php
-          $args = array('cat' => 7);
+          $args = array('cat' => array(7,8));
           $loop = new WP_Query($args); 
         ?>
 
