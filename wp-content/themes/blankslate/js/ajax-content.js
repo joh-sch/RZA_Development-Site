@@ -103,16 +103,21 @@ function reset_navLinks_right() {
   });
 })(jQuery);
 
-// Function to fetch actors (female only)
+// Function to fetch actors (based on category of clicked nav-link)
 (function($) {
   $(document).on("click", ".actor-link", function(event) {
     event.preventDefault();
     //
     var grid = $("#content_right .grid-container");
-    var cat = find_content_cat($(this));
     //
-    reset_navLinks_right();
-    $(this).addClass("active");
+    if ($(this).hasClass("active")) {
+      var cat = [7, 8];
+      reset_navLinks_right();
+    } else {
+      var cat = find_content_cat($(this));
+      reset_navLinks_right();
+      $(this).addClass("active");
+    }
     //
     $.ajax({
       url: ajaxcontent.ajaxurl,
