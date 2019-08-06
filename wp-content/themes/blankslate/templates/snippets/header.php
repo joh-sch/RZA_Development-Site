@@ -26,7 +26,8 @@
               foreach ( (array) $menu_items as $key => $menu_item ) {
                 $title = $menu_item->title;
                 $url = $menu_item->url;
-                $menu_link = '<a class="align-left">' . $title . '</a>';
+                $cat = $menu_item->object_id;
+                $menu_link = '<a class="align-left actor-link" data-content-cat="' . $cat . '">' . $title . '</a>';
                 //
                 echo $menu_link;
               }
