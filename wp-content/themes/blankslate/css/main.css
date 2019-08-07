@@ -69,6 +69,10 @@ body {
   position: relative;
 }
 
+.content-item.actor h1 {
+  display: inline;
+}
+
 /* ****************************** */
 
 .z--high {
@@ -230,11 +234,12 @@ button.text:hover {
 
 h1,
 .text--lg {
-  font-size: 2rem;
+  font-size: 2rem !important;
 }
 
 h2,
-.h2 {
+.h2,
+.text--b {
   font-weight: bold !important;
 }
 

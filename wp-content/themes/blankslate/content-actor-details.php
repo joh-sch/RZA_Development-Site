@@ -18,7 +18,10 @@
   </header>
 
   <div class="px--2 pt--2">
-    <h2><?php the_title(); ?></h2>
+    <div>
+      <h1 class="text--b"><?php the_title(); ?></h1>
+      <span>*<?php the_field('geburtsjahr'); ?></span>
+    </div>
     <?php echo preg_replace('/<img[^>]+./','',get_the_content()); ?>
   </div>
   

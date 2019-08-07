@@ -23,7 +23,8 @@
         </header>
 
         <div class="px--2 pt--2">
-          <h2><?php the_title(); ?></h2>
+          <h1 class="text--b"><?php the_title(); ?></h1>
+          <span>*<?php the_field('geburtsjahr'); ?></span>
           <?php 
             $post_id = get_the_ID();
             global $post; 
