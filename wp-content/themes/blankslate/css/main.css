@@ -62,6 +62,7 @@ body {
 }
 .content-item img {
   float: right;
+  margin-left: 5px;
 }
 
 .content-item.actor header {
