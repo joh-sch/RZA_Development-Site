@@ -4,7 +4,6 @@
     
     <!-- Content Sections -->
     <section id="content_left" data-namespace="News" class="w--50">
-    
       <article id="post-<?php the_ID(); ?>" class="content-item actor text--def">
         <?php $images = get_attached_media( 'image' ); ?>
 
@@ -30,10 +29,10 @@
             global $post; 
             $post = get_post($post_id); 
             setup_postdata($post);
-            echo preg_replace('/<img[^>]+./','',get_the_content()); ?>
+            echo preg_replace('/<img[^>]+./','',get_the_content()); 
+          ?>
         </div>
       </article>
-
     </section>
 
     <section id="content_right" class="w--50 text--def">
@@ -53,4 +52,17 @@
 
   </main>
 
+  <!-- Standalone slider-init -->
+  <script>
+    window.$sliderActor = jQuery(".actor-carousel").flickity({
+      cellAlign: "left",
+      contain: true,
+      pageDots: false,
+      prevNextButtons: false,
+      wrapAround: true,
+      draggable: false,
+      lazyLoad: 2
+    });
+  </script>
+  
 <?php get_template_part( 'templates/snippets/footer'); ?>

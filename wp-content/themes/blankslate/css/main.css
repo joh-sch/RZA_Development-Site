@@ -255,6 +255,9 @@ h2,
   justify-content: center;
   align-items: center;
 }
+.carousel-cell img {
+  margin: 0 !important;
+}
 
 .actor-carousel-overlay {
   position: absolute;
