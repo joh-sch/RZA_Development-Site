@@ -1,10 +1,8 @@
 <article id="post-<?php the_ID(); ?>" class="content-item text--def">
 
-  <header>
-    <h2><?php the_title(); ?></h2>
-  </header>
-
   <div>
+    <img src="<?php the_post_thumbnail_url(); ?>">
+    <h2><?php the_title(); ?></h2>
     <?php the_content(); ?>
   </div>
   

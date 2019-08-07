@@ -51,9 +51,18 @@ body {
   transition: opacity 0.25s;
 }
 
-.content-item,
-.content-item p {
+.content-item {
   margin-bottom: 1.33rem;
+  overflow: hidden;
+}
+.content-item p,
+.content-item h2 {
+  display: inline;
+  float: none;
+}
+.content-item img {
+  float: right;
+  margin-left: 5px;
 }
 
 .content-item.actor header {
@@ -224,7 +233,8 @@ h1,
   font-size: 2rem;
 }
 
-h2 {
+h2,
+.h2 {
   font-weight: bold !important;
 }
 
