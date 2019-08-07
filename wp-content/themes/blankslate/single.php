@@ -44,6 +44,7 @@
         ?>
 
         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+          <?php set_query_var('current_post', $post_id); ?>
           <?php get_template_part( 'content-actor' ); ?>
         <?php endwhile; ?>
         
@@ -64,5 +65,5 @@
       lazyLoad: 2
     });
   </script>
-  
+
 <?php get_template_part( 'templates/snippets/footer'); ?>
