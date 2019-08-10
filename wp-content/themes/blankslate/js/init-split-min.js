@@ -1,1 +1,1 @@
-jQuery(document).ready(function(e){Split(["#content_left","#content_right"],{gutterSize:8,cursor:"col-resize"}),e("#content_left").overlayScrollbars({className:"os-theme-dark flo"}),e("#content_right").overlayScrollbars({className:"os-theme-dark flo"})});
+jQuery(document).ready(function(e){Split(["#content_left","#content_right"],{gutterSize:8,cursor:"col-resize"}),window.os_left=e("#content_left").overlayScrollbars({}).overlayScrollbars()});
