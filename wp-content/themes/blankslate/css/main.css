@@ -182,6 +182,9 @@ button.text:hover {
 .mb--1 {
   margin-bottom: 1rem;
 }
+.mb--2 {
+  margin-bottom: 2rem;
+}
 
 .pl--1 {
   padding-left: 1rem;
