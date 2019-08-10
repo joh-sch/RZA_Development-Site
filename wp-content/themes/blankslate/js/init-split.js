@@ -9,11 +9,14 @@ jQuery(document).ready(function($) {
     cursor: "col-resize"
   });
   // Init scrollbars
-  // window.os_left = OverlayScrollbars(document.getElementById("content_left"), {
-  //   className: "os-theme-dark flo"
-  // });
-
   window.os_left = $("#content_left")
-    .overlayScrollbars({})
+    .overlayScrollbars({
+      className: "os-theme-dark rza left"
+    })
+    .overlayScrollbars();
+  window.os_right = $("#content_right")
+    .overlayScrollbars({
+      className: "os-theme-dark rza right"
+    })
     .overlayScrollbars();
 });

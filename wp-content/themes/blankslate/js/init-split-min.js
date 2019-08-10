@@ -1,1 +1,1 @@
-jQuery(document).ready(function(e){Split(["#content_left","#content_right"],{gutterSize:8,cursor:"col-resize"}),window.os_left=e("#content_left").overlayScrollbars({}).overlayScrollbars()});
+jQuery(document).ready(function(r){Split(["#content_left","#content_right"],{gutterSize:8,cursor:"col-resize"}),window.os_left=r("#content_left").overlayScrollbars({className:"os-theme-dark rza left"}).overlayScrollbars(),window.os_right=r("#content_right").overlayScrollbars({className:"os-theme-dark rza right"}).overlayScrollbars()});

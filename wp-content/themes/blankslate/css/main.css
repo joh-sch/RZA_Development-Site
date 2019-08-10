@@ -333,6 +333,7 @@ p {
 
   margin: 0 0 2rem 2rem;
 }
+
 /* ****************************** */
 
 .gutter {
@@ -357,4 +358,28 @@ p {
   float: left;
 
   background: gray;
+}
+
+/* ****************************** */
+
+.rza.os-theme-dark > .os-scrollbar,
+.rza.os-theme-light > .os-scrollbar {
+  padding: 0px !important;
+}
+
+.rza.os-theme-dark > .os-scrollbar-vertical,
+.os-theme-light > .os-scrollbar-vertical {
+  width: 4px !important;
+}
+
+.rza > .os-scrollbar-vertical > .os-scrollbar-track > .os-scrollbar-handle {
+  background: black !important;
+  border-radius: 0 !important;
+}
+
+.rza.right
+  > .os-scrollbar-vertical
+  > .os-scrollbar-track
+  > .os-scrollbar-handle {
+  background: white !important;
 }
