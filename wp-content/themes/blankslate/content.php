@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" class="content-item text--def">
+<article id="post-<?php the_ID(); ?>" class="content-item noActor text--def">
 
   <div>
     <img src="<?php the_post_thumbnail_url(); ?>">

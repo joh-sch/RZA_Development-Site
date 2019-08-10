@@ -20,10 +20,31 @@
   </header>
 
   <div class="px--2 pt--2">
-    <div>
+    <div class="mb--1">
       <h1 class="text--b"><?php the_title(); ?></h1>
       <span>*<?php the_field('geburtsjahr'); ?></span>
     </div>
+
+    <?php if( have_rows('lebenslauf') ): ?>
+
+      <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
+        <section class="mb--1">
+          <h2><?php the_sub_field('jahr'); ?></h2>
+
+          <?php if( have_rows('produktionen') ): ?>
+            <?php while ( have_rows('produktionen') ) : the_row(); ?>
+              <div class="text--il">
+                <p class="h2"><?php the_sub_field('titel'); ?></p>
+                <span>Regie: <?php the_sub_field('regie'); ?></span>
+              </div>
+            <?php endwhile ?>
+          <?php endif ?>
+
+        </section> 
+      <?php endwhile ?>
+
+    <?php endif ?>
+    
     <?php echo preg_replace('/<img[^>]+./','',get_the_content()); ?>
   </div>
   
