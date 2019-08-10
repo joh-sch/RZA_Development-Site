@@ -16,11 +16,34 @@ Main styling & visual behavior
 }
 
 /* ****************************** */
+
+@font-face {
+  font-family: "Agipo Regular";
+  src: url("../fonts/agipo/agipo.woff");
+  /* src: local('☺'), url('http://webfonts.radimpesko.com/RP-W-5955067a6f3e0c0ec5000010-5343e121934c2b46ab000012.woff?u=9wgolr7bYKxgLzXclK3hcYm9vrp55bTVIMtH7Ubv1cY') format('woff');*/
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Agipo Bold";
+  src: url("../fonts/agipo/agipo_bold.otf") format("opentype");
+  /* src: local('☺'), url('http://webfonts.radimpesko.com/RP-W-5955067a6f3e0c0ec5000010-5343e121934c2b46ab000012.woff?u=9wgolr7bYKxgLzXclK3hcYm9vrp55bTVIMtH7Ubv1cY') format('woff');*/
+  font-style: normal;
+  font-weight: bold;
+  font-stretch: normal;
+}
+
+/* ****************************** */
+
 body.blog,
 body.single,
 body.home {
   height: 100vh;
   overflow: hidden;
+
+  font-family: "Agipo Regular";
 }
 
 #header {
@@ -249,7 +272,7 @@ h1,
 h2,
 .h2,
 .text--b {
-  font-weight: bold !important;
+  font-family: "Agipo Bold";
 }
 
 .text--def {
