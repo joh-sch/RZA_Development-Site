@@ -26,7 +26,6 @@
     </div>
 
     <?php if( have_rows('lebenslauf') ): ?>
-
       <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
         <section class="mb--1">
           <h2><?php the_sub_field('jahr'); ?></h2>
@@ -42,10 +41,7 @@
 
         </section> 
       <?php endwhile ?>
-
     <?php endif ?>
-    
-    <?php echo preg_replace('/<img[^>]+./','',get_the_content()); ?>
   </div>
   
 </article> 

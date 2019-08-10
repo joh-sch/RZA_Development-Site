@@ -5,7 +5,8 @@
     <!-- Content Sections -->
     <section id="content_left" data-namespace="News" class="w--50">
       <article id="post-<?php the_ID(); ?>" class="content-item actor text--def">
-        <?php $images = get_attached_media( 'image' ); ?>
+        
+        <?php $images = get_field('bildergalerie');?>
 
         <header>
           <div class="actor-carousel-overlay z--up">
@@ -14,25 +15,48 @@
             <button class="slider-button next" onclick="slider_next()"></button>
           </div>
           <div class="actor-carousel">
-            <?php foreach ( $images as $image ): ?>
-              <div class="carousel-cell">
-                <img src="<?php echo wp_get_attachment_url($image->ID) ?>">
-              </div>
-            <?php endforeach; ?>
+            <?php if( $images ): ?>
+              <?php foreach( $images as $image ): ?>
+                <div class="carousel-cell">
+                  <img src="<?php echo $image['url']; ?>">
+                </div>
+              <?php endforeach; ?>
+            <?php endif; ?>
           </div>
         </header>
 
         <div class="px--2 pt--2">
-          <h1 class="text--b"><?php the_title(); ?></h1>
-          <span>*<?php the_field('geburtsjahr'); ?></span>
+          <div class="mb--1">
+            <h1 class="text--b"><?php the_title(); ?></h1>
+            <span>*<?php the_field('geburtsjahr'); ?></span>
+          </div>
+
           <?php 
             $post_id = get_the_ID();
             global $post; 
             $post = get_post($post_id); 
             setup_postdata($post);
-            echo preg_replace('/<img[^>]+./','',get_the_content()); 
           ?>
+          
+          <?php if( have_rows('lebenslauf') ): ?>
+            <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
+              <section class="mb--1">
+                <h2><?php the_sub_field('jahr'); ?></h2>
+
+                <?php if( have_rows('produktionen') ): ?>
+                  <?php while ( have_rows('produktionen') ) : the_row(); ?>
+                    <div class="text--il">
+                      <p class="h2"><?php the_sub_field('titel'); ?></p>
+                      <span>Regie: <?php the_sub_field('regie'); ?></span>
+                    </div>
+                  <?php endwhile ?>
+                <?php endif ?>
+
+              </section> 
+            <?php endwhile ?>
+          <?php endif ?>
         </div>
+
       </article>
     </section>
 
