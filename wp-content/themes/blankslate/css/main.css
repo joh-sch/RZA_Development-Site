@@ -16,7 +16,9 @@ Main styling & visual behavior
 }
 
 /* ****************************** */
-body {
+body.blog,
+body.single,
+body.home {
   height: 100vh;
   overflow: hidden;
 }
