@@ -13,7 +13,9 @@ function reset_navLinks_right() {
 function reset_scrollbars_left() {
   os_left.destroy();
   window.os_left = jQuery("#content_left")
-    .overlayScrollbars({})
+    .overlayScrollbars({
+      className: "os-theme-dark rza left"
+    })
     .overlayScrollbars();
 }
 
