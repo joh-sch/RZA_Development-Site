@@ -1,6 +1,9 @@
 <article id="post-<?php the_ID(); ?>" class="content-item actor text--def">
 
-  <?php $images = get_attached_media( 'image' ); ?>
+  <?php
+    $images = get_field('bildergalerie');
+  ?>
+  
 
   <header>
     <div class="actor-carousel-overlay z--up">
@@ -9,11 +12,13 @@
       <button class="slider-button next" onclick="slider_next()"></button>
     </div>
     <div class="actor-carousel">
-      <?php foreach ( $images as $image ): ?>
-        <div class="carousel-cell">
-          <img src="<?php echo wp_get_attachment_url($image->ID) ?>">
-        </div>
-      <?php endforeach; ?>
+      <?php if( $images ): 
+        foreach( $images as $image ): ?>
+          <div class="carousel-cell">
+            <img src="<?php echo $image['url']; ?>">
+          </div>
+        <?php endforeach; ?>
+      <?php endif; ?>
     </div>
   </header>
 
