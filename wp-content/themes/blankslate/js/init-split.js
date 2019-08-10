@@ -3,8 +3,20 @@
 //
 
 jQuery(document).ready(function($) {
+  // Split panes
   Split(["#content_left", "#content_right"], {
     gutterSize: 8,
     cursor: "col-resize"
   });
+  // Init scrollbars
+  window.os_left = $("#content_left")
+    .overlayScrollbars({
+      className: "os-theme-dark rza left"
+    })
+    .overlayScrollbars();
+  window.os_right = $("#content_right")
+    .overlayScrollbars({
+      className: "os-theme-dark rza right"
+    })
+    .overlayScrollbars();
 });
