@@ -45,10 +45,10 @@
                 $cat = $menu_item->object_id;
                 //
                 if($title == 'Agentur' || $title == 'Kontakt') {
-                  $menu_link = '<span class="list content-link" data-content-cat="' . $title . '" ><a>' . $title . '</a></span>';
+                  $menu_link = '<span class="list menu-link content-link" data-content-cat="' . $title . '" ><a>' . $title . '</a></span>';
                   echo $menu_link;
                 } else {
-                  $menu_link = '<span class="list content-link" data-content-cat="' . $cat . '" ><a data-namespace="' . $title . '">' . $title . '</a></span>';
+                  $menu_link = '<span class="list menu-link content-link" data-content-cat="' . $cat . '" ><a data-namespace="' . $title . '">' . $title . '</a></span>';
                   echo $menu_link;
                 }
               }
