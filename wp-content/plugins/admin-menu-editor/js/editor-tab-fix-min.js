@@ -1,0 +1,1 @@
+jQuery(function(e){var r=e("#ws_ame_editor_heading").first(),t=e(".nav-tab-wrapper").first();t=t.add(t.next(".clear")),r.length>0&&t.length>0&&t.insertAfter(r)});

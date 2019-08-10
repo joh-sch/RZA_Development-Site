@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+<h1 id="forceutf8">forceutf8</h1>
+
+<p>PHP Class Encoding featuring popular \ForceUTF8\Encoding::toUTF8() function &#8211;formerly known as forceUTF8()&#8211; that fixes mixed encoded strings.</p>
+
+<h1 id="description">Description</h1>
+
+<p>If you apply the PHP function utf8_encode() to an already-UTF8 string it will return a garbled UTF8 string.</p>
+
+<p>This class addresses this issue and provides a handy static function called \ForceUTF8\Encoding::toUTF8().</p>
+
+<p>You don&#8217;t need to know what the encoding of your strings is. It can be Latin1 (iso 8859&#8211;1), Windows-1252 or UTF8, or the string can have a mix of them. \ForceUTF8\Encoding::toUTF8() will convert everything to UTF8.</p>
+
+<p>Sometimes you have to deal with services that are unreliable in terms of encoding, possibly mixing UTF8 and Latin1 in the same string.</p>
+
+<p>Update:</p>
+
+<p>I&#8217;ve included another function, \ForceUTF8\Encoding::fixUTF8(), which will fix the double (or multiple) encoded UTF8 string that looks garbled.</p>
+
+<h1 id="usage:">Usage:</h1>
+
+<pre><code>use \ForceUTF8\Encoding;
+
+$utf8_string = Encoding::toUTF8($utf8_or_latin1_or_mixed_string);
+
+$latin1_string = Encoding::toLatin1($utf8_or_latin1_or_mixed_string);
+</code></pre>
+
+<p>also:</p>
+
+<pre><code>$utf8_string = Encoding::fixUTF8($garbled_utf8_string);
+</code></pre>
+
+<p>Examples:</p>
+
+<pre><code>use \ForceUTF8\Encoding;
+
+echo Encoding::fixUTF8(&quot;FÃÂ©dération Camerounaise de Football\n&quot;);
+echo Encoding::fixUTF8(&quot;FÃ©dÃ©ration Camerounaise de Football\n&quot;);
+echo Encoding::fixUTF8(&quot;FÃÂ©dÃÂ©ration Camerounaise de Football\n&quot;);
+echo Encoding::fixUTF8(&quot;FÃÂÂÂÂ©dÃÂÂÂÂ©ration Camerounaise de Football\n&quot;);
+</code></pre>
+
+<p>will output:</p>
+
+<pre><code>Fédération Camerounaise de Football
+Fédération Camerounaise de Football
+Fédération Camerounaise de Football
+Fédération Camerounaise de Football
+</code></pre>
+
+<h1 id="installviacomposer:">Install via composer:</h1>
+
+<p>Edit your composer.json file to include the following:</p>
+
+<pre><code class="json">{
+    &quot;require&quot;: {
+        &quot;neitanod/forceutf8&quot;: &quot;dev-master&quot;
+    }
+}
+</code></pre>
+
+</body>
+</html>
+
