@@ -1,9 +1,6 @@
 <article id="post-<?php the_ID(); ?>" class="content-item actor text--def">
 
-  <?php
-    $images = get_field('bildergalerie');
-  ?>
-  
+  <?php $images = get_field('bildergalerie');?>
 
   <header>
     <div class="actor-carousel-overlay z--up">
@@ -12,8 +9,8 @@
       <button class="slider-button next" onclick="slider_next()"></button>
     </div>
     <div class="actor-carousel">
-      <?php if( $images ): 
-        foreach( $images as $image ): ?>
+      <?php if( $images ): ?>
+        <?php foreach( $images as $image ): ?>
           <div class="carousel-cell">
             <img src="<?php echo $image['url']; ?>">
           </div>
