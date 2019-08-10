@@ -272,7 +272,7 @@ h1,
 h2,
 .h2,
 .text--b {
-  font-family: "Agipo Bold";
+  font-family: "Agipo Bold" !important;
 }
 
 .text--def {
@@ -282,6 +282,11 @@ h2,
 .text--il p,
 .text--il span {
   display: inline;
+}
+
+p {
+  line-height: 1.32rem !important;
+  letter-spacing: 0.01rem !important;
 }
 
 /* ****************************** */

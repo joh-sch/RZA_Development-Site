@@ -15,7 +15,7 @@
         +
       </button>
       
-      <div id="nav_main" class="d--flex text--lg w--100 dev-bg--1">
+      <div id="nav_main" class="d--flex text--lg text--b w--100 dev-bg--1">
 
         <div class="f1">
           <div class="d--flex v">
