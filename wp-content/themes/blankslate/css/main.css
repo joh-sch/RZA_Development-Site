@@ -49,6 +49,9 @@ body.home {
 #header {
   width: 100%;
 }
+.actor #header {
+  position: absolute;
+}
 
 #content_right {
   background: red;
@@ -101,6 +104,10 @@ body.home {
 
 #nav_main {
   background: white;
+}
+
+.actor #nav_main {
+  padding: 2rem;
 }
 
 #brand_link {

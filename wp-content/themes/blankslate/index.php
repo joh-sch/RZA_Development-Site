@@ -5,17 +5,18 @@
     <!-- Content Sections -->
     <section id="content_left" data-namespace="News" class="w--50 noActor">
 
-      <!-- Navigation Menu -->
       <?php get_template_part( 'templates/snippets/menu'); ?>
 
-      <?php
-        $args = array('cat' => 6);
-        $loop = new WP_Query($args); 
-      ?>
+      <section id="content_left_items">
+        <?php
+          $args = array('cat' => 6);
+          $loop = new WP_Query($args); 
+        ?>
 
-      <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-        <?php get_template_part( 'content' ); ?>
-      <?php endwhile; ?>
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+          <?php get_template_part( 'content' ); ?>
+        <?php endwhile; ?>
+      </section>
     </section>
 
     <section id="content_right" class="w--50 text--def">
