@@ -50,15 +50,20 @@ function reset_scrollbars_left() {
           $("#content_left").attr("data-namespace", namespace);
         }
         // Change content
-        $("#content_left").addClass("hidden--content");
+        $("#content_left_items").addClass("hidden--content");
+        $("#content_left").removeClass("actor");
         setTimeout(function() {
-          $("#content_left").empty();
-          $("#content_left").append(content);
+          $("#content_left_items")
+            .find("article, .content-item")
+            .remove();
+          $("#content_left_items").append(content);
+          //
+          $("#content_left").addClass("noActor");
         }, 275);
         setTimeout(function() {
           reset_scrollbars_left();
           $("#content_left").addClass("noActor");
-          $("#content_left").removeClass("hidden--content");
+          $("#content_left_items").removeClass("hidden--content");
         }, 300);
       }
     });
@@ -86,13 +91,17 @@ function reset_scrollbars_left() {
         post: post_id
       },
       success: function(content) {
-        hide_menu();
         $("#content_left").addClass("hidden--content");
-
+        $("#content_left").removeClass("noActor");
         //
         setTimeout(function() {
-          $("#content_left").empty();
-          $("#content_left").append(content);
+          $("#content_left_items")
+            .find("article, .content-item")
+            .remove();
+          $("#content_left_items").append(content);
+          //
+          hide_menu();
+          $("#content_left").addClass("actor");
         }, 275);
         //
         setTimeout(function() {
@@ -106,7 +115,6 @@ function reset_scrollbars_left() {
             lazyLoad: 2
           });
           reset_scrollbars_left();
-          $("#content_left").removeClass("noActor");
           $("#content_left").removeClass("hidden--content");
         }, 300);
       }

@@ -47,10 +47,10 @@ body.home {
 }
 
 #header {
-  position: fixed;
-  width: calc(50% - 4rem);
-
-  margin: 2rem 0 0 2rem;
+  width: 100%;
+}
+.actor #header {
+  position: absolute;
 }
 
 #content_right {
@@ -62,9 +62,11 @@ body.home {
 #content_right {
   height: 100vh;
   overflow: scroll;
+
+  min-width: 600px;
 }
 #content_left.noActor {
-  padding-top: 10rem;
+  padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -96,6 +98,20 @@ body.home {
 
 .content-item.actor h1 {
   display: inline;
+}
+
+/* ****************************** */
+
+#nav_main {
+  background: white;
+}
+
+.actor #nav_main {
+  padding: 2rem;
+}
+
+#brand_link {
+  font-size: 4rem;
 }
 
 /* ****************************** */
@@ -152,15 +168,26 @@ body.home {
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 a:hover,
 a.active {
-  color: red;
+  color: red !important;
+}
+a:visited {
+  color: black;
 }
 
 a.lg,
 .lg a {
   font-size: 2rem;
+}
+
+span.list {
+  margin-right: 0.5rem;
+}
+span.list:last-of-type {
+  margin-right: 0;
 }
 
 span.list::after {
@@ -207,6 +234,10 @@ button.text:hover {
 }
 .mb--2 {
   margin-bottom: 2rem;
+}
+
+.mr--1 {
+  margin-right: 1rem;
 }
 
 .pl--1 {
