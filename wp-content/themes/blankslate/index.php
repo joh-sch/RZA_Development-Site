@@ -53,7 +53,7 @@
           </div>
 
           <div class="f1 d--flex h right align-top">
-            <a href="<?php echo get_home_url(); ?>">RZ A</a>
+            <a id="brand_link" href="<?php echo get_home_url(); ?>">RZ A</a>
           </div>
           
         </div>  
