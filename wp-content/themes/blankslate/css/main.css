@@ -47,10 +47,7 @@ body.home {
 }
 
 #header {
-  position: fixed;
-  width: calc(50% - 4rem);
-
-  margin: 2rem 0 0 2rem;
+  width: calc(100% - 4rem);
 }
 
 #content_right {
@@ -64,7 +61,7 @@ body.home {
   overflow: scroll;
 }
 #content_left.noActor {
-  padding-top: 10rem;
+  padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -96,6 +93,12 @@ body.home {
 
 .content-item.actor h1 {
   display: inline;
+}
+
+/* ****************************** */
+
+#nav_main {
+  background: white;
 }
 
 /* ****************************** */
