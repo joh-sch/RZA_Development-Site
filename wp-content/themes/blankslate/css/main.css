@@ -59,6 +59,8 @@ body.home {
 #content_right {
   height: 100vh;
   overflow: scroll;
+
+  min-width: 600px;
 }
 #content_left.noActor {
   padding-top: 2rem;
