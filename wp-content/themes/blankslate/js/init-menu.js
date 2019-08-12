@@ -31,6 +31,13 @@ function toggle_menu() {
     menu.removeClass("hidden--off");
   }
 }
+function resize_menu() {
+  var master = jQuery("#content_left");
+  var master_width = master.width();
+  var menu = jQuery("#header");
+  //
+  menu.width(master_width);
+}
 
 //
 
