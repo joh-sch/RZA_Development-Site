@@ -24,6 +24,8 @@ function reset_scrollbars_left() {
   // AJAX function
   $(document).on("click", ".content-link", function(event) {
     event.preventDefault();
+    $("#content_left").removeClass("actor");
+    $("#content_left").addClass("noActor");
     //
     var gridItems = $(".grid-item.actor");
     gridItems.removeClass("active");
@@ -51,7 +53,7 @@ function reset_scrollbars_left() {
         }
         // Change content
         $("#content_left_items").addClass("hidden--content");
-        $("#content_left").removeClass("actor");
+
         setTimeout(function() {
           $("#content_left_items")
             .find("article, .content-item")
@@ -62,7 +64,6 @@ function reset_scrollbars_left() {
         }, 275);
         setTimeout(function() {
           reset_scrollbars_left();
-          $("#content_left").addClass("noActor");
           $("#content_left_items").removeClass("hidden--content");
         }, 300);
       }

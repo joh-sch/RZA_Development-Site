@@ -10,10 +10,17 @@ function set_active_menu_entry() {
 
 function hide_menu() {
   var menu = jQuery("#nav_main");
+  var menu_btn = jQuery("#button_nav");
   //
   if (!menu.hasClass("hidden--off")) {
     menu.addClass("hidden--off");
+    menu_btn.removeClass("hidden--off");
   }
+}
+function show_menu() {
+  var menu = jQuery("#nav_main");
+  //
+  menu.removeClass("hidden--off");
 }
 function toggle_menu() {
   var menu = jQuery("#nav_main");

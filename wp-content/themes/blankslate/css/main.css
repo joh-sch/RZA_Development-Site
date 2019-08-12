@@ -47,7 +47,8 @@ body.home {
 }
 
 #header {
-  width: 100%;
+  width: 50%;
+  position: fixed;
 }
 .actor #header {
   position: absolute;
@@ -211,6 +212,8 @@ button.text:hover {
 
 #button_nav {
   position: absolute;
+  left: 2rem;
+  top: 2rem;
 }
 
 /* ****************************** */
