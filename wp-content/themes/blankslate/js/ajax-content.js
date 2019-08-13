@@ -24,8 +24,6 @@ function reset_scrollbars_left() {
   // AJAX function
   $(document).on("click", ".content-link", function(event) {
     event.preventDefault();
-    $("#content_left").removeClass("actor");
-    $("#content_left").addClass("noActor");
     //
     var gridItems = $(".grid-item.actor");
     gridItems.removeClass("active");
@@ -60,6 +58,7 @@ function reset_scrollbars_left() {
             .remove();
           $("#content_left_items").append(content);
           //
+          $("#content_left").removeClass("actor");
           $("#content_left").addClass("noActor");
         }, 275);
         setTimeout(function() {
@@ -94,7 +93,6 @@ function reset_scrollbars_left() {
       success: function(content) {
         $("#content_left").addClass("hidden--content");
         hide_menu();
-        $("#content_left").removeClass("noActor");
         //
         setTimeout(function() {
           $("#content_left_items")
@@ -102,6 +100,7 @@ function reset_scrollbars_left() {
             .remove();
           $("#content_left_items").append(content);
           //
+          $("#content_left").removeClass("noActor");
           $("#content_left").addClass("actor");
         }, 275);
         //
