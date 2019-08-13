@@ -25,6 +25,8 @@ function reset_scrollbars_left() {
   $(document).on("click", ".content-link", function(event) {
     event.preventDefault();
     //
+    $("#header").addClass("perma");
+    //
     var gridItems = $(".grid-item.actor");
     gridItems.removeClass("active");
     var navLinks = $(".content-link a");
