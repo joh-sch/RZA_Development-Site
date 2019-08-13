@@ -1,12 +1,11 @@
 <?php get_template_part( 'templates/snippets/header'); ?>
 
   <main id="content" class="d--flex">
+    <!-- Nav-Menu -->
+    <?php get_template_part( 'templates/snippets/menu'); ?>
     
     <!-- Content Sections -->
     <section id="content_left" data-namespace="News" class="w--50 noActor">
-
-      <?php get_template_part( 'templates/snippets/menu'); ?>
-
       <section id="content_left_items">
         <?php
           $args = array('cat' => 6);

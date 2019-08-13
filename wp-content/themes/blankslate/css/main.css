@@ -49,6 +49,10 @@ body.home {
 #header {
   width: 50%;
   position: fixed;
+
+  padding: 2rem;
+
+  background: white;
 }
 .actor #header {
   position: absolute;
@@ -102,10 +106,6 @@ body.home {
 }
 
 /* ****************************** */
-
-#nav_main {
-  background: white;
-}
 
 .actor #nav_main {
   padding: 2rem;
