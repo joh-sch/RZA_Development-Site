@@ -53,6 +53,7 @@ jQuery(document).ready(function($) {
     if (!parent.hasClass("noActor")) {
       $("#header").removeClass("off");
       $("#nav_main").removeClass("hidden--off");
+      $(this).addClass("hidden--off");
     }
   });
   $("#header").mouseleave(function() {
@@ -61,6 +62,7 @@ jQuery(document).ready(function($) {
       $("#nav_main").removeClass("hidden--off");
       $("#nav_main").addClass("hidden--off");
       $("#header").addClass("off");
+      $("#button_nav").removeClass("hidden--off");
     }
   });
 });
