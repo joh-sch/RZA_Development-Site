@@ -71,7 +71,7 @@ body.home {
   min-width: 600px;
 }
 #content_left.noActor {
-  padding-top: 2rem;
+  padding-top: calc(8.75rem);
   padding-left: 2rem;
   padding-right: 2rem;
 }
