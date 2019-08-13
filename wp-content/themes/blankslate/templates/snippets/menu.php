@@ -1,5 +1,5 @@
 <header id="header" class="z--high mb--2">
-  <button id="button_nav" class="text text--lg" onclick="toggle_menu()">
+  <button id="button_nav" class="text text--lg hidden--off">
     +
   </button>
   

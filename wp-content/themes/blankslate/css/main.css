@@ -47,8 +47,17 @@ body.home {
 }
 
 #header {
-  width: 100%;
+  width: 50%;
+  position: fixed;
+
+  padding: 2rem;
+
+  background: white;
 }
+#header.off {
+  background: transparent;
+}
+
 .actor #header {
   position: absolute;
 }
@@ -66,7 +75,7 @@ body.home {
   min-width: 600px;
 }
 #content_left.noActor {
-  padding-top: 2rem;
+  padding-top: calc(10.75rem);
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -101,10 +110,6 @@ body.home {
 }
 
 /* ****************************** */
-
-#nav_main {
-  background: white;
-}
 
 .actor #nav_main {
   padding: 2rem;
@@ -211,6 +216,8 @@ button.text:hover {
 
 #button_nav {
   position: absolute;
+  left: 2rem;
+  top: 2rem;
 }
 
 /* ****************************** */
