@@ -6,7 +6,10 @@ jQuery(document).ready(function($) {
   // Split panes
   Split(["#content_left", "#content_right"], {
     gutterSize: 8,
-    cursor: "col-resize"
+    cursor: "col-resize",
+    onDrag: function() {
+      resize_menu();
+    }
   });
   // Init scrollbars
   window.os_left = $("#content_left")
