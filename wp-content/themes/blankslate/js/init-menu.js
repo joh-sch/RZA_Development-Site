@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
       $("#nav_main").removeClass("hidden--off");
     }
   });
-  $("#nav_main").mouseleave(function() {
+  $("#header").mouseleave(function() {
     var parent = $("#content_left");
     if (!parent.hasClass("noActor")) {
       $("#nav_main").removeClass("hidden--off");
