@@ -93,6 +93,7 @@ function reset_scrollbars_left() {
       },
       success: function(content) {
         $("#content_left").addClass("hidden--content");
+        hide_menu();
         $("#content_left").removeClass("noActor");
         //
         setTimeout(function() {
@@ -101,7 +102,6 @@ function reset_scrollbars_left() {
             .remove();
           $("#content_left_items").append(content);
           //
-          hide_menu();
           $("#content_left").addClass("actor");
         }, 275);
         //

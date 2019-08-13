@@ -9,10 +9,12 @@ function set_active_menu_entry() {
 }
 
 function hide_menu() {
+  var menu_container = jQuery("#header");
   var menu = jQuery("#nav_main");
   var menu_btn = jQuery("#button_nav");
   //
   if (!menu.hasClass("hidden--off")) {
+    menu_container.addClass("off");
     menu.addClass("hidden--off");
     menu_btn.removeClass("hidden--off");
   }
@@ -23,11 +25,13 @@ function show_menu() {
   menu.removeClass("hidden--off");
 }
 function toggle_menu() {
+  var menu_container = jQuery("#header");
   var menu = jQuery("#nav_main");
   //
   if (!menu.hasClass("hidden--off")) {
     menu.addClass("hidden--off");
   } else {
+    menu_container.removeClass("hidden--off");
     menu.removeClass("hidden--off");
   }
 }
@@ -47,6 +51,7 @@ jQuery(document).ready(function($) {
   $("#button_nav").mouseover(function() {
     var parent = $("#content_left");
     if (!parent.hasClass("noActor")) {
+      $("#header").removeClass("off");
       $("#nav_main").removeClass("hidden--off");
     }
   });
@@ -55,6 +60,7 @@ jQuery(document).ready(function($) {
     if (!parent.hasClass("noActor")) {
       $("#nav_main").removeClass("hidden--off");
       $("#nav_main").addClass("hidden--off");
+      $("#header").addClass("off");
     }
   });
 });

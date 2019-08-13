@@ -54,6 +54,10 @@ body.home {
 
   background: white;
 }
+#header.off {
+  background: transparent;
+}
+
 .actor #header {
   position: absolute;
 }
