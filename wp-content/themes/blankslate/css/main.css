@@ -155,17 +155,27 @@ body.home {
 
 /* ****************************** */
 
-.grid-container {
+.grid-container,
+.grid-container.mobile {
   display: grid;
-
+}
+.grid-container {
   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   grid-gap: 2rem;
 
   padding: 2rem;
 }
+.grid-container.mobile {
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  padding: 0;
+}
 
 .grid-item.actor {
   min-width: 175px;
+}
+.grid-container.mobile .grid-item.actor {
+  min-width: 80px;
 }
 
 .grid-item:hover {
