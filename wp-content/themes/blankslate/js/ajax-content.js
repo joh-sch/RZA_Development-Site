@@ -53,28 +53,21 @@ function toggle_gridDisplay_mobile(element) {
           var namespace = "News";
           $("#content_left").attr("data-namespace", namespace);
         }
-        // Determine display-status of #content_right
-        var display_status_r = $("#content_right").css("display");
-        // (Re-)place content
-        if (display_status_r == "block") {
-          $("#content_left_items").addClass("hidden--content");
+        $("#content_left_items").addClass("hidden--content");
 
-          setTimeout(function() {
-            $("#content_left_items")
-              .find("article, .content-item")
-              .remove();
-            $("#content_left_items").append(content);
-            //
-            $("#content_left").removeClass("actor");
-            $("#content_left").addClass("noActor");
-          }, 275);
-          setTimeout(function() {
-            reset_scrollbars_left();
-            $("#content_left_items").removeClass("hidden--content");
-          }, 300);
-        } else {
-          alert("Site is viewed in mobile resolution…");
-        }
+        setTimeout(function() {
+          $("#content_left_items")
+            .find("article, .content-item")
+            .remove();
+          $("#content_left_items").append(content);
+          //
+          $("#content_left").removeClass("actor");
+          $("#content_left").addClass("noActor");
+        }, 275);
+        setTimeout(function() {
+          reset_scrollbars_left();
+          $("#content_left_items").removeClass("hidden--content");
+        }, 300);
       }
     });
   });
