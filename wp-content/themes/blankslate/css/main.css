@@ -78,6 +78,9 @@ body.home {
   min-width: 100%;
   /* ****** */
 }
+#content_left.grid {
+  background: red;
+}
 
 #content_left,
 #content_right {

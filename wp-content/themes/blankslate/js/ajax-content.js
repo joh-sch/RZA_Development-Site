@@ -19,6 +19,7 @@ function reset_scrollbars_left() {
     .overlayScrollbars();
 }
 function toggle_gridDisplay_mobile(element) {
+  element.parents("section").addClass("grid");
   element.addClass("grid-container mobile");
 }
 
