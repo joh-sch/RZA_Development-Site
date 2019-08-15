@@ -73,65 +73,6 @@ function toggle_gridDisplay_mobile(element) {
   });
 })(jQuery);
 
-// Function to fetch actor-page content
-(function($) {
-  $(document).on("click", ".grid-item.actor", function(event) {
-    var actor_id = $(this).attr("id");
-    var post_id = $(this).data("post-id");
-    //
-    var navLinks = $(".content-link a");
-    navLinks.removeClass("active");
-    var gridItems = $(".grid-item.actor");
-    gridItems.removeClass("active");
-    $(this).addClass("active");
-    //
-    $.ajax({
-      url: ajaxcontent.ajaxurl,
-      type: "post",
-      data: {
-        action: "ajax_content_actor",
-        query_vars: ajaxcontent.query_vars,
-        post: post_id
-      },
-      success: function(content) {
-        // Determine display-status of #content_right
-        var display_status_r = $("#content_right").css("display");
-        //
-        if (display_status_r == "block") {
-          $("#content_left").addClass("hidden--content");
-          hide_menu();
-          //
-          setTimeout(function() {
-            $("#content_left_items")
-              .find("article, .content-item")
-              .remove();
-            $("#content_left_items").append(content);
-            //
-            $("#content_left").removeClass("noActor");
-            $("#content_left").addClass("actor");
-          }, 275);
-          //
-          setTimeout(function() {
-            window.$sliderActor = $(".actor-carousel").flickity({
-              cellAlign: "left",
-              contain: true,
-              pageDots: false,
-              prevNextButtons: false,
-              wrapAround: true,
-              draggable: false,
-              lazyLoad: 2
-            });
-            reset_scrollbars_left();
-            $("#content_left").removeClass("hidden--content");
-          }, 300);
-        } else {
-          alert("Site is viewed in mobile resolution…");
-        }
-      }
-    });
-  });
-})(jQuery);
-
 // Function to fetch actors (based on category of clicked nav-link)
 (function($) {
   $(document).on("click", ".actor-link", function(event) {
@@ -185,6 +126,65 @@ function toggle_gridDisplay_mobile(element) {
           setTimeout(function() {
             grid.removeClass("hidden--content");
           }, 325);
+        }
+      }
+    });
+  });
+})(jQuery);
+
+// Function to fetch actor-page content
+(function($) {
+  $(document).on("click", ".grid-item.actor", function(event) {
+    var actor_id = $(this).attr("id");
+    var post_id = $(this).data("post-id");
+    //
+    var navLinks = $(".content-link a");
+    navLinks.removeClass("active");
+    var gridItems = $(".grid-item.actor");
+    gridItems.removeClass("active");
+    $(this).addClass("active");
+    //
+    $.ajax({
+      url: ajaxcontent.ajaxurl,
+      type: "post",
+      data: {
+        action: "ajax_content_actor",
+        query_vars: ajaxcontent.query_vars,
+        post: post_id
+      },
+      success: function(content) {
+        // Determine display-status of #content_right
+        var display_status_r = $("#content_right").css("display");
+        //
+        if (display_status_r == "block") {
+          $("#content_left").addClass("hidden--content");
+          hide_menu();
+          //
+          setTimeout(function() {
+            $("#content_left_items")
+              .find("article, .content-item")
+              .remove();
+            $("#content_left_items").append(content);
+            //
+            $("#content_left").removeClass("noActor");
+            $("#content_left").addClass("actor");
+          }, 275);
+          //
+          setTimeout(function() {
+            window.$sliderActor = $(".actor-carousel").flickity({
+              cellAlign: "left",
+              contain: true,
+              pageDots: false,
+              prevNextButtons: false,
+              wrapAround: true,
+              draggable: false,
+              lazyLoad: 2
+            });
+            reset_scrollbars_left();
+            $("#content_left").removeClass("hidden--content");
+          }, 300);
+        } else {
+          alert("Site is viewed in mobile resolution…");
         }
       }
     });
