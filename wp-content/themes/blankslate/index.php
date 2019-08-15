@@ -8,12 +8,20 @@
     <section id="content_left" data-namespace="News" class="w--50 noActor">
       <section id="content_left_items">
         <?php
-          $args = array('cat' => 6);
+          if ( wp_is_mobile() ) {
+            $args = array('cat' => array(7,8));
+          } else {
+            $args = array('cat' => 6);
+          }
           $loop = new WP_Query($args); 
         ?>
 
         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-          <?php get_template_part( 'content' ); ?>
+          <?php if ( wp_is_mobile() ): ?>
+            <?php get_template_part( 'content-actor' ); ?>
+          <?php else: ?>
+            <?php get_template_part( 'content' ); ?>
+          <?php endif ?>
         <?php endwhile; ?>
       </section>
     </section>
