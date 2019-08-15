@@ -141,8 +141,6 @@ function reset_scrollbars_left() {
   $(document).on("click", ".actor-link", function(event) {
     event.preventDefault();
     //
-    var grid = $("#content_right .grid-container");
-    //
     if ($(this).hasClass("active")) {
       var cat = [7, 8];
       reset_navLinks_right();
@@ -161,16 +159,38 @@ function reset_scrollbars_left() {
         cat: cat
       },
       success: function(content) {
-        grid.addClass("hidden--content");
-        setTimeout(function() {
-          grid.empty();
-        }, 275);
-        setTimeout(function() {
-          grid.append(content);
-        }, 300);
-        setTimeout(function() {
-          grid.removeClass("hidden--content");
-        }, 325);
+        // Determine display-status of #content_right
+        var display_status_r = $("#content_right").css("display");
+        //
+        if (display_status_r == "block") {
+          var grid = $("#content_right .grid-container");
+          //
+          grid.addClass("hidden--content");
+          setTimeout(function() {
+            grid.empty();
+          }, 275);
+          setTimeout(function() {
+            grid.append(content);
+          }, 300);
+          setTimeout(function() {
+            grid.removeClass("hidden--content");
+          }, 325);
+        } else {
+          alert("Site is viewed in mobile resolution…");
+          //
+          var grid = $("#content_left_items");
+          //
+          grid.addClass("hidden--content");
+          setTimeout(function() {
+            grid.empty();
+          }, 275);
+          setTimeout(function() {
+            grid.append(content);
+          }, 300);
+          setTimeout(function() {
+            grid.removeClass("hidden--content");
+          }, 325);
+        }
       }
     });
   });
