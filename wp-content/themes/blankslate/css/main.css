@@ -119,6 +119,13 @@ body.home {
   margin-left: 5px;
 }
 
+.mobile .content-item img {
+  float: none;
+  margin: 0;
+
+  width: 100%;
+}
+
 .content-item.actor header {
   position: relative;
 }
