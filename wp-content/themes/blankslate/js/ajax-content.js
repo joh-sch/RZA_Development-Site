@@ -54,11 +54,12 @@ function toggle_gridDisplay_mobile(element) {
           var namespace = "News";
           $("#content_left").attr("data-namespace", namespace);
         }
+        //
         $("#content_left_items").addClass("hidden--content");
-
+        //
         setTimeout(function() {
           $("#content_left_items")
-            .find("article, .content-item")
+            .find("article, .content-item, .grid-item.actor")
             .remove();
           $("#content_left_items").append(content);
           //
