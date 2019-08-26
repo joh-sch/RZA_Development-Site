@@ -62,17 +62,33 @@ body.home {
   position: absolute;
 }
 
+/* ****************************** */
+
 #content_right {
+  /* MOBILE */
+  display: none;
+  /* ****** */
+
   background: red;
   min-height: 100vh;
+}
+
+#content_left {
+  /* MOBILE */
+  min-width: 100%;
+  /* ****** */
+}
+#content_left.grid {
+  background: red;
+}
+#content_left.grid.off {
+  background: white;
 }
 
 #content_left,
 #content_right {
   height: 100vh;
   overflow: scroll;
-
-  min-width: 600px;
 }
 #content_left.noActor {
   padding-top: calc(10.75rem);
@@ -86,6 +102,8 @@ body.home {
 #content_right article {
   transition: opacity 0.25s;
 }
+
+/* ****************************** */
 
 .content-item {
   margin-bottom: 1.33rem;
@@ -143,17 +161,30 @@ body.home {
 
 /* ****************************** */
 
-.grid-container {
+.grid-container,
+.grid-container.mobile {
   display: grid;
-
+}
+.grid-container {
   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   grid-gap: 2rem;
 
   padding: 2rem;
 }
+.grid-container.mobile {
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  padding: 0;
+}
+.grid-container.mobile.off {
+  grid-template-columns: 1fr !important;
+}
 
 .grid-item.actor {
   min-width: 175px;
+}
+.grid-container.mobile .grid-item.actor {
+  min-width: 80px;
 }
 
 .grid-item:hover {
@@ -376,6 +407,10 @@ h2 {
 /* ****************************** */
 
 .gutter {
+  /* MOBILE */
+  display: none;
+  /* ****** */
+
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -422,3 +457,41 @@ h2 {
   > .os-scrollbar-handle {
   background: white !important;
 }
+
+/* ****************************** */
+
+@media only screen and (min-width: 0) {
+}
+/* ****************************** */
+
+@media only screen and (min-width: 768px) {
+  #content_right,
+  .gutter {
+    display: block;
+  }
+  #content_left,
+  #content_right {
+    min-width: 600px;
+  }
+}
+/* ****************************** */
+
+@media only screen and (min-width: 1024px) {
+}
+
+/* ****************************** */
+
+@media only screen and (min-width: 1280px) {
+}
+
+/* ****************************** */
+
+@media only screen and (min-width: 1440px) {
+}
+
+/* ****************************** */
+
+@media only screen and (min-width: 1680px) {
+}
+
+/* ****************************** */
