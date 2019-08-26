@@ -92,8 +92,11 @@ body.home {
 }
 #content_left.noActor {
   padding-top: calc(10.75rem);
-  padding-left: 2rem;
-  padding-right: 2rem;
+
+  /* MOBILE */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* ****** */
 }
 
 #content_left div,
@@ -117,6 +120,13 @@ body.home {
 .content-item img {
   float: right;
   margin-left: 5px;
+}
+
+.mobile .content-item img {
+  float: none;
+  margin: 0;
+
+  width: 100%;
 }
 
 .content-item.actor header {
@@ -472,6 +482,11 @@ h2 {
   #content_left,
   #content_right {
     min-width: 600px;
+  }
+
+  #content_left.noActor {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 /* ****************************** */
