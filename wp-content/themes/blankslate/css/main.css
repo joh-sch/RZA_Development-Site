@@ -81,6 +81,9 @@ body.home {
 #content_left.grid {
   background: red;
 }
+#content_left.grid.off {
+  background: white;
+}
 
 #content_left,
 #content_right {
@@ -172,6 +175,9 @@ body.home {
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   padding: 0;
+}
+.grid-container.mobile.off {
+  grid-template-columns: 1fr !important;
 }
 
 .grid-item.actor {

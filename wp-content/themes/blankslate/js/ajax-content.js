@@ -22,6 +22,10 @@ function toggle_gridDisplay_mobile(element) {
   element.parents("section").addClass("grid");
   element.addClass("grid-container mobile");
 }
+function disable_gridDisplay_mobile(element) {
+  element.parents("section").addClass("off");
+  element.addClass("off");
+}
 
 // Function to fetch subpage-content (Agentur, Kontakt, News)
 (function($) {
@@ -49,26 +53,28 @@ function toggle_gridDisplay_mobile(element) {
         cat: cat
       },
       success: function(content) {
+        var section = $("#content_left");
+        var container = $("#content_left_items");
         // Change namespace
         if (cat == "6") {
           var namespace = "News";
-          $("#content_left").attr("data-namespace", namespace);
+          section.attr("data-namespace", namespace);
         }
         //
-        $("#content_left_items").addClass("hidden--content");
+        container.addClass("hidden--content");
         //
         setTimeout(function() {
-          $("#content_left_items")
-            .find("article, .content-item, .grid-item.actor")
-            .remove();
-          $("#content_left_items").append(content);
+          container.find("article, .content-item, .grid-item.actor").remove();
+          container.append(content);
           //
-          $("#content_left").removeClass("actor");
-          $("#content_left").addClass("noActor");
+          section.removeClass("actor");
+          section.addClass("noActor");
+          //
+          disable_gridDisplay_mobile(container);
         }, 275);
         setTimeout(function() {
           reset_scrollbars_left();
-          $("#content_left_items").removeClass("hidden--content");
+          container.removeClass("hidden--content");
         }, 300);
       }
     });
