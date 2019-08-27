@@ -545,6 +545,12 @@ h2 {
 
     padding: 2rem;
   }
+  #header.noActor {
+    background: white;
+  }
+  #header.open {
+    height: auto !important;
+  }
 
   #nav_main {
     display: flex !important;
