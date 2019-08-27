@@ -166,6 +166,10 @@ body.home {
   width: 100%;
 }
 
+.content-item.actor {
+  margin-bottom: 0;
+}
+
 .content-item.actor header {
   position: relative;
 }

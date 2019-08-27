@@ -1,6 +1,7 @@
 <?php get_template_part( 'templates/snippets/header'); ?>
 
   <main id="content" class="d--flex">
+    
     <!-- Nav-Menu -->
     <?php get_template_part( 'templates/snippets/menu'); ?>
     
