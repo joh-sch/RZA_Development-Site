@@ -19,7 +19,7 @@
     </div>
   </header>
 
-  <div class="px--2 pt--2">
+  <div class="p--mob-1-desk-2">
     <div class="mb--1">
       <h1 class="text--b"><?php the_title(); ?></h1>
       <span>*<?php the_field('geburtsjahr'); ?></span>

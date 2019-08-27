@@ -211,6 +211,9 @@ function disable_gridDisplay_mobile(element) {
             //
             container.append(content);
             disable_gridDisplay_mobile(container);
+            //
+            $("#content_left").removeClass("noActor");
+            $("#content_left").addClass("actor");
           }, 275);
           //
           setTimeout(function() {
