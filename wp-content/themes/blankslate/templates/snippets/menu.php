@@ -1,9 +1,16 @@
-<header id="header" class="z--high mb--2">
-  <button id="button_nav" class="text text--lg hidden--off">
-    +
-  </button>
+<header id="header" class="z--high">
+
+  <!-- Menu-button for desktop display -->
+  <button id="button_nav" class="text text--lg hidden--off">+</button>
+
+  <!-- Menu-button for mobile display -->
+  <button id="button_nav_mobile" class="hidden--desktop" onclick="toggle_menu_mobile()">open</button>
   
-  <div id="nav_main" class="d--flex text--lg text--b w--100">
+  <!-- Brand -->
+  <a id="brand_link" href="<?php echo get_home_url(); ?>">RZ A</a>
+
+  <!-- Nav -->
+  <div id="nav_main" class="d--flex text--lg text--b w--100 mt--mob-6-desk-0">
 
     <div class="f1">
       <div class="d--flex v">
@@ -22,7 +29,7 @@
         ?>
       </div>
 
-      <div class="d--flex h">
+      <div class="d--flex v-mob-h-desk">
         <?php 
           $menu = wp_get_nav_menu_object('Untermenü');  
           $menu_items = wp_get_nav_menu_items($menu->term_id);
@@ -43,10 +50,7 @@
         ?>
       </div>
     </div>
-
-    <div class="f1 d--flex h right align-top">
-      <a id="brand_link" href="<?php echo get_home_url(); ?>">RZ A</a>
-    </div>
     
-  </div>  
+  </div> 
+  
 </header>
