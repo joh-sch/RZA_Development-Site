@@ -360,10 +360,22 @@ button.text:hover {
 .pt--2 {
   padding-top: 2rem;
 }
-
 .pt--10 {
   padding-top: 10rem;
 }
+
+/* ***** */
+
+.px--mob-1-desk-2 {
+  padding: 0 1rem;
+}
+
+/* ***** */
+
+.p--mob-1-desk-2 {
+  padding: 1rem;
+}
+
 /* ****************************** */
 
 .d--flex {
@@ -574,16 +586,28 @@ h2 {
     content: ",";
   }
 
-  /* *************** */
+  /* ***** */
 
   .hidden--desktop {
     display: none !important;
   }
 
-  /* *************** */
+  /* ***** */
 
   .mt--mob-6-desk-0 {
     margin-top: 0;
+  }
+
+  /* ***** */
+
+  .px--mob-1-desk-2 {
+    padding: 0 2rem;
+  }
+
+  /* ***** */
+
+  .p--mob-1-desk-2 {
+    padding: 2rem;
   }
 }
 /* ****************************** */
