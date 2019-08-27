@@ -46,8 +46,14 @@ body.home {
   font-family: "Agipo Regular";
 }
 
+/* ****************************** */
+
 #header {
-  width: 50%;
+  /* MOBILE */
+  width: 100%;
+  height: 8rem;
+  /* ****** */
+
   position: fixed;
 
   padding: 2rem;
@@ -57,9 +63,34 @@ body.home {
 #header.off {
   background: transparent;
 }
+#header.open {
+  height: 100% !important;
+}
 
 .actor #header {
   position: absolute;
+}
+
+#nav_main {
+  /* MOBILE */
+  display: none;
+  /* ****** */
+}
+#header.open #nav_main {
+  display: flex;
+}
+
+#button_nav_mobile {
+  position: absolute;
+
+  /* DEV */
+  width: 100px;
+  height: 33px;
+  background: plum;
+}
+#brand_link {
+  position: absolute;
+  right: 2rem;
 }
 
 /* ****************************** */
@@ -169,6 +200,13 @@ body.home {
   pointer-events: none;
 }
 
+.hidden--mobile {
+  display: none !important;
+}
+.hidden--desktop {
+  display: block !important;
+}
+
 /* ****************************** */
 
 .grid-container,
@@ -237,7 +275,9 @@ span.list:last-of-type {
 }
 
 span.list::after {
-  content: ",";
+  /* MOBILE */
+  content: "";
+  /* ****** */
 }
 span.list:last-of-type::after {
   content: "";
@@ -284,6 +324,14 @@ button.text:hover {
   margin-bottom: 2rem;
 }
 
+.mt--2 {
+  margin-top: 2rem;
+}
+
+.mt--mob-6-desk-0 {
+  margin-top: 6rem;
+}
+
 .mr--1 {
   margin-right: 1rem;
 }
@@ -327,6 +375,15 @@ button.text:hover {
 }
 .d--flex.h.align-top {
   align-items: flex-start;
+}
+
+.d--flex.v-mob-h-desk {
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .d--flex.v-mob-h-desk {
+    flex-direction: row;
+  }
 }
 
 .d--flex.f1,
@@ -475,6 +532,15 @@ h2 {
 /* ****************************** */
 
 @media only screen and (min-width: 768px) {
+  #header {
+    width: 50%;
+    height: auto;
+  }
+
+  #nav_main {
+    display: flex !important;
+  }
+
   #content_right,
   .gutter {
     display: block;
@@ -487,6 +553,22 @@ h2 {
   #content_left.noActor {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  span.list::after {
+    content: ",";
+  }
+
+  /* *************** */
+
+  .hidden--desktop {
+    display: none !important;
+  }
+
+  /* *************** */
+
+  .mt--mob-6-desk-0 {
+    margin-top: 0;
   }
 }
 /* ****************************** */

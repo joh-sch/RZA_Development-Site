@@ -44,6 +44,26 @@ function resize_menu() {
   menu.width(master_width);
 }
 
+function open_menu_mobile() {
+  var menu_container = jQuery("#header");
+  //
+  menu_container.addClass("open");
+}
+function close_menu_mobile() {
+  var menu_container = jQuery("#header");
+  //
+  menu_container.removeClass("open");
+}
+function toggle_menu_mobile() {
+  var menu_container = jQuery("#header");
+  //
+  if (!menu_container.hasClass("open")) {
+    menu_container.addClass("open");
+  } else {
+    menu_container.removeClass("open");
+  }
+}
+
 //
 
 jQuery(document).ready(function($) {
