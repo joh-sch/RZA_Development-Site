@@ -157,6 +157,8 @@ function disable_gridDisplay_mobile(element) {
     var actor_id = $(this).attr("id");
     var post_id = $(this).data("post-id");
     //
+    history.pushState(null, null, "#" + actor_id);
+    //
     var navLinks = $(".content-link a");
     navLinks.removeClass("active");
     var gridItems = $(".grid-item.actor");
