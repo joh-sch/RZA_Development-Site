@@ -69,6 +69,7 @@ function disable_gridDisplay_mobile(element) {
         setTimeout(function() {
           // Close menu
           toggle_menu_mobile();
+          set_menu_color_r();
           //
           container.find("article, .content-item, .grid-item.actor").remove();
           container.append(content);
@@ -133,6 +134,7 @@ function disable_gridDisplay_mobile(element) {
           setTimeout(function() {
             // Close menu
             toggle_menu_mobile();
+            set_menu_color_w();
             //
             grid.empty();
             toggle_gridDisplay_mobile(grid);
