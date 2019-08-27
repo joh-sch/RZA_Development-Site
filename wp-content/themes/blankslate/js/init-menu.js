@@ -64,6 +64,21 @@ function toggle_menu_mobile() {
   }
 }
 
+function set_menu_color_r() {
+  var menu_container = jQuery("#header");
+  //
+  if (!menu_container.hasClass("noActor")) {
+    menu_container.addClass("noActor");
+  }
+}
+function set_menu_color_w() {
+  var menu_container = jQuery("#header");
+  //
+  if (menu_container.hasClass("noActor")) {
+    menu_container.removeClass("noActor");
+  }
+}
+
 //
 
 jQuery(document).ready(function($) {
