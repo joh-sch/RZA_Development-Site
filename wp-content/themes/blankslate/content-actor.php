@@ -11,7 +11,7 @@
 ?>
 
 <div class="grid-item actor <?php echo $status ?>" id="<?php echo sanitize_title_with_dashes(get_the_title()) ?>" data-post-id="<?php the_ID() ?>">
-  <figure > 
+  <figure class="d--flex mob-vr-desk-v h--100"> 
     <img src="<?php the_post_thumbnail_url(); ?>">
     <figcaption class="text--b"><?php the_title(); ?></figcaption>
   </figure>

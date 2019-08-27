@@ -323,6 +323,10 @@ button.text:hover {
   width: 50vw;
 }
 
+.h--100 {
+  height: 100%;
+}
+
 .mb--1 {
   margin-bottom: 1rem;
 }
@@ -383,6 +387,12 @@ button.text:hover {
 
 .d--flex.v {
   flex-direction: column;
+}
+.d--flex.vr {
+  flex-direction: column-reverse;
+}
+.d--flex.mob-vr-desk-v {
+  flex-direction: column-reverse;
 }
 
 .d--flex.h {
@@ -608,6 +618,12 @@ h2 {
 
   .p--mob-1-desk-2 {
     padding: 2rem;
+  }
+
+  /* ***** */
+
+  .d--flex.mob-vr-desk-v {
+    flex-direction: column;
   }
 }
 /* ****************************** */
