@@ -542,6 +542,8 @@ h2 {
   #header {
     width: 50%;
     height: auto;
+
+    padding: 2rem;
   }
 
   #nav_main {
