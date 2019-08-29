@@ -528,6 +528,8 @@ h2 {
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50%;
+
+  position: relative;
 }
 
 .gutter.gutter-horizontal {
@@ -545,7 +547,14 @@ h2 {
   height: 100vh;
   float: left;
 
-  background: gray;
+  background: white;
+}
+
+.gutter img {
+  height: 100%;
+
+  position: absolute;
+  right: 0;
 }
 
 /* ****************************** */

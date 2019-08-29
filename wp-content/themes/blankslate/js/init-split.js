@@ -5,13 +5,21 @@
 jQuery(document).ready(function($) {
   // Split panes
   Split(["#content_left", "#content_right"], {
-    gutterSize: 8,
+    gutterSize: 50,
     cursor: "col-resize",
     onDrag: function() {
       resize_menu();
       resize_zigzag();
     }
   });
+  // Append Zig-Zag element to split handler
+  var handler = document.getElementsByClassName("gutter");
+  var zigzag = document.createElement("img");
+  //
+  zigzag.src =
+    "http://localhost:8888/wp-content/uploads/2019/08/rz_zigzag_rot_v.png";
+  handler[0].appendChild(zigzag);
+
   // Init scrollbars
   window.os_left = $("#content_left")
     .overlayScrollbars({

@@ -27,9 +27,6 @@
       </section>
     </section>
 
-    <!-- ZigZag -->
-    <div class="zigzag"></div>
-
     <!-- Right Content Section -->
     <section id="content_right" class="w--50 text--def">
       <div class="grid-container">
