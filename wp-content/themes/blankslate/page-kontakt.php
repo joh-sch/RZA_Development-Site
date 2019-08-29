@@ -6,7 +6,7 @@
     <?php get_template_part( 'templates/snippets/menu'); ?>
     
     <!-- Content Sections -->
-    <section id="content_left" data-namespace="News" class="w--50 noActor <?php if (wp_is_mobile()): ?> grid<?php endif ?>">
+    <section id="content_left" data-namespace="<?php echo get_the_title(); ?>" class="w--50 noActor <?php if (wp_is_mobile()): ?> grid<?php endif ?>">
       <section id="content_left_items" class="<?php if (wp_is_mobile()): ?> grid-container mobile<?php endif ?>">
         
         <!-- Load »Agentur« content -->

@@ -60,10 +60,7 @@ function disable_gridDisplay_mobile(element) {
         var section = $("#content_left");
         var container = $("#content_left_items");
         // Change namespace
-        if (cat == "6") {
-          var namespace = "News";
-          section.attr("data-namespace", namespace);
-        }
+        section.attr("data-namespace", cat);
         //
         container.addClass("hidden--content");
         //
