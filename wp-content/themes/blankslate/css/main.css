@@ -39,6 +39,7 @@ Main styling & visual behavior
 
 body.blog,
 body.single,
+body.page,
 body.home {
   height: 100vh;
   overflow: hidden;
