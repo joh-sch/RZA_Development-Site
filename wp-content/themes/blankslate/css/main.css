@@ -143,6 +143,23 @@ body.home {
 
 /* ****************************** */
 
+.zigzag {
+  /* DEV */
+  background: plum;
+  pointer-events: none;
+  /* *** */
+
+  width: 50px;
+  height: 100vh;
+
+  position: absolute;
+  left: calc(50vw - 50px);
+
+  z-index: 99999999;
+}
+
+/* ****************************** */
+
 .content-item {
   margin-bottom: 1.33rem;
   overflow: hidden;
