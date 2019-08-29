@@ -8,11 +8,8 @@ Main styling & visual behavior
 
 /* ****************************** */
 
-.dev-bg--1 {
-  background: plum;
-}
-.dev-bg--2 {
-  background: lightgreen;
+:root {
+  --color_rz-red: #ff1412;
 }
 
 /* ****************************** */
@@ -69,7 +66,7 @@ body.home {
 }
 
 #header.noActor {
-  background: red;
+  background: var(--color_rz-red);
 }
 #header.noActor.open {
   background: white;
@@ -108,7 +105,7 @@ body.home {
   display: none;
   /* ****** */
 
-  background: red;
+  background: var(--color_rz-red);
   min-height: 100vh;
 }
 
@@ -118,7 +115,7 @@ body.home {
   /* ****** */
 }
 #content_left.grid {
-  background: red;
+  background: var(--color_rz-red);
 }
 #content_left.grid.off {
   background: white;
@@ -267,7 +264,7 @@ a {
 }
 a:hover,
 a.active {
-  color: red !important;
+  color: var(--color_rz-red) !important;
 }
 a:visited {
   color: black;
@@ -303,7 +300,7 @@ button {
 
 button.text:hover {
   cursor: pointer;
-  color: red;
+  color: var(--color_rz-red);
 }
 
 #button_nav {
