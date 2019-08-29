@@ -61,12 +61,12 @@ function my_ajax_content() {
       $content = '<div class="content-item text--def">' . $page->post_content . '</div>';
       echo $content;
     } else {
-      $args = array('cat' => $cat);
-      $loop = new WP_Query($args); 
+      $loop = new WP_Query( array (
+        'category_name' => $cat
+      )); 
       //
       while ( $loop->have_posts() ) { 
         $loop->the_post();
-        //
         get_template_part( 'content' );
       }
     }

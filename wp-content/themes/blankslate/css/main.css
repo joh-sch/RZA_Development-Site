@@ -39,6 +39,7 @@ Main styling & visual behavior
 
 body.blog,
 body.single,
+body.page,
 body.home {
   height: 100vh;
   overflow: hidden;
@@ -164,6 +165,10 @@ body.home {
   margin: 0;
 
   width: 100%;
+}
+
+.content-item.actor {
+  margin-bottom: 0;
 }
 
 .content-item.actor header {

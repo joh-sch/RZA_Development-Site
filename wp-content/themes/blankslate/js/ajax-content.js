@@ -46,6 +46,7 @@ function disable_gridDisplay_mobile(element) {
       .addClass("active");
     //
     cat = find_content_cat($(this));
+    history.pushState(null, null, "/" + cat);
     //
     $.ajax({
       url: ajaxcontent.ajaxurl,
@@ -59,10 +60,7 @@ function disable_gridDisplay_mobile(element) {
         var section = $("#content_left");
         var container = $("#content_left_items");
         // Change namespace
-        if (cat == "6") {
-          var namespace = "News";
-          section.attr("data-namespace", namespace);
-        }
+        section.attr("data-namespace", cat);
         //
         container.addClass("hidden--content");
         //
@@ -156,6 +154,8 @@ function disable_gridDisplay_mobile(element) {
   $(document).on("click", ".grid-item.actor", function(event) {
     var actor_id = $(this).attr("id");
     var post_id = $(this).data("post-id");
+    //
+    history.pushState(null, null, "/" + actor_id);
     //
     var navLinks = $(".content-link a");
     navLinks.removeClass("active");

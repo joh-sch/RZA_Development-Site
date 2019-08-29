@@ -6,24 +6,16 @@
     <?php get_template_part( 'templates/snippets/menu'); ?>
     
     <!-- Content Sections -->
-    <section id="content_left" data-namespace="News" class="w--50 noActor <?php if (wp_is_mobile()): ?> grid<?php endif ?>">
+    <section id="content_left" data-namespace="<?php echo get_the_title(); ?>" class="w--50 noActor <?php if (wp_is_mobile()): ?> grid<?php endif ?>">
       <section id="content_left_items" class="<?php if (wp_is_mobile()): ?> grid-container mobile<?php endif ?>">
-        <?php
-          if ( wp_is_mobile() ) {
-            $args = array('cat' => array(7,8));
-          } else {
-            $args = array('cat' => 6);
-          }
-          $loop = new WP_Query($args); 
+        
+        <!-- Load »Agentur« content -->
+        <?php 
+          $page = get_page_by_title('Agentur');
+          $content = '<div class="content-item text--def">' . $page->post_content . '</div>';
+          echo $content
         ?>
 
-        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-          <?php if ( wp_is_mobile() ): ?>
-            <?php get_template_part( 'content-actor' ); ?>
-          <?php else: ?>
-            <?php get_template_part( 'content' ); ?>
-          <?php endif ?>
-        <?php endwhile; ?>
       </section>
     </section>
 

@@ -1,12 +1,12 @@
 <?php get_template_part( 'templates/snippets/header'); ?>
 
   <main id="content" class="d--flex">
+
+    <!-- Nav-Menu -->
+    <?php get_template_part( 'templates/snippets/menu'); ?>
     
     <!-- Content Sections -->
     <section id="content_left" data-namespace="News" class="w--50 actor">
-
-      <?php get_template_part( 'templates/snippets/menu'); ?>
-
       <section id="content_left_items">
         <article id="post-<?php the_ID(); ?>" class="content-item actor text--def">
           
@@ -29,7 +29,7 @@
             </div>
           </header>
 
-          <div class="px--2 pt--2">
+          <div class="p--mob-1-desk-2">
             <div class="mb--1">
               <h1 class="text--b"><?php the_title(); ?></h1>
               <span>*<?php the_field('geburtsjahr'); ?></span>
