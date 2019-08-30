@@ -79,17 +79,6 @@ function set_menu_color_w() {
   }
 }
 
-function resize_zigzag() {
-  var master = jQuery("#content_left");
-  var master_width = master.outerWidth();
-
-  var zigzag = jQuery(".zigzag");
-  var zigzag_width = zigzag.width();
-  var zigzag_position = master_width - zigzag_width;
-  //
-  zigzag.css("left", zigzag_position);
-}
-
 //
 
 jQuery(document).ready(function($) {
