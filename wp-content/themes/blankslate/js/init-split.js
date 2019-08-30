@@ -5,12 +5,15 @@
 jQuery(document).ready(function($) {
   // Split panes
   Split(["#content_left", "#content_right"], {
-    gutterSize: 8,
+    gutterSize: 10,
     cursor: "col-resize",
     onDrag: function() {
       resize_menu();
+      resize_zigzag();
     }
   });
+  //
+  resize_zigzag();
   // Init scrollbars
   window.os_left = $("#content_left")
     .overlayScrollbars({

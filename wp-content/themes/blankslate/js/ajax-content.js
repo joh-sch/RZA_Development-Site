@@ -173,19 +173,22 @@ function disable_gridDisplay_mobile(element) {
       },
       success: function(content) {
         // Determine display-status of #content_right
-        var display_status_r = $("#content_right").css("display");
+        var section = $("#content_left");
         var container = $("#content_left_items");
+        var display_status_r = $("#content_right").css("display");
+        // Change namespace
+        section.attr("data-namespace", "actor");
         //
         if (display_status_r == "block") {
-          $("#content_left").addClass("hidden--content");
+          section.addClass("hidden--content");
           hide_menu();
           //
           setTimeout(function() {
             container.find("article, .content-item").remove();
             container.append(content);
             //
-            $("#content_left").removeClass("noActor");
-            $("#content_left").addClass("actor");
+            section.removeClass("noActor");
+            section.addClass("actor");
           }, 275);
           //
           setTimeout(function() {
@@ -199,10 +202,10 @@ function disable_gridDisplay_mobile(element) {
               lazyLoad: 2
             });
             reset_scrollbars_left();
-            $("#content_left").removeClass("hidden--content");
+            section.removeClass("hidden--content");
           }, 300);
         } else {
-          $("#content_left").addClass("hidden--content");
+          section.addClass("hidden--content");
           //
           setTimeout(function() {
             $("#content_left_items")
@@ -212,8 +215,8 @@ function disable_gridDisplay_mobile(element) {
             container.append(content);
             disable_gridDisplay_mobile(container);
             //
-            $("#content_left").removeClass("noActor");
-            $("#content_left").addClass("actor");
+            section.removeClass("noActor");
+            section.addClass("actor");
           }, 275);
           //
           setTimeout(function() {
@@ -228,7 +231,7 @@ function disable_gridDisplay_mobile(element) {
             });
             //
             reset_scrollbars_left();
-            $("#content_left").removeClass("hidden--content");
+            section.removeClass("hidden--content");
           }, 300);
         }
       }

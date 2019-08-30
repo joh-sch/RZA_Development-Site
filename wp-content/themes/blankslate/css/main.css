@@ -8,11 +8,8 @@ Main styling & visual behavior
 
 /* ****************************** */
 
-.dev-bg--1 {
-  background: plum;
-}
-.dev-bg--2 {
-  background: lightgreen;
+:root {
+  --color_rz-red: #ff1412;
 }
 
 /* ****************************** */
@@ -69,7 +66,7 @@ body.home {
 }
 
 #header.noActor {
-  background: red;
+  background: var(--color_rz-red);
 }
 #header.noActor.open {
   background: white;
@@ -108,7 +105,7 @@ body.home {
   display: none;
   /* ****** */
 
-  background: red;
+  background: var(--color_rz-red);
   min-height: 100vh;
 }
 
@@ -118,7 +115,7 @@ body.home {
   /* ****** */
 }
 #content_left.grid {
-  background: red;
+  background: var(--color_rz-red);
 }
 #content_left.grid.off {
   background: white;
@@ -142,6 +139,36 @@ body.home {
 #content_right div,
 #content_right article {
   transition: opacity 0.25s;
+}
+
+/* ****************************** */
+
+.zigzag-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+
+  z-index: 999999;
+
+  pointer-events: none;
+}
+.zigzag-container img {
+  height: 100vh;
+}
+
+.zigzag {
+  /* DEV */
+  background: plum;
+  pointer-events: none;
+  /* *** */
+
+  width: 50px;
+  height: 100vh;
+
+  position: absolute;
+  left: calc(50vw - 50px);
+
+  z-index: 99999999;
 }
 
 /* ****************************** */
@@ -267,7 +294,7 @@ a {
 }
 a:hover,
 a.active {
-  color: red !important;
+  color: var(--color_rz-red) !important;
 }
 a:visited {
   color: black;
@@ -303,7 +330,7 @@ button {
 
 button.text:hover {
   cursor: pointer;
-  color: red;
+  color: var(--color_rz-red);
 }
 
 #button_nav {
@@ -514,6 +541,8 @@ h2 {
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50%;
+
+  position: relative;
 }
 
 .gutter.gutter-horizontal {
@@ -531,7 +560,14 @@ h2 {
   height: 100vh;
   float: left;
 
-  background: gray;
+  background: white;
+}
+
+.gutter img {
+  height: 100%;
+
+  position: absolute;
+  right: 0;
 }
 
 /* ****************************** */
@@ -547,7 +583,7 @@ h2 {
 }
 
 .rza > .os-scrollbar-vertical > .os-scrollbar-track > .os-scrollbar-handle {
-  background: black !important;
+  background: transparent !important;
   border-radius: 0 !important;
 }
 
@@ -555,7 +591,7 @@ h2 {
   > .os-scrollbar-vertical
   > .os-scrollbar-track
   > .os-scrollbar-handle {
-  background: white !important;
+  background: transparent !important;
 }
 
 /* ****************************** */
@@ -566,7 +602,7 @@ h2 {
 
 @media only screen and (min-width: 768px) {
   #header {
-    width: 50%;
+    width: calc(50% - 5px);
     height: auto;
 
     padding: 2rem;
