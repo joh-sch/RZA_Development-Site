@@ -155,20 +155,8 @@ body.home {
 .zigzag-container img {
   height: 100vh;
 }
-
-.zigzag {
-  /* DEV */
-  background: plum;
-  pointer-events: none;
-  /* *** */
-
-  width: 50px;
-  height: 100vh;
-
-  position: absolute;
-  left: calc(50vw - 50px);
-
-  z-index: 99999999;
+.zigzag-container img.active {
+  filter: drop-shadow(0px 0px 6px #ff1412);
 }
 
 /* ****************************** */
@@ -560,7 +548,7 @@ h2 {
   height: 100vh;
   float: left;
 
-  background: white;
+  background: var(--color_rz-red);
 }
 
 .gutter img {
