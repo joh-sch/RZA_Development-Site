@@ -143,6 +143,15 @@ body.home {
 
 /* ****************************** */
 
+.zigzag-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.zigzag-container img {
+  height: 100vh;
+}
+
 .zigzag {
   /* DEV */
   background: plum;

@@ -5,7 +5,7 @@
 jQuery(document).ready(function($) {
   // Split panes
   Split(["#content_left", "#content_right"], {
-    gutterSize: 50,
+    gutterSize: 10,
     cursor: "col-resize",
     onDrag: function() {
       resize_menu();
