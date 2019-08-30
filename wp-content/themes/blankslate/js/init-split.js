@@ -9,9 +9,11 @@ jQuery(document).ready(function($) {
     cursor: "col-resize",
     onDrag: function() {
       resize_menu();
+      resize_zigzag();
     }
   });
-
+  //
+  resize_zigzag();
   // Init scrollbars
   window.os_left = $("#content_left")
     .overlayScrollbars({

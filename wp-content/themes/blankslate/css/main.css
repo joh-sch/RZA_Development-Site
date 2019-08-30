@@ -144,9 +144,13 @@ body.home {
 /* ****************************** */
 
 .zigzag-container {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
+  left: 50%;
+
+  z-index: 999999;
+
+  pointer-events: none;
 }
 .zigzag-container img {
   height: 100vh;
