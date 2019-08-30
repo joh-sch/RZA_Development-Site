@@ -579,7 +579,7 @@ h2 {
 }
 
 .rza > .os-scrollbar-vertical > .os-scrollbar-track > .os-scrollbar-handle {
-  background: black !important;
+  background: transparent !important;
   border-radius: 0 !important;
 }
 
@@ -587,7 +587,7 @@ h2 {
   > .os-scrollbar-vertical
   > .os-scrollbar-track
   > .os-scrollbar-handle {
-  background: white !important;
+  background: transparent !important;
 }
 
 /* ****************************** */
