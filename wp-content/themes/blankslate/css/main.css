@@ -156,21 +156,6 @@ body.home {
   height: 100vh;
 }
 
-.zigzag {
-  /* DEV */
-  background: plum;
-  pointer-events: none;
-  /* *** */
-
-  width: 50px;
-  height: 100vh;
-
-  position: absolute;
-  left: calc(50vw - 50px);
-
-  z-index: 99999999;
-}
-
 /* ****************************** */
 
 .content-item {
@@ -560,7 +545,7 @@ h2 {
   height: 100vh;
   float: left;
 
-  background: white;
+  background: var(--color_rz-red);
 }
 
 .gutter img {
@@ -602,7 +587,7 @@ h2 {
 
 @media only screen and (min-width: 768px) {
   #header {
-    width: calc(50% - 5px);
+    width: calc(50% - 10px);
     height: auto;
 
     padding: 2rem;
@@ -670,6 +655,9 @@ h2 {
 /* ****************************** */
 
 @media only screen and (min-width: 1024px) {
+  .zigzag-container img.active {
+    filter: drop-shadow(0px 2px 4px #ff1412);
+  }
 }
 
 /* ****************************** */
@@ -685,6 +673,9 @@ h2 {
 /* ****************************** */
 
 @media only screen and (min-width: 1680px) {
+  .zigzag-container img.active {
+    filter: drop-shadow(0px 1px 6px #ff1412);
+  }
 }
 
 /* ****************************** */
