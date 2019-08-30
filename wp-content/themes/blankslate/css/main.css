@@ -155,9 +155,6 @@ body.home {
 .zigzag-container img {
   height: 100vh;
 }
-.zigzag-container img.active {
-  filter: drop-shadow(0px 0px 6px #ff1412);
-}
 
 /* ****************************** */
 
@@ -658,6 +655,9 @@ h2 {
 /* ****************************** */
 
 @media only screen and (min-width: 1024px) {
+  .zigzag-container img.active {
+    filter: drop-shadow(0px 2px 4px #ff1412);
+  }
 }
 
 /* ****************************** */
@@ -673,6 +673,9 @@ h2 {
 /* ****************************** */
 
 @media only screen and (min-width: 1680px) {
+  .zigzag-container img.active {
+    filter: drop-shadow(0px 1px 6px #ff1412);
+  }
 }
 
 /* ****************************** */
