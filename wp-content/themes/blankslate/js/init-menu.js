@@ -40,10 +40,15 @@ function toggle_menu() {
 }
 function resize_menu() {
   var master = jQuery("#content_left");
+  var master_status = master.attr("data-namespace");
   var master_width = master.width();
   var menu = jQuery("#header");
   //
-  menu.width(master_width);
+  if (master_status == "actor") {
+    menu.outerWidth(master_width);
+  } else {
+    menu.width(master_width);
+  }
 }
 
 function open_menu_mobile() {
