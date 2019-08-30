@@ -16,6 +16,8 @@ function hide_menu() {
   if (!menu.hasClass("hidden--off")) {
     menu_container.addClass("off");
     menu_container.removeClass("perma");
+    menu_container.removeClass("open");
+    menu_container.removeClass("noActor");
     menu.addClass("hidden--off");
     menu_btn.removeClass("hidden--off");
   }
