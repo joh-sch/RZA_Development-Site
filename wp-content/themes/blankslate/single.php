@@ -91,6 +91,9 @@
 
     </section>
 
+    <!-- Zig-Zag -->
+    <?php get_template_part( 'templates/snippets/zigzag'); ?>
+
     <section id="content_right" class="w--50 text--def">
       <div class="grid-container">
 
