@@ -4,6 +4,7 @@
     
     <!-- Nav-Menu -->
     <?php get_template_part( 'templates/snippets/menu'); ?>
+    <?php get_template_part( 'templates/snippets/menu_mobile'); ?>
     
     <!-- Left Content Section -->
     <section id="content_left" data-namespace="News" class="w--50 noActor <?php if (wp_is_mobile()): ?> grid<?php endif ?>">

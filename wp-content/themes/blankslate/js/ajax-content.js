@@ -65,9 +65,6 @@ function disable_gridDisplay_mobile(element) {
         container.addClass("hidden--content");
         //
         setTimeout(function() {
-          // Close menu
-          toggle_menu_mobile();
-          set_menu_color_r();
           //
           container.find("article, .content-item, .grid-item.actor").remove();
           container.append(content);

@@ -57,26 +57,6 @@ function resize_menu() {
   }
 }
 
-function open_menu_mobile() {
-  var menu_container = jQuery("#header");
-  //
-  menu_container.addClass("open");
-}
-function close_menu_mobile() {
-  var menu_container = jQuery("#header");
-  //
-  menu_container.removeClass("open");
-}
-function toggle_menu_mobile() {
-  var menu_container = jQuery("#header");
-  //
-  if (!menu_container.hasClass("open")) {
-    menu_container.addClass("open");
-  } else {
-    menu_container.removeClass("open");
-  }
-}
-
 function set_menu_color_r() {
   var menu_container = jQuery("#header");
   //
