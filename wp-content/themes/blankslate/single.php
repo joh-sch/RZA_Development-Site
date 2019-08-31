@@ -6,7 +6,7 @@
     <?php get_template_part( 'templates/snippets/menu'); ?>
     
     <!-- Content Sections -->
-    <section id="content_left" data-namespace="News" class="w--50 actor">
+    <section id="content_left" data-namespace="actor" class="w--50 actor">
       <section id="content_left_items">
         <article id="post-<?php the_ID(); ?>" class="content-item actor text--def">
           
@@ -90,6 +90,9 @@
       </section>
 
     </section>
+
+    <!-- Zig-Zag -->
+    <?php get_template_part( 'templates/snippets/zigzag'); ?>
 
     <section id="content_right" class="w--50 text--def">
       <div class="grid-container">
