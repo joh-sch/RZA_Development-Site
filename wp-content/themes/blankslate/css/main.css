@@ -589,6 +589,10 @@ h2 {
 
   /* ***** */
 
+  .hidden--mobile {
+    display: block !important;
+  }
+
   .hidden--desktop {
     display: none !important;
   }

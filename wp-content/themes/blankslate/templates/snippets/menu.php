@@ -1,10 +1,9 @@
-<header id="header" class="z--high <?php if(is_single()): ?>off<?php endif ?>">
+<header id="header" class="z--high hidden--mobile <?php if(is_single()): ?>off<?php endif ?>">
 
-  <!-- Menu-button for desktop display -->
+  <!-- Menu-button -->
   <button id="button_nav" class="text text--lg <?php if(!is_single()): ?>hidden--off<?php endif ?>">+</button>
   
-
-  <!-- Nav -->
+  <!-- Menu -->
   <div id="nav_main" class="d--flex btw text--lg text--b w--100 <?php if(is_single()): ?>hidden--off<?php endif ?>">
 
     <!-- Links -->
