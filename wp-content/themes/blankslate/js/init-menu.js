@@ -1,6 +1,12 @@
 //
 // Utility-functions for interactions with menu-/nav-elements
 //
+function getStatus_content(section) {
+  var section = jQuery(section);
+  var section_status = section.attr("data-namespace");
+  //
+  return section_status;
+}
 
 function set_active_menu_entry() {
   var namespace = jQuery("#content_left").data("namespace");
@@ -40,7 +46,7 @@ function toggle_menu() {
 }
 function resize_menu() {
   var master = jQuery("#content_left");
-  var master_status = master.attr("data-namespace");
+  var master_status = getStatus_content("#content_left");
   var master_width = master.width();
   var menu = jQuery("#header");
   //

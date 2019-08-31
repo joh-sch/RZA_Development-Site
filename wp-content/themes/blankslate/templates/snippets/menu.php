@@ -1,11 +1,11 @@
-<header id="header" class="z--high">
+<header id="header" class="z--high <?php if(is_single()): ?>off<?php endif ?>">
 
   <!-- Menu-button for desktop display -->
-  <button id="button_nav" class="text text--lg hidden--off">+</button>
+  <button id="button_nav" class="text text--lg <?php if(!is_single()): ?>hidden--off<?php endif ?>">+</button>
   
 
   <!-- Nav -->
-  <div id="nav_main" class="d--flex btw text--lg text--b w--100 mt--mob-6-desk-0">
+  <div id="nav_main" class="d--flex btw text--lg text--b w--100 <?php if(is_single()): ?>hidden--off<?php endif ?>">
 
     <!-- Links -->
     <div>
