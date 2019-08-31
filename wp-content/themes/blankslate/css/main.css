@@ -9,6 +9,11 @@ Main styling & visual behavior
 /* ****************************** */
 
 :root {
+  /* Margins/Paddings */
+  --m_def_desk-lg: 2rem;
+  --m_left_r_desk-lg: 4rem;
+
+  /* Colors */
   --color_rz-red: #ff1412;
 }
 
@@ -54,7 +59,8 @@ body.home {
 
   position: fixed;
 
-  padding: 1rem;
+  padding: var(--m_def_desk-lg);
+  padding-right: var(--m_left_r_desk-lg);
 
   background: white;
 }
@@ -569,8 +575,6 @@ h2 {
   #header {
     width: calc(50% - 10px);
     height: auto;
-
-    padding: 2rem;
   }
   #header.noActor {
     background: white;
@@ -594,8 +598,8 @@ h2 {
 
   #content_left.noActor {
     padding-top: 10.75rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: var(--m_def_desk-lg);
+    padding-right: var(--m_left_r_desk-lg);
   }
 
   span.list::after {
