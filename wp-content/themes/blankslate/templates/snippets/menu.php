@@ -2,9 +2,6 @@
 
   <!-- Menu-button for desktop display -->
   <button id="button_nav" class="text text--lg hidden--off">+</button>
-
-  <!-- Menu-button for mobile display -->
-  <button id="button_nav_mobile" class="hidden--desktop" onclick="toggle_menu_mobile()">open</button>
   
   <!-- Brand -->
   <a id="brand_link" href="<?php echo get_home_url(); ?>">RZ A</a>
