@@ -46,7 +46,7 @@ function disable_gridDisplay_mobile(element) {
       .addClass("active");
     //
     cat = find_content_cat($(this));
-    history.pushState(null, null, "/" + cat);
+    history.pushState(null, null, "/" + cat.toLowerCase());
     //
     $.ajax({
       url: ajaxcontent.ajaxurl,
