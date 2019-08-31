@@ -593,7 +593,8 @@ h2 {
     display: block !important;
   }
 
-  .hidden--desktop {
+  .hidden--desktop,
+  .hidden--desktop--flex {
     display: none !important;
   }
 
