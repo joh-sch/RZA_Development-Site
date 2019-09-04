@@ -66,7 +66,7 @@ body.home {
   background: white;
 }
 #header_mob_wrapper div:last-of-type {
-  background: transparent;
+  background: transparent !important;
 }
 
 #header_mob_content,
@@ -91,7 +91,7 @@ body.home {
 #header.noActor {
   background: white;
 }
-#header_mob_wrapper.noActor {
+#header_mob_wrapper.noActor div {
   background: var(--color_rz-red);
   color: white;
 }
@@ -159,6 +159,15 @@ body.home {
 }
 .zigzag-container img {
   height: 100vh;
+}
+
+#header_mob_wrapper #zigzag_mob_r,
+#header_mob_wrapper.noActor #zigzag_mob_w {
+  display: none;
+}
+#header_mob_wrapper.noActor #zigzag_mob_r,
+#header_mob_wrapper #zigzag_mob_w {
+  display: block;
 }
 
 /* ****************************** */

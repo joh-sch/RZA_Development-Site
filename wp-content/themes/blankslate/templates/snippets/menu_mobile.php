@@ -44,6 +44,7 @@
 
   <!-- Mobile Zig-Zag -->
   <div>
-    <img class="w--100" id="zigzag_mob" src="wp-content/uploads/2019/09/rz_zigzag_weiss.png">
+    <img class="w--100" id="zigzag_mob_w" src="wp-content/uploads/2019/09/rz_zigzag_weiss.png">
+    <img class="w--100" id="zigzag_mob_r" src="wp-content/uploads/2019/09/rz_zigzag_mob_rot.png">
   </div>
 </header>
