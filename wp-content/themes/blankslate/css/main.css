@@ -181,7 +181,8 @@ body.home {
   padding: 2rem;
 }
 
-#brand_link {
+#brand_link,
+#brand_link_mob {
   font-size: 4rem;
 }
 
@@ -196,6 +197,9 @@ body.home {
 }
 
 /* ****************************** */
+.hidden--dis {
+  display: none !important;
+}
 
 .hidden--content > div,
 .hidden--content > article {
@@ -389,6 +393,10 @@ button.text:hover {
   display: flex;
 }
 
+.d--flex.hidden--dis.active {
+  display: flex !important;
+}
+
 .d--flex.v,
 .hidden--desktop--flex.v {
   flex-direction: column;
@@ -422,6 +430,10 @@ button.text:hover {
 }
 
 /* ****************************** */
+
+.text--xlg {
+  font-size: 4rem !important;
+}
 
 h1,
 .text--lg {

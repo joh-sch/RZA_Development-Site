@@ -57,6 +57,12 @@ function resize_menu() {
   }
 }
 
+function toggle_mobile_menu() {
+  var links = jQuery("#nav_links_mob");
+  //
+  links.toggleClass("active");
+}
+
 function set_menu_color_r() {
   var menu_container = jQuery("#header");
   //

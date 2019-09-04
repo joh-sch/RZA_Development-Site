@@ -2,14 +2,14 @@
 
   <div class="d--flex btw">
     <!-- Menu-Button -->
-    <button>+</button>
+    <button id="button_nav_mob" class="text--xlg" onclick="toggle_mobile_menu()">+</button>
 
     <!-- Brand -->
-    <a id="brand_link" class="nobreak" href="<?php echo get_home_url(); ?>">RZ A</a>
+    <a id="brand_link_mob" class="nobreak" href="<?php echo get_home_url(); ?>">RZ A</a>
   </div>
 
   <!-- Links -->
-  <div class="d--flex v">
+  <div id="nav_links_mob" class="d--flex v hidden--dis">
     <a href="#">Link</a>
     <a href="#">Link</a>
     <a href="#">Link</a>
