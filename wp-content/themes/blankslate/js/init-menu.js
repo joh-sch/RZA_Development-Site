@@ -58,11 +58,13 @@ function resize_menu() {
 }
 
 function toggle_mobile_menu() {
+  var btn = jQuery("#button_nav_mob");
   var container = jQuery("#header_mob");
   var links = jQuery("#nav_links_mob");
   //
   container.toggleClass("h--100");
   links.toggleClass("active");
+  btn.toggleClass("active");
 }
 
 function set_menu_color_r() {
@@ -113,5 +115,9 @@ jQuery(document).ready(function($) {
       $("#header").addClass("off");
       $("#button_nav").removeClass("hidden--off");
     }
+  });
+  //
+  $("#button_nav_mob").click(function() {
+    toggle_mobile_menu();
   });
 });

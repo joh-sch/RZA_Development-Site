@@ -2,7 +2,7 @@
 
   <div class="d--flex btw">
     <!-- Menu-Button -->
-    <button id="button_nav_mob" class="text--xlg" onclick="toggle_mobile_menu()">+</button>
+    <button id="button_nav_mob" class="text--xlg"></button>
 
     <!-- Brand -->
     <a id="brand_link_mob" class="nobreak" href="<?php echo get_home_url(); ?>">RZ A</a>
