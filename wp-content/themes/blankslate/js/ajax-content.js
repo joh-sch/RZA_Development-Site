@@ -73,6 +73,8 @@ function disable_gridDisplay_mobile(element) {
           section.addClass("noActor");
           //
           disable_gridDisplay_mobile(container);
+          toggle_mobile_menu();
+          set_menu_color_r();
         }, 275);
         setTimeout(function() {
           reset_scrollbars_left();

@@ -66,7 +66,7 @@ function toggle_mobile_menu() {
 }
 
 function set_menu_color_r() {
-  var menu_container = jQuery("#header");
+  var menu_container = jQuery("#header_mob");
   //
   if (!menu_container.hasClass("noActor")) {
     menu_container.addClass("noActor");

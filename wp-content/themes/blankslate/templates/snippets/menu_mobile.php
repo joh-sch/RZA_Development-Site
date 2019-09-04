@@ -19,7 +19,7 @@
         $title = $menu_item->title;
         $url = $menu_item->url;
         $cat = $menu_item->object_id;
-        $menu_link = '<a class="mb--05" data-content-cat="' . $cat . '">' . $title . '</a>';
+        $menu_link = '<a class="actor-link mb--05" data-content-cat="' . $cat . '">' . $title . '</a>';
         //
         echo $menu_link;
       } 
@@ -34,7 +34,7 @@
         $url = $menu_item->url;
         $cat = $menu_item->object_id;
         //
-        $menu_link = '<span class="mb--05" data-content-cat="' . $title . '" ><a>' . $title . '</a></span>';
+        $menu_link = '<span class="content-link mb--05" data-content-cat="' . $title . '" ><a>' . $title . '</a></span>';
         echo $menu_link;
       }
     ?>

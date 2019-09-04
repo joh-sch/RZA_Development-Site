@@ -11,6 +11,7 @@ Main styling & visual behavior
 :root {
   /* Margins/Paddings */
   --m_def_desk-lg: 2rem;
+  --m_def_mob: 1.33rem;
   --m_left_r_desk-lg: 4rem;
 
   /* Colors */
@@ -53,10 +54,13 @@ body.home {
 #header_mob,
 #header {
   position: fixed;
-
-  padding: var(--m_def_desk-lg);
-
   background: white;
+}
+#header {
+  padding: var(--m_def_desk-lg);
+}
+#header_mob {
+  padding: var(--m_def_mob);
 }
 
 #header {
@@ -72,6 +76,10 @@ body.home {
 }
 #header.noActor {
   background: white;
+}
+#header_mob.noActor {
+  background: var(--color_rz-red);
+  color: white;
 }
 
 #nav_main {
