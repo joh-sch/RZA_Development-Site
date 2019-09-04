@@ -52,7 +52,6 @@ body.home {
 /* ****************************** */
 #header_mob,
 #header {
-  height: auto;
   position: fixed;
 
   padding: var(--m_def_desk-lg);

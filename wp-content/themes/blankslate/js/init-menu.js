@@ -58,8 +58,10 @@ function resize_menu() {
 }
 
 function toggle_mobile_menu() {
+  var container = jQuery("#header_mob");
   var links = jQuery("#nav_links_mob");
   //
+  container.toggleClass("h--100");
   links.toggleClass("active");
 }
 
