@@ -9,9 +9,35 @@
   </div>
 
   <!-- Links -->
-  <div id="nav_links_mob" class="d--flex v hidden--dis">
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
+  <div id="nav_links_mob" class="d--flex v hidden--dis text--lg text--b">
+
+    <?php 
+      $menu = wp_get_nav_menu_object('Hauptmenü');  
+      $menu_items = wp_get_nav_menu_items($menu->term_id);
+      //
+      foreach ( (array) $menu_items as $key => $menu_item ) {
+        $title = $menu_item->title;
+        $url = $menu_item->url;
+        $cat = $menu_item->object_id;
+        $menu_link = '<a class="mb--05" data-content-cat="' . $cat . '">' . $title . '</a>';
+        //
+        echo $menu_link;
+      } 
+    ?>
+
+    <?php 
+      $menu = wp_get_nav_menu_object('Untermenü');  
+      $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+      foreach ( (array) $menu_items as $key => $menu_item ) {
+        $title = $menu_item->title;
+        $url = $menu_item->url;
+        $cat = $menu_item->object_id;
+        //
+        $menu_link = '<span class="mb--05" data-content-cat="' . $title . '" ><a>' . $title . '</a></span>';
+        echo $menu_link;
+      }
+    ?>
+
   </div>
 </header>
