@@ -59,7 +59,7 @@ function resize_menu() {
 
 function toggle_mobile_menu() {
   var btn = jQuery("#button_nav_mob");
-  var container = jQuery("#header_mob");
+  var container = jQuery("#header_mob_wrapper");
   var links = jQuery("#nav_links_mob");
   //
   container.toggleClass("h--100");
