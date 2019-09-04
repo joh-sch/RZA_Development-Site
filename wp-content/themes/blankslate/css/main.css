@@ -65,9 +65,9 @@ body.home {
 #header_mob_wrapper div {
   background: white;
 }
-#header_mob_wrapper div:last-of-type {
+/* #header_mob_wrapper div:last-of-type {
   background: transparent !important;
-}
+} */
 
 #header_mob_content,
 #nav_links_mob {
