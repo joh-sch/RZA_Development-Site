@@ -1,6 +1,7 @@
-<header id="header_mob" class="z--high hidden--desktop--flex v">
+<header id="header_mob_wrapper" class="z--high hidden--desktop--flex v">
 
-  <div class="d--flex btw">
+  <!-- Header Content -->
+  <div id="header_mob_content" class="d--flex btw">
     <!-- Menu-Button -->
     <button id="button_nav_mob" class="text--xlg"></button>
 
@@ -9,7 +10,7 @@
   </div>
 
   <!-- Links -->
-  <div id="nav_links_mob" class="d--flex v hidden--dis text--lg text--b">
+  <div id="nav_links_mob" class="d--flex v hidden--dis text--lg text--b h--100">
 
     <?php 
       $menu = wp_get_nav_menu_object('Hauptmenü');  
@@ -40,4 +41,8 @@
     ?>
 
   </div>
+
+  <!-- Mobile Zig-Zag -->
+    <img class="w--100" id="zigzag_mob_w" src="wp-content/uploads/2019/09/rz_zigzag_weiss.png">
+    <img class="w--100" id="zigzag_mob_r" src="wp-content/uploads/2019/09/rz_zigzag_mob_rot.png">
 </header>
