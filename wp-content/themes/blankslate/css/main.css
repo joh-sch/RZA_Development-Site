@@ -333,6 +333,7 @@ button {
   border: none;
   padding: 0;
   background: transparent;
+  color: unset;
 }
 
 button.text:hover {
