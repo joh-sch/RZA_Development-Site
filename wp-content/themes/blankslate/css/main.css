@@ -342,6 +342,7 @@ button {
   padding: 0;
   background: transparent;
   color: unset;
+  font-size: 1.5rem;
 }
 
 button.text:hover {
@@ -476,6 +477,11 @@ button.text:hover {
   justify-content: space-between;
 }
 
+.d--flex.center {
+  justify-content: center;
+  align-items: center;
+}
+
 .d--flex a.align-left {
   align-self: flex-start;
 }
@@ -550,6 +556,7 @@ h2 {
   background: transparent;
 }
 .actor-carousel-overlay .slider-button.prev {
+  left: 0;
   cursor: w-resize;
 }
 .actor-carousel-overlay .slider-button.next {
@@ -559,6 +566,7 @@ h2 {
 
 .slider-counter {
   position: absolute;
+  left: 0;
   bottom: 0;
 
   margin: 0 0 2rem 2rem;
