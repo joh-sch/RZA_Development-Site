@@ -9,6 +9,14 @@ Main styling & visual behavior
 /* ****************************** */
 
 :root {
+  /* Margins/Paddings */
+  --m_def_desk-lg: 2rem;
+  --m_left_r_desk-lg: 4rem;
+
+  --m_def_mob: 1.1rem;
+  --m_def-plus_mob: 1.25rem;
+
+  /* Colors */
   --color_rz-red: #ff1412;
 }
 
@@ -45,59 +53,58 @@ body.home {
 }
 
 /* ****************************** */
+#header_mob_wrapper,
+#header {
+  position: fixed;
+}
+#header {
+  background: white;
+  padding: var(--m_def_desk-lg);
+}
+#header_mob_wrapper {
+  background: transparent;
+}
+#header_mob_wrapper div {
+  background: white;
+}
+/* #header_mob_wrapper div:last-of-type {
+  background: transparent !important;
+} */
+
+#header_mob_content {
+  padding: var(--m_def_mob);
+}
+#nav_links_mob {
+  padding: var(--m_def-plus_mob);
+  padding-top: 0;
+}
 
 #header {
-  /* MOBILE */
-  width: 100%;
-  height: 6rem;
-  /* ****** */
+  width: calc(50% - 10px);
 
-  position: fixed;
-
-  padding: 1rem;
-
-  background: white;
+  padding-right: var(--m_left_r_desk-lg);
 }
 #header.off {
   background: transparent;
 }
 #header.open {
-  height: 100% !important;
+  height: auto !important;
 }
-
 #header.noActor {
-  background: var(--color_rz-red);
-}
-#header.noActor.open {
   background: white;
 }
-
-.actor #header {
-  position: absolute;
+#header_mob_wrapper.noActor div {
+  background: var(--color_rz-red);
+  color: white;
 }
 
 #nav_main {
-  /* MOBILE */
-  display: none;
-  /* ****** */
-}
-#header.open #nav_main {
-  display: flex;
+  display: flex !important;
 }
 
-#button_nav_mobile {
-  position: absolute;
-
-  /* DEV */
-  width: 100px;
-  height: 33px;
-  background: plum;
+#header_mob_wrapper {
+  width: 100%;
 }
-#brand_link {
-  position: absolute;
-  right: 2rem;
-}
-
 /* ****************************** */
 
 #content_right {
@@ -156,6 +163,15 @@ body.home {
   height: 100vh;
 }
 
+#header_mob_wrapper #zigzag_mob_r,
+#header_mob_wrapper.noActor #zigzag_mob_w {
+  display: none;
+}
+#header_mob_wrapper.noActor #zigzag_mob_r,
+#header_mob_wrapper #zigzag_mob_w {
+  display: block;
+}
+
 /* ****************************** */
 
 .content-item {
@@ -197,7 +213,8 @@ body.home {
   padding: 2rem;
 }
 
-#brand_link {
+#brand_link,
+#brand_link_mob {
   font-size: 4rem;
 }
 
@@ -212,6 +229,9 @@ body.home {
 }
 
 /* ****************************** */
+.hidden--dis {
+  display: none !important;
+}
 
 .hidden--content > div,
 .hidden--content > article {
@@ -228,6 +248,9 @@ body.home {
 }
 .hidden--desktop {
   display: block !important;
+}
+.hidden--desktop--flex {
+  display: flex !important;
 }
 
 /* ****************************** */
@@ -284,8 +307,11 @@ a:hover,
 a.active {
   color: var(--color_rz-red) !important;
 }
+.noActor a.active {
+  color: black !important;
+}
 a:visited {
-  color: black;
+  color: unset;
 }
 
 a.lg,
@@ -314,6 +340,8 @@ span.list:last-of-type::after {
 button {
   border: none;
   padding: 0;
+  background: transparent;
+  color: unset;
 }
 
 button.text:hover {
@@ -325,6 +353,16 @@ button.text:hover {
   position: absolute;
   left: 2rem;
   top: 2rem;
+}
+
+#button_nav_mob {
+  line-height: 0;
+}
+#button_nav_mob::after {
+  content: "+";
+}
+#button_nav_mob.active::after {
+  content: "×";
 }
 
 /* ****************************** */
@@ -345,6 +383,10 @@ button.text:hover {
 
 .h--100 {
   height: 100%;
+}
+
+.mb--05 {
+  margin-bottom: 0.5rem;
 }
 
 .mb--1 {
@@ -405,7 +447,12 @@ button.text:hover {
   display: flex;
 }
 
-.d--flex.v {
+.d--flex.hidden--dis.active {
+  display: flex !important;
+}
+
+.d--flex.v,
+.hidden--desktop--flex.v {
   flex-direction: column;
 }
 .d--flex.vr {
@@ -425,18 +472,8 @@ button.text:hover {
   align-items: flex-start;
 }
 
-.d--flex.v-mob-h-desk {
-  flex-direction: column;
-}
-@media only screen and (min-width: 768px) {
-  .d--flex.v-mob-h-desk {
-    flex-direction: row;
-  }
-}
-
-.d--flex.f1,
-.d--flex .f1 {
-  flex: 1;
+.d--flex.btw {
+  justify-content: space-between;
 }
 
 .d--flex a.align-left {
@@ -447,6 +484,10 @@ button.text:hover {
 }
 
 /* ****************************** */
+
+.text--xlg {
+  font-size: 4rem !important;
+}
 
 h1,
 .text--lg {
@@ -472,6 +513,10 @@ p,
 h2 {
   line-height: 1.866rem !important;
   letter-spacing: 0.01rem !important;
+}
+
+.nobreak {
+  white-space: nowrap;
 }
 
 /* ****************************** */
@@ -589,23 +634,6 @@ h2 {
 /* ****************************** */
 
 @media only screen and (min-width: 768px) {
-  #header {
-    width: calc(50% - 10px);
-    height: auto;
-
-    padding: 2rem;
-  }
-  #header.noActor {
-    background: white;
-  }
-  #header.open {
-    height: auto !important;
-  }
-
-  #nav_main {
-    display: flex !important;
-  }
-
   #content_right,
   .gutter {
     display: block;
@@ -617,8 +645,8 @@ h2 {
 
   #content_left.noActor {
     padding-top: 10.75rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: var(--m_def_desk-lg);
+    padding-right: var(--m_left_r_desk-lg);
   }
 
   span.list::after {
@@ -627,7 +655,12 @@ h2 {
 
   /* ***** */
 
-  .hidden--desktop {
+  .hidden--mobile {
+    display: block !important;
+  }
+
+  .hidden--desktop,
+  .hidden--desktop--flex {
     display: none !important;
   }
 

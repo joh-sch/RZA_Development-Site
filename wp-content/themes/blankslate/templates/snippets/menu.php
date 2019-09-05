@@ -1,18 +1,13 @@
-<header id="header" class="z--high">
+<header id="header" class="z--high hidden--mobile <?php if(is_single()): ?>off<?php endif ?>">
 
-  <!-- Menu-button for desktop display -->
-  <button id="button_nav" class="text text--lg hidden--off">+</button>
-
-  <!-- Menu-button for mobile display -->
-  <button id="button_nav_mobile" class="hidden--desktop" onclick="toggle_menu_mobile()">open</button>
+  <!-- Menu-button -->
+  <button id="button_nav" class="text text--lg <?php if(!is_single()): ?>hidden--off<?php endif ?>">+</button>
   
-  <!-- Brand -->
-  <a id="brand_link" href="<?php echo get_home_url(); ?>">RZ A</a>
+  <!-- Menu -->
+  <div id="nav_main" class="d--flex btw text--lg text--b w--100 <?php if(is_single()): ?>hidden--off<?php endif ?>">
 
-  <!-- Nav -->
-  <div id="nav_main" class="d--flex text--lg text--b w--100 mt--mob-6-desk-0">
-
-    <div class="f1">
+    <!-- Links -->
+    <div>
       <div class="d--flex v">
         <?php 
           $menu = wp_get_nav_menu_object('Hauptmenü');  
@@ -29,7 +24,7 @@
         ?>
       </div>
 
-      <div class="d--flex v-mob-h-desk">
+      <div class="d--flex h">
         <?php 
           $menu = wp_get_nav_menu_object('Untermenü');  
           $menu_items = wp_get_nav_menu_items($menu->term_id);
@@ -50,7 +45,9 @@
         ?>
       </div>
     </div>
-    
+
+    <!-- Brand -->
+    <a id="brand_link" class="nobreak" href="<?php echo get_home_url(); ?>">RZ A</a>
   </div> 
   
 </header>

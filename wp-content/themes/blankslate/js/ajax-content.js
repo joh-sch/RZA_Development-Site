@@ -46,7 +46,7 @@ function disable_gridDisplay_mobile(element) {
       .addClass("active");
     //
     cat = find_content_cat($(this));
-    history.pushState(null, null, "/" + cat);
+    history.pushState(null, null, "/" + cat.toLowerCase());
     //
     $.ajax({
       url: ajaxcontent.ajaxurl,
@@ -65,9 +65,6 @@ function disable_gridDisplay_mobile(element) {
         container.addClass("hidden--content");
         //
         setTimeout(function() {
-          // Close menu
-          toggle_menu_mobile();
-          set_menu_color_r();
           //
           container.find("article, .content-item, .grid-item.actor").remove();
           container.append(content);
@@ -76,6 +73,12 @@ function disable_gridDisplay_mobile(element) {
           section.addClass("noActor");
           //
           disable_gridDisplay_mobile(container);
+          toggle_mobile_menu();
+          set_menu_color_r();
+          var display_status_r = $("#content_right").css("display");
+          if (display_status_r == "none") {
+            reset_navLinks_right();
+          }
         }, 275);
         setTimeout(function() {
           reset_scrollbars_left();
@@ -127,18 +130,20 @@ function disable_gridDisplay_mobile(element) {
           }, 325);
         } else {
           var grid = $("#content_left_items");
+          var section = $("#content_left");
+          // Change namespace
+          section.attr("data-namespace", "actors");
           //
           grid.addClass("hidden--content");
           setTimeout(function() {
-            // Close menu
-            toggle_menu_mobile();
-            set_menu_color_w();
-            //
             grid.empty();
             toggle_gridDisplay_mobile(grid);
           }, 275);
           setTimeout(function() {
             grid.append(content);
+            toggle_mobile_menu();
+            set_menu_color_w();
+            reset_navLinks_left();
           }, 300);
           setTimeout(function() {
             grid.removeClass("hidden--content");
