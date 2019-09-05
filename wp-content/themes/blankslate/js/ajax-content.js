@@ -129,15 +129,13 @@ function disable_gridDisplay_mobile(element) {
           //
           grid.addClass("hidden--content");
           setTimeout(function() {
-            // Close menu
-            toggle_menu_mobile();
-            set_menu_color_w();
-            //
             grid.empty();
             toggle_gridDisplay_mobile(grid);
           }, 275);
           setTimeout(function() {
             grid.append(content);
+            toggle_mobile_menu();
+            set_menu_color_w();
           }, 300);
           setTimeout(function() {
             grid.removeClass("hidden--content");

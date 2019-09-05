@@ -75,7 +75,7 @@ function set_menu_color_r() {
   }
 }
 function set_menu_color_w() {
-  var menu_container = jQuery("#header");
+  var menu_container = jQuery("#header_mob_wrapper");
   //
   if (menu_container.hasClass("noActor")) {
     menu_container.removeClass("noActor");
