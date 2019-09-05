@@ -16,6 +16,9 @@ Main styling & visual behavior
   --m_def_mob: 1.1rem;
   --m_def-plus_mob: 1.25rem;
 
+  --m_btn_absolute_leftbottom: 0 0 2rem 2rem;
+  --m_btn_absolute_rightbottom: 0 2rem 2rem 0;
+
   /* Colors */
   --color_rz-red: #ff1412;
 }
@@ -410,6 +413,9 @@ button.vjs-big-play-button {
   margin-top: 6rem;
 }
 
+.mr--05 {
+  margin-right: 0.5rem;
+}
 .mr--1 {
   margin-right: 1rem;
 }
@@ -568,17 +574,22 @@ h2 {
   right: 0;
   cursor: e-resize;
 }
+
+.actor-carousel-overlay .video-controls {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  margin: var(--m_btn_absolute_rightbottom);
+}
+.actor-carousel-overlay button.fullscreen::after {
+  content: "Vollbild";
+}
 .actor-carousel-overlay button.play::after {
-  content: "abspielen";
+  content: "Abspielen";
 }
-.actor-carousel-overlay button.play.playing {
-  opacity: 0;
-}
-.actor-carousel-overlay button.play.playing:hover {
-  opacity: 1;
-}
-.actor-carousel-overlay button.play.playing::after {
-  content: "pause";
+.actor-carousel-overlay .playing button.play::after {
+  content: "Pause";
 }
 
 .slider-counter {
@@ -586,7 +597,7 @@ h2 {
   left: 0;
   bottom: 0;
 
-  margin: 0 0 2rem 2rem;
+  margin: var(--m_btn_absolute_leftbottom);
 }
 
 /* ****************************** */

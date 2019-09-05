@@ -13,11 +13,15 @@
           <?php $images = get_field('bildergalerie');?>
 
           <header>
-            <div id="slider_overlay" class="actor-carousel-overlay z--up d--flex center text--def">
+            <div id="slider_overlay" class="actor-carousel-overlay z--up text--def">
               <div class="slider-counter">1/3</div>
               <button class="slider-button prev" onclick="slider_prev()"></button>
               <button class="slider-button next" onclick="slider_next()"></button>
-              <button class="play hidden--off"></button>
+              <div class="video-controls hidden--off">
+                <button class="play mr--05"></button>
+                <button class="fullscreen"></button>
+              </div>
+              
             </div>
             <div class="actor-carousel">
               <?php if( $images ): ?>
@@ -139,6 +143,16 @@
     // Video Controls
     document.querySelector("#slider_overlay button.play").addEventListener("click", function() {
       video_playToggle();
+    });
+    document.querySelector("#slider_overlay button.fullscreen").addEventListener("click", function() {
+      alert("Dieser Button funktioniert noch nicht… aber bald!")
+    });
+    // End of Video
+    players[0].on("ended", event => {
+      // Reset play-button & video
+      var controls = jQuery("#slider_overlay .video-controls");
+      controls.removeClass("playing");
+      players[0].stop();
     });
   </script>
 

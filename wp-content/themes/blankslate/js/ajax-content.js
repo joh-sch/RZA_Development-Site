@@ -33,22 +33,26 @@ function check_slide_video() {
   var sliderInstance = $sliderActor.data("flickity");
   var currentSlide = jQuery(sliderInstance.selectedElement);
   if (currentSlide.hasClass("video-cell")) {
-    jQuery("#slider_overlay button.play").removeClass("hidden--off");
+    jQuery("#slider_overlay .video-controls").removeClass("hidden--off");
   } else {
-    jQuery("#slider_overlay button.play").addClass("hidden--off");
+    jQuery("#slider_overlay .video-controls").addClass("hidden--off");
   }
 }
 function video_playToggle() {
   var video = jQuery(players[0].videojs.el_);
-  var button = jQuery("#slider_overlay button.play");
+  var controls = jQuery("#slider_overlay .video-controls");
   //
   if (video.hasClass("vjs-playing")) {
     players[0].pause();
-    button.removeClass("playing");
+    controls.removeClass("playing");
   } else {
     players[0].play();
-    button.addClass("playing");
+    controls.addClass("playing");
   }
+}
+function video_fullscreen() {
+  players[0].maximize();
+  players[0].controls(true);
 }
 
 // Function to fetch subpage-content (Agentur, Kontakt, News)
