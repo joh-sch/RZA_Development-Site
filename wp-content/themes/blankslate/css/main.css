@@ -343,6 +343,7 @@ button {
   background: transparent;
   color: unset;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 button.text:hover {
@@ -562,6 +563,18 @@ h2 {
 .actor-carousel-overlay .slider-button.next {
   right: 0;
   cursor: e-resize;
+}
+.actor-carousel-overlay button.play::after {
+  content: "abspielen";
+}
+.actor-carousel-overlay button.play.playing {
+  opacity: 0;
+}
+.actor-carousel-overlay button.play.playing:hover {
+  opacity: 1;
+}
+.actor-carousel-overlay button.play.playing::after {
+  content: "pause";
 }
 
 .slider-counter {

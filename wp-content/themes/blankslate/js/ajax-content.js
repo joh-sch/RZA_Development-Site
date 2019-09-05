@@ -29,7 +29,6 @@ function disable_gridDisplay_mobile(element) {
   element.parents("section").addClass("off");
   element.addClass("off");
 }
-
 function check_slide_video() {
   var sliderInstance = $sliderActor.data("flickity");
   var currentSlide = jQuery(sliderInstance.selectedElement);
@@ -37,6 +36,18 @@ function check_slide_video() {
     jQuery("#slider_overlay button.play").removeClass("hidden--off");
   } else {
     jQuery("#slider_overlay button.play").addClass("hidden--off");
+  }
+}
+function video_playToggle() {
+  var video = jQuery(players[0].videojs.el_);
+  var button = jQuery("#slider_overlay button.play");
+  //
+  if (video.hasClass("vjs-playing")) {
+    players[0].pause();
+    button.removeClass("playing");
+  } else {
+    players[0].play();
+    button.addClass("playing");
   }
 }
 

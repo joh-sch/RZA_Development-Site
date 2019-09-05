@@ -17,7 +17,7 @@
               <div class="slider-counter">1/3</div>
               <button class="slider-button prev" onclick="slider_prev()"></button>
               <button class="slider-button next" onclick="slider_next()"></button>
-              <button class="play hidden--off">abspielen</button>
+              <button class="play hidden--off"></button>
             </div>
             <div class="actor-carousel">
               <?php if( $images ): ?>
@@ -135,6 +135,10 @@
     var cld = cloudinary.Cloudinary.new({ cloud_name: "johschmoll" });
     window.players = cld.videoPlayers(".cld-video-player", {
       events: ["ended"]
+    });
+    // Video Controls
+    document.querySelector("#slider_overlay button.play").addEventListener("click", function() {
+      video_playToggle();
     });
   </script>
 
