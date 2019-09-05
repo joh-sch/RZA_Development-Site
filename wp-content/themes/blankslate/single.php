@@ -28,7 +28,10 @@
               <?php endif; ?>
 
               <!-- DEV — Video-Slide -->
-              <div>
+              <div class="carousel-cell video-cell">
+                <video class="cld-video-player cld-video-player-skin-dark" data-cld-public-id="Clients/Client_RZA/raeuber">
+                </video>
+              </div>
             </div>
           </header>
 
@@ -117,6 +120,7 @@
 
   <!-- Standalone slider-init -->
   <script>
+    // Flickity init
     window.$sliderActor = jQuery(".actor-carousel").flickity({
       cellAlign: "left",
       contain: true,
@@ -125,6 +129,11 @@
       wrapAround: true,
       draggable: false,
       lazyLoad: 2
+    });
+    // CLD init
+    var cld = cloudinary.Cloudinary.new({ cloud_name: "johschmoll" });
+    window.players = cld.videoPlayers(".cld-video-player", {
+      events: ["ended"]
     });
   </script>
 
