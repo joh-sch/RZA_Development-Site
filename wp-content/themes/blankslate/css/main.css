@@ -367,6 +367,10 @@ button.text:hover {
   content: "×";
 }
 
+button.vjs-big-play-button {
+  display: none !important;
+}
+
 /* ****************************** */
 
 .w--100 {
