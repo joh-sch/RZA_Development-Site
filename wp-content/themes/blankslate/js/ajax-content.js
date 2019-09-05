@@ -75,6 +75,10 @@ function disable_gridDisplay_mobile(element) {
           disable_gridDisplay_mobile(container);
           toggle_mobile_menu();
           set_menu_color_r();
+          var display_status_r = $("#content_right").css("display");
+          if (display_status_r == "none") {
+            reset_navLinks_right();
+          }
         }, 275);
         setTimeout(function() {
           reset_scrollbars_left();
