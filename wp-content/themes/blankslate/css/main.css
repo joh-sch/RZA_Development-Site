@@ -302,8 +302,11 @@ a:hover,
 a.active {
   color: var(--color_rz-red) !important;
 }
+.noActor a.active {
+  color: black !important;
+}
 a:visited {
-  color: black;
+  color: unset;
 }
 
 a.lg,
