@@ -139,6 +139,7 @@ function disable_gridDisplay_mobile(element) {
             grid.append(content);
             toggle_mobile_menu();
             set_menu_color_w();
+            reset_navLinks_left();
           }, 300);
           setTimeout(function() {
             grid.removeClass("hidden--content");
