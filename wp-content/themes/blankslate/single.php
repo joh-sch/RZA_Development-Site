@@ -13,7 +13,7 @@
           <?php $images = get_field('bildergalerie');?>
 
           <header>
-            <div class="actor-carousel-overlay z--up d--flex center text--def">
+            <div id="slider_overlay" class="actor-carousel-overlay z--up d--flex center text--def">
               <div class="slider-counter">1/3</div>
               <button class="slider-button prev" onclick="slider_prev()"></button>
               <button class="slider-button next" onclick="slider_next()"></button>

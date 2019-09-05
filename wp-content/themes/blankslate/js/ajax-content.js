@@ -30,10 +30,14 @@ function disable_gridDisplay_mobile(element) {
   element.addClass("off");
 }
 
-function check_slider_class_video() {
+function check_slide_video() {
   var sliderInstance = $sliderActor.data("flickity");
   var currentSlide = jQuery(sliderInstance.selectedElement);
-  currentSlide.hasClass("video-cell");
+  if (currentSlide.hasClass("video-cell")) {
+    jQuery("#slider_overlay button.play").removeClass("hidden--off");
+  } else {
+    jQuery("#slider_overlay button.play").addClass("hidden--off");
+  }
 }
 
 // Function to fetch subpage-content (Agentur, Kontakt, News)
@@ -261,16 +265,12 @@ function slider_update_counter() {
 function slider_next() {
   $sliderActor.flickity("next");
   slider_update_counter();
-  //
-  var sliderInstance = $sliderActor.data("flickity");
-  var currentSlide = jQuery(sliderInstance.selectedElement);
-  if (currentSlide.hasClass("video-cell")) {
-    alert("Video Slide!");
-  }
+  check_slide_video();
 }
 function slider_prev() {
   $sliderActor.flickity("previous");
   slider_update_counter();
+  check_slide_video();
 }
 
 function slider_home_next() {
