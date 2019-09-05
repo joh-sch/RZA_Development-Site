@@ -26,6 +26,9 @@
                   </div>
                 <?php endforeach; ?>
               <?php endif; ?>
+
+              <!-- DEV — Video-Slide -->
+              <div>
             </div>
           </header>
 
