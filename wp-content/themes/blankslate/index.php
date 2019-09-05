@@ -7,7 +7,7 @@
     <?php get_template_part( 'templates/snippets/menu_mobile'); ?>
     
     <!-- Left Content Section -->
-    <section id="content_left" data-namespace="News" class="w--50 noActor <?php if (wp_is_mobile()): ?> grid<?php endif ?>">
+<section id="content_left" data-namespace="<?php if (wp_is_mobile()): ?>Actors<?php else: ?>News<?php endif ?>" class="w--50 noActor <?php if (wp_is_mobile()): ?> grid<?php endif ?>">
       <section id="content_left_items" class="<?php if (wp_is_mobile()): ?> grid-container mobile<?php endif ?>">
         <?php
           if ( wp_is_mobile() ) {

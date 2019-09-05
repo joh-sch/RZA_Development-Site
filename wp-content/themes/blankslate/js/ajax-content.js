@@ -126,6 +126,9 @@ function disable_gridDisplay_mobile(element) {
           }, 325);
         } else {
           var grid = $("#content_left_items");
+          var section = $("#content_left");
+          // Change namespace
+          section.attr("data-namespace", "actors");
           //
           grid.addClass("hidden--content");
           setTimeout(function() {
