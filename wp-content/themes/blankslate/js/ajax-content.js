@@ -40,14 +40,21 @@ function toggle_ui_actor(color) {
 function check_slide_video() {
   var sliderInstance = $sliderActor.data("flickity");
   var currentSlide = jQuery(sliderInstance.selectedElement);
+  var video = jQuery(players[0].videojs.el_);
+  var controls = jQuery("#slider_overlay .video-controls");
+  //
   if (currentSlide.hasClass("video-cell")) {
     var ui_colorSetting = "color_white";
-    jQuery("#slider_overlay .video-controls").removeClass("hidden--off");
+    controls.removeClass("hidden--off");
     toggle_ui_actor(ui_colorSetting);
   } else {
     var ui_colorSetting = "color_black";
-    jQuery("#slider_overlay .video-controls").addClass("hidden--off");
+    controls.addClass("hidden--off");
     toggle_ui_actor(ui_colorSetting);
+    if (video.hasClass("vjs-playing")) {
+      players[0].stop();
+      controls.removeClass("playing");
+    }
   }
 }
 function video_playToggle() {
