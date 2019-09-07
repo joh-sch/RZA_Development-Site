@@ -45,6 +45,15 @@ Main styling & visual behavior
 
 /* ****************************** */
 
+.color_white {
+  color: white !important;
+}
+.color_black {
+  color: black !important;
+}
+
+/* ****************************** */
+
 body.blog,
 body.single,
 body.page,
@@ -56,6 +65,7 @@ body.home {
 }
 
 /* ****************************** */
+
 #header_mob_wrapper,
 #header {
   position: fixed;
@@ -543,7 +553,7 @@ h2 {
 .carousel-cell {
   width: 100%;
   height: 50vh;
-  background: #8c8;
+  background: white;
 
   display: flex;
   justify-content: center;

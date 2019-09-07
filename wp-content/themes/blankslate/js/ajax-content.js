@@ -29,13 +29,25 @@ function disable_gridDisplay_mobile(element) {
   element.parents("section").addClass("off");
   element.addClass("off");
 }
+function toggle_ui_actor(color) {
+  var ui_elements = jQuery("#slider_overlay, #button_nav");
+  // remove all color classes
+  ui_elements.removeClass(function(index, classname) {
+    return (classname.match(/\bcolor_\S+/g) || []).join(" ");
+  });
+  ui_elements.addClass(color);
+}
 function check_slide_video() {
   var sliderInstance = $sliderActor.data("flickity");
   var currentSlide = jQuery(sliderInstance.selectedElement);
   if (currentSlide.hasClass("video-cell")) {
+    var ui_colorSetting = "color_white";
     jQuery("#slider_overlay .video-controls").removeClass("hidden--off");
+    toggle_ui_actor(ui_colorSetting);
   } else {
+    var ui_colorSetting = "color_black";
     jQuery("#slider_overlay .video-controls").addClass("hidden--off");
+    toggle_ui_actor(ui_colorSetting);
   }
 }
 function video_playToggle() {
