@@ -12,13 +12,22 @@
           
           <?php $images = get_field('bildergalerie');?>
 
+          <!-- Photo & Video Content -->
           <header>
-            <div class="actor-carousel-overlay z--up">
-              <div class="slider-counter text--def">1/3</div>
+            <!-- Slider-Overlay -->
+            <div id="slider_overlay" class="actor-carousel-overlay z--up text--def color_black">
+              <div class="slider-counter">1/3</div>
               <button class="slider-button prev" onclick="slider_prev()"></button>
               <button class="slider-button next" onclick="slider_next()"></button>
+              <div class="video-controls hidden--off">
+                <button class="play mr--05"></button>
+                <button class="fullscreen"></button>
+              </div>
             </div>
+
+            <!-- Slider -->
             <div class="actor-carousel">
+              <!-- Photo-Slides -->
               <?php if( $images ): ?>
                 <?php foreach( $images as $image ): ?>
                   <div class="carousel-cell">
@@ -26,9 +35,17 @@
                   </div>
                 <?php endforeach; ?>
               <?php endif; ?>
+              <!-- Video-Slide -->
+              <?php if(get_field('video')): ?>
+                <div class="carousel-cell video-cell">
+                  <video class="cld-video-player cld-video-player-skin-dark" data-cld-public-id="Clients/Client_RZA/<?php the_field('video') ?>">
+                  </video>
+                </div>
+              <?php endif ?>
             </div>
           </header>
 
+          <!-- Text Content -->
           <div class="p--mob-1-desk-2">
             <div class="mb--1">
               <h1 class="text--b"><?php the_title(); ?></h1>
@@ -114,6 +131,7 @@
 
   <!-- Standalone slider-init -->
   <script>
+    // Flickity init
     window.$sliderActor = jQuery(".actor-carousel").flickity({
       cellAlign: "left",
       contain: true,
@@ -123,6 +141,29 @@
       draggable: false,
       lazyLoad: 2
     });
+    // CLD/Video init
+    if(jQuery(".video-cell").length > 0) {
+      var cld = cloudinary.Cloudinary.new({ cloud_name: "johschmoll" });
+      window.players = cld.videoPlayers(".cld-video-player", {
+        events: ["ended"]
+      });
+      // Video Controls
+      document.querySelector("#slider_overlay button.play").addEventListener("click", function() {
+        video_playToggle();
+      });
+      document.querySelector("#slider_overlay button.fullscreen").addEventListener("click", function() {
+        alert("Dieser Button funktioniert noch nicht… aber bald!")
+      });
+      // End of Video
+      players[0].on("ended", event => {
+        // Reset play-button & video
+        var controls = jQuery("#slider_overlay .video-controls");
+        controls.removeClass("playing");
+        players[0].stop();
+      });
+    } else {
+      console.log("No video slides found.")
+    }
   </script>
 
 <?php get_template_part( 'templates/snippets/footer'); ?>

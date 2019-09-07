@@ -2,13 +2,22 @@
 
   <?php $images = get_field('bildergalerie');?>
 
+  <!-- Photo & Video Content -->
   <header>
-    <div class="actor-carousel-overlay z--up">
-      <div class="slider-counter text--def">1/3</div>
+    <!-- Slider-Overlay -->
+    <div id="slider_overlay" class="actor-carousel-overlay z--up text--def color_black">
+      <div class="slider-counter">1/3</div>
       <button class="slider-button prev" onclick="slider_prev()"></button>
       <button class="slider-button next" onclick="slider_next()"></button>
+      <div class="video-controls hidden--off">
+        <button class="play mr--05"></button>
+        <button class="fullscreen"></button>
+      </div>
     </div>
+
+    <!-- Slider -->
     <div class="actor-carousel">
+      <!-- Photo-Slides -->
       <?php if( $images ): ?>
         <?php foreach( $images as $image ): ?>
           <div class="carousel-cell">
@@ -16,9 +25,17 @@
           </div>
         <?php endforeach; ?>
       <?php endif; ?>
+      <!-- Video-Slide -->
+      <?php if(get_field('video')): ?>
+        <div class="carousel-cell video-cell">
+          <video class="cld-video-player cld-video-player-skin-dark" data-cld-public-id="Clients/Client_RZA/<?php the_field('video') ?>">
+          </video>
+        </div>
+      <?php endif ?>
     </div>
   </header>
 
+  <!-- Text Content -->
   <div class="p--mob-1-desk-2">
     <div class="mb--1">
       <h1 class="text--b"><?php the_title(); ?></h1>
