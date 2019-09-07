@@ -31,10 +31,11 @@ function disable_gridDisplay_mobile(element) {
 }
 function toggle_ui_actor(color) {
   var ui_elements = jQuery("#slider_overlay, #button_nav");
-  // remove all color classes
+  // Remove all color classes
   ui_elements.removeClass(function(index, classname) {
     return (classname.match(/\bcolor_\S+/g) || []).join(" ");
   });
+  // Set new color
   ui_elements.addClass(color);
 }
 function check_slide_video() {
@@ -227,7 +228,7 @@ function video_fullscreen() {
         var display_status_r = $("#content_right").css("display");
         // Change namespace
         section.attr("data-namespace", "actor");
-        //
+        // Place content
         if (display_status_r == "block") {
           section.addClass("hidden--content");
           hide_menu();
@@ -241,6 +242,7 @@ function video_fullscreen() {
           }, 275);
           //
           setTimeout(function() {
+            // Flickity init
             window.$sliderActor = $(".actor-carousel").flickity({
               cellAlign: "left",
               contain: true,
@@ -250,6 +252,30 @@ function video_fullscreen() {
               draggable: false,
               lazyLoad: 2
             });
+            // CLD init
+            var cld = cloudinary.Cloudinary.new({ cloud_name: "johschmoll" });
+            window.players = cld.videoPlayers(".cld-video-player", {
+              events: ["ended"]
+            });
+            // Video Controls
+            document
+              .querySelector("#slider_overlay button.play")
+              .addEventListener("click", function() {
+                video_playToggle();
+              });
+            document
+              .querySelector("#slider_overlay button.fullscreen")
+              .addEventListener("click", function() {
+                alert("Dieser Button funktioniert noch nicht… aber bald!");
+              });
+            // End of Video
+            players[0].on("ended", event => {
+              // Reset play-button & video
+              var controls = jQuery("#slider_overlay .video-controls");
+              controls.removeClass("playing");
+              players[0].stop();
+            });
+            //
             reset_scrollbars_left();
             section.removeClass("hidden--content");
           }, 300);

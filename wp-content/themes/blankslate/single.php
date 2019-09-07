@@ -12,7 +12,9 @@
           
           <?php $images = get_field('bildergalerie');?>
 
+          <!-- Photo & Video Content -->
           <header>
+            <!-- Slider-Overlay -->
             <div id="slider_overlay" class="actor-carousel-overlay z--up text--def color_black">
               <div class="slider-counter">1/3</div>
               <button class="slider-button prev" onclick="slider_prev()"></button>
@@ -21,9 +23,11 @@
                 <button class="play mr--05"></button>
                 <button class="fullscreen"></button>
               </div>
-              
             </div>
+
+            <!-- Slider -->
             <div class="actor-carousel">
+              <!-- Photo-Slides -->
               <?php if( $images ): ?>
                 <?php foreach( $images as $image ): ?>
                   <div class="carousel-cell">
@@ -31,8 +35,7 @@
                   </div>
                 <?php endforeach; ?>
               <?php endif; ?>
-
-              <!-- DEV — Video-Slide -->
+              <!-- Video-Slide -->
               <div class="carousel-cell video-cell">
                 <video class="cld-video-player cld-video-player-skin-dark" data-cld-public-id="Clients/Client_RZA/raeuber">
                 </video>
@@ -40,6 +43,7 @@
             </div>
           </header>
 
+          <!-- Text Content -->
           <div class="p--mob-1-desk-2">
             <div class="mb--1">
               <h1 class="text--b"><?php the_title(); ?></h1>
