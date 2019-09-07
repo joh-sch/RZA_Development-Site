@@ -141,25 +141,29 @@
       draggable: false,
       lazyLoad: 2
     });
-    // CLD init
-    var cld = cloudinary.Cloudinary.new({ cloud_name: "johschmoll" });
-    window.players = cld.videoPlayers(".cld-video-player", {
-      events: ["ended"]
-    });
-    // Video Controls
-    document.querySelector("#slider_overlay button.play").addEventListener("click", function() {
-      video_playToggle();
-    });
-    document.querySelector("#slider_overlay button.fullscreen").addEventListener("click", function() {
-      alert("Dieser Button funktioniert noch nicht… aber bald!")
-    });
-    // End of Video
-    players[0].on("ended", event => {
-      // Reset play-button & video
-      var controls = jQuery("#slider_overlay .video-controls");
-      controls.removeClass("playing");
-      players[0].stop();
-    });
+    // CLD/Video init
+    if(jQuery(".video-cell").length > 0) {
+      var cld = cloudinary.Cloudinary.new({ cloud_name: "johschmoll" });
+      window.players = cld.videoPlayers(".cld-video-player", {
+        events: ["ended"]
+      });
+      // Video Controls
+      document.querySelector("#slider_overlay button.play").addEventListener("click", function() {
+        video_playToggle();
+      });
+      document.querySelector("#slider_overlay button.fullscreen").addEventListener("click", function() {
+        alert("Dieser Button funktioniert noch nicht… aber bald!")
+      });
+      // End of Video
+      players[0].on("ended", event => {
+        // Reset play-button & video
+        var controls = jQuery("#slider_overlay .video-controls");
+        controls.removeClass("playing");
+        players[0].stop();
+      });
+    } else {
+      console.log("No video slides found.")
+    }
   </script>
 
 <?php get_template_part( 'templates/snippets/footer'); ?>

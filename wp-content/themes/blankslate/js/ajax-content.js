@@ -252,29 +252,33 @@ function video_fullscreen() {
               draggable: false,
               lazyLoad: 2
             });
-            // CLD init
-            var cld = cloudinary.Cloudinary.new({ cloud_name: "johschmoll" });
-            window.players = cld.videoPlayers(".cld-video-player", {
-              events: ["ended"]
-            });
-            // Video Controls
-            document
-              .querySelector("#slider_overlay button.play")
-              .addEventListener("click", function() {
-                video_playToggle();
+            // CLD/Video init
+            if (jQuery(".video-cell").length > 0) {
+              var cld = cloudinary.Cloudinary.new({ cloud_name: "johschmoll" });
+              window.players = cld.videoPlayers(".cld-video-player", {
+                events: ["ended"]
               });
-            document
-              .querySelector("#slider_overlay button.fullscreen")
-              .addEventListener("click", function() {
-                alert("Dieser Button funktioniert noch nicht… aber bald!");
+              // Video Controls
+              document
+                .querySelector("#slider_overlay button.play")
+                .addEventListener("click", function() {
+                  video_playToggle();
+                });
+              document
+                .querySelector("#slider_overlay button.fullscreen")
+                .addEventListener("click", function() {
+                  alert("Dieser Button funktioniert noch nicht… aber bald!");
+                });
+              // End of Video
+              players[0].on("ended", event => {
+                // Reset play-button & video
+                var controls = jQuery("#slider_overlay .video-controls");
+                controls.removeClass("playing");
+                players[0].stop();
               });
-            // End of Video
-            players[0].on("ended", event => {
-              // Reset play-button & video
-              var controls = jQuery("#slider_overlay .video-controls");
-              controls.removeClass("playing");
-              players[0].stop();
-            });
+            } else {
+              console.log("No video slides found.");
+            }
             //
             reset_scrollbars_left();
             section.removeClass("hidden--content");
