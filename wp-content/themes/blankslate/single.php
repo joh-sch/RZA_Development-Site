@@ -37,7 +37,7 @@
               <?php endif; ?>
               <!-- Video-Slide -->
               <div class="carousel-cell video-cell">
-                <video class="cld-video-player cld-video-player-skin-dark" data-cld-public-id="Clients/Client_RZA/raeuber">
+                <video class="cld-video-player cld-video-player-skin-dark" data-cld-public-id="Clients/Client_RZA/<?php the_field('video') ?>">
                 </video>
               </div>
             </div>
