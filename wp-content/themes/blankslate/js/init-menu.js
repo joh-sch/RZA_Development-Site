@@ -1,6 +1,4 @@
-//
 // Utility-functions for interactions with menu-/nav-elements
-//
 function getStatus_content(section) {
   var section = jQuery(section);
   var section_status = section.attr("data-namespace");

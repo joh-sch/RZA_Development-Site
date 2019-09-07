@@ -393,9 +393,13 @@ button.vjs-big-play-button {
 }
 .collapsible--button::before {
   content: "+ ";
+  color: black;
 }
 .collapsible--button.active::before {
   content: "× ";
+}
+.collapsible--button:hover::before {
+  color: var(--color_rz-red);
 }
 .collapsible--content {
   display: none;
