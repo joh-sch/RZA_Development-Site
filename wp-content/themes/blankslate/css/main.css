@@ -315,6 +315,7 @@ body.home {
 a {
   cursor: pointer;
   text-decoration: none;
+  color: black;
 }
 a:hover,
 a.active,

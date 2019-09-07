@@ -17,6 +17,8 @@ add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
   function blankslate_load_scripts() {
     wp_enqueue_style( 'blankslate-style', get_stylesheet_uri() );
     wp_enqueue_script( 'jquery' );
+    // FontAwesome
+    wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/b5aa866e69.js');
     // CLD
     wp_enqueue_script('cld-core', 'https://unpkg.com/cloudinary-core@2.6.3/cloudinary-core-shrinkwrap.min.js');
     wp_enqueue_script('cld-player', 'https://unpkg.com/cloudinary-video-player@1.2.0/dist/cld-video-player.light.min.js');
