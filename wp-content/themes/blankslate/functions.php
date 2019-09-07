@@ -66,9 +66,9 @@ function my_ajax_content() {
     $cat  = $_POST['cat'];
     //
     if ($cat == 'Agentur' || $cat == 'Kontakt') {
-      $page = get_page_by_title($cat);
-      $content = '<div class="content-item text--def">' . $page->post_content . '</div>';
-      echo $content;
+      if($cat == 'Kontakt') {
+        get_template_part( 'content-kontakt' );
+      } 
     } else {
       $loop = new WP_Query( array (
         'category_name' => $cat
