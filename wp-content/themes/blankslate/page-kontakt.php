@@ -20,7 +20,11 @@
         <div>
           <button class="collapsible--button text text--lg text--b">Impressum</button>
           <div class="collapsible--content text--def">
-            <p>Text Text Text Text Text Text Text Text Text Text Text Text Text</p>
+            <p><?php the_field('impressum') ?></p>
+          </div>
+          <button class="collapsible--button text text--lg text--b">Datenschutz</button>
+          <div class="collapsible--content text--def">
+            <p><?php the_field('datenschutz') ?></p>
           </div>
         </div>
       </section>

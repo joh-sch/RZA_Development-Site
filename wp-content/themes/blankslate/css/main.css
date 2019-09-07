@@ -387,6 +387,9 @@ button.vjs-big-play-button {
   display: none !important;
 }
 
+.collapsible--button {
+  display: block;
+}
 .collapsible--button::before {
   content: "+ ";
 }
