@@ -68,7 +68,9 @@ function my_ajax_content() {
     if ($cat == 'Agentur' || $cat == 'Kontakt') {
       if($cat == 'Kontakt') {
         get_template_part( 'content-kontakt' );
-      } 
+      } else {
+        get_template_part( 'content-agentur' );
+      }
     } else {
       $loop = new WP_Query( array (
         'category_name' => $cat
