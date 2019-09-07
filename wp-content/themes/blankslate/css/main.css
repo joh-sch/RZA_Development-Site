@@ -317,7 +317,8 @@ a {
   text-decoration: none;
 }
 a:hover,
-a.active {
+a.active,
+button.active {
   color: var(--color_rz-red) !important;
 }
 .noActor a.active {
@@ -354,9 +355,11 @@ button {
   border: none;
   padding: 0;
   background: transparent;
-  color: unset;
-  font-size: 1.5rem;
   cursor: pointer;
+
+  font-family: inherit;
+  font-size: 100%;
+  color: unset;
 }
 
 button.text:hover {
@@ -384,6 +387,16 @@ button.vjs-big-play-button {
   display: none !important;
 }
 
+.collapsible--button::before {
+  content: "+ ";
+}
+.collapsible--button.active::before {
+  content: "× ";
+}
+.collapsible--content {
+  display: none;
+  overflow: hidden;
+}
 /* ****************************** */
 
 .w--100 {

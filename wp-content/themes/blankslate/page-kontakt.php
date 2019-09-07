@@ -16,6 +16,13 @@
           echo $content
         ?>
 
+        <!-- Imprint & PP -->
+        <div>
+          <button class="collapsible--button text text--lg text--b">Impressum</button>
+          <div class="collapsible--content text--def">
+            <p>Text Text Text Text Text Text Text Text Text Text Text Text Text</p>
+          </div>
+        </div>
       </section>
     </section>
 
@@ -38,5 +45,12 @@
     </section>
 
   </main>
+
+  <!-- Standalone Inits -->
+  <script>
+    jQuery(document).ready(function($) {
+      init_collapsibles()
+    });
+  </script>
 
 <?php get_template_part( 'templates/snippets/footer'); ?>

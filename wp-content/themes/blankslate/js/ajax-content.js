@@ -74,6 +74,21 @@ function video_fullscreen() {
   players[0].maximize();
   players[0].controls(true);
 }
+function init_collapsibles() {
+  var coll = document.getElementsByClassName("collapsible--button");
+  var i;
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+}
 
 // Function to fetch subpage-content (Agentur, Kontakt, News)
 (function($) {
