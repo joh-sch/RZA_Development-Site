@@ -22,6 +22,8 @@ add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
     // CLD
     wp_enqueue_script('cld-core', 'https://unpkg.com/cloudinary-core@2.6.3/cloudinary-core-shrinkwrap.min.js');
     wp_enqueue_script('cld-player', 'https://unpkg.com/cloudinary-video-player@1.2.0/dist/cld-video-player.light.min.js');
+    // Cookie Consent
+    wp_enqueue_script('cookieconsent', 'https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js');
     // Custom Scrollbars
     wp_enqueue_script('overlayscrollbars', 'https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/jquery.overlayScrollbars.min.js');
     // Flickity
@@ -49,8 +51,10 @@ add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
   wp_enqueue_style( 'flickity-fade', "https://unpkg.com/flickity-fade@1/flickity-fade.css",false,'1.0','all');
   // CLD
   wp_enqueue_style( 'cld', "https://unpkg.com/cloudinary-video-player@1.1.3/dist/cld-video-player.min.css",false,'1.1.3','all');
-//////////////////////////////
+  // Cookie Consent
+  wp_enqueue_style( 'cookieconsent', "https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css",false,'1.0','all');
 
+//////////////////////////////
 
 // Custom AJAX functions
 add_action( 'wp_ajax_nopriv_ajax_content', 'my_ajax_content' );
