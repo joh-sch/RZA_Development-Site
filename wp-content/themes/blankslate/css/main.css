@@ -20,7 +20,8 @@ Main styling & visual behavior
   --m_btn_absolute_rightbottom: 0 2rem 2rem 0;
 
   /* Colors */
-  --color_rz-red: #ff1412;
+  --color_rz-red: rgb(255, 20, 18);
+  --color_rz-red_dim: rgba(255, 22, 18, 0.5);
 }
 
 /* ****************************** */
@@ -696,12 +697,34 @@ h2 {
 
 /* ****************************** */
 
-#cookie-bar {
-  z-index: 99999;
-  background: white !important;
+.cc-window {
+  font-family: "Agipo Bold" !important;
+  font-size: 1.5rem !important;
+  line-height: 1 !important;
+
+  z-index: 9999999 !important;
+
+  padding: 1rem !important;
+
+  box-shadow: 0px 0px 8px 4px var(--color_rz-red_dim);
 }
-#cookie-bar p {
-  color: black !important;
+
+.cc-message {
+  margin: 0 !important;
+}
+
+.cc-btn {
+  background: white !important;
+  border-radius: 0 !important;
+  font-size: 2.25rem !important;
+  padding: 0 !important;
+  margin: 0 1rem 4px 0 !important;
+}
+
+.cc-link {
+  text-decoration: none !important;
+  text-transform: uppercase;
+  color: var(--color_rz-red) !important;
 }
 
 /* ****************************** */

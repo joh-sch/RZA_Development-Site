@@ -108,24 +108,24 @@ function init_cookieConsent() {
       allow: "Allow cookies",
       deny: "Decline",
       link: "Mehr",
-      href: "https://www.cookiesandyou.com",
+      href: "/kontakt",
       close: "&#x274c;",
       policy: "Cookie Policy",
-      target: "_blank"
+      target: "_self"
     },
     elements: {
       header: '<span class="cc-header">{{header}}</span>',
       message:
         '<span id="cookieconsent:desc" class="cc-message">{{message}}</span>',
       messagelink:
-        '<a aria-label="dismiss cookie message" tabindex="0" class="cc-btn cc-dismiss">x</a> <span id="cookieconsent:desc" class="cc-message test">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a></span>',
+        '<a aria-label="dismiss cookie message" tabindex="0" class="cc-btn cc-dismiss mr--1">×</a> <span id="cookieconsent:desc" class="cc-message test">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_self">{{link}}</a></span>',
       dismiss: "",
       allow:
         '<a aria-label="allow cookies" tabindex="0" class="cc-btn cc-allow">{{allow}}</a>',
       deny:
         '<a aria-label="deny cookies" tabindex="0" class="cc-btn cc-deny">{{deny}}</a>',
       link:
-        '<a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a>',
+        '<a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_self">{{link}}</a>',
       close:
         '<span aria-label="dismiss cookie message" tabindex="0" class="cc-close">{{close}}</span>'
     }
