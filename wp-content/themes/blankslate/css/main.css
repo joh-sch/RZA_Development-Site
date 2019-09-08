@@ -20,7 +20,8 @@ Main styling & visual behavior
   --m_btn_absolute_rightbottom: 0 2rem 2rem 0;
 
   /* Colors */
-  --color_rz-red: #ff1412;
+  --color_rz-red: rgb(255, 20, 18);
+  --color_rz-red_dim: rgba(255, 22, 18, 0.5);
 }
 
 /* ****************************** */
@@ -315,9 +316,11 @@ body.home {
 a {
   cursor: pointer;
   text-decoration: none;
+  color: black;
 }
 a:hover,
-a.active {
+a.active,
+button.active {
   color: var(--color_rz-red) !important;
 }
 .noActor a.active {
@@ -354,9 +357,11 @@ button {
   border: none;
   padding: 0;
   background: transparent;
-  color: unset;
-  font-size: 1.5rem;
   cursor: pointer;
+
+  font-family: inherit;
+  font-size: 100%;
+  color: unset;
 }
 
 button.text:hover {
@@ -384,6 +389,23 @@ button.vjs-big-play-button {
   display: none !important;
 }
 
+.collapsible--button {
+  display: block;
+}
+.collapsible--button::before {
+  content: "+ ";
+  color: black;
+}
+.collapsible--button.active::before {
+  content: "× ";
+}
+.collapsible--button:hover::before {
+  color: var(--color_rz-red);
+}
+.collapsible--content {
+  display: none;
+  overflow: hidden;
+}
 /* ****************************** */
 
 .w--100 {
@@ -671,6 +693,40 @@ h2 {
   > .os-scrollbar-track
   > .os-scrollbar-handle {
   background: transparent !important;
+}
+
+/* ****************************** */
+
+.cc-window {
+  font-family: "Agipo Bold" !important;
+  font-size: 1.5rem !important;
+  line-height: 1 !important;
+
+  z-index: 9999999 !important;
+
+  padding: 1rem !important;
+
+  box-shadow: 0px 0px 8px 4px var(--color_rz-red_dim);
+
+  transition: opacity 0s !important;
+}
+
+.cc-message {
+  margin: 0 !important;
+}
+
+.cc-btn {
+  background: white !important;
+  border-radius: 0 !important;
+  font-size: 2.25rem !important;
+  padding: 0 !important;
+  margin: 0 1rem 4px 0 !important;
+}
+
+.cc-link {
+  text-decoration: none !important;
+  text-transform: uppercase;
+  color: var(--color_rz-red) !important;
 }
 
 /* ****************************** */

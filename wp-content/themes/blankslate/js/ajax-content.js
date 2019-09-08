@@ -74,6 +74,63 @@ function video_fullscreen() {
   players[0].maximize();
   players[0].controls(true);
 }
+function init_collapsibles() {
+  var coll = document.getElementsByClassName("collapsible--button");
+  var i;
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+}
+function init_cookieConsent() {
+  window.cookieconsent.initialise({
+    palette: {
+      popup: {
+        background: "#ffffff"
+      },
+      button: {
+        background: "#f1d600"
+      }
+    },
+    theme: "classic",
+    content: {
+      header: "Cookies used on the website!",
+      message:
+        "Diese Website verwendet Cookies. Mehr darüber erfahren Sie in unseren Hinweisen zum Datenschutz.",
+      dismiss: "Got it!",
+      allow: "Allow cookies",
+      deny: "Decline",
+      link: "Mehr",
+      href: "/kontakt",
+      close: "&#x274c;",
+      policy: "Cookie Policy",
+      target: "_self"
+    },
+    elements: {
+      header: '<span class="cc-header">{{header}}</span>',
+      message:
+        '<span id="cookieconsent:desc" class="cc-message">{{message}}</span>',
+      messagelink:
+        '<a aria-label="dismiss cookie message" tabindex="0" class="cc-btn cc-dismiss mr--1">×</a> <span id="cookieconsent:desc" class="cc-message test">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_self">{{link}}</a></span>',
+      dismiss: "",
+      allow:
+        '<a aria-label="allow cookies" tabindex="0" class="cc-btn cc-allow">{{allow}}</a>',
+      deny:
+        '<a aria-label="deny cookies" tabindex="0" class="cc-btn cc-deny">{{deny}}</a>',
+      link:
+        '<a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_self">{{link}}</a>',
+      close:
+        '<span aria-label="dismiss cookie message" tabindex="0" class="cc-close">{{close}}</span>'
+    }
+  });
+}
 
 // Function to fetch subpage-content (Agentur, Kontakt, News)
 (function($) {
@@ -120,6 +177,7 @@ function video_fullscreen() {
           disable_gridDisplay_mobile(container);
           toggle_mobile_menu();
           set_menu_color_r();
+          //
           var display_status_r = $("#content_right").css("display");
           if (display_status_r == "none") {
             reset_navLinks_right();
@@ -127,6 +185,10 @@ function video_fullscreen() {
         }, 275);
         setTimeout(function() {
           reset_scrollbars_left();
+          if (cat == "Kontakt") {
+            init_collapsibles();
+          }
+          //
           container.removeClass("hidden--content");
         }, 300);
       }
