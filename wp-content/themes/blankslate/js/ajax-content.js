@@ -119,7 +119,8 @@ function init_cookieConsent() {
         '<span id="cookieconsent:desc" class="cc-message">{{message}}</span>',
       messagelink:
         '<a aria-label="dismiss cookie message" tabindex="0" class="cc-btn cc-dismiss mr--1">×</a> <span id="cookieconsent:desc" class="cc-message test">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_self">{{link}}</a></span>',
-      dismiss: "",
+      dismiss:
+        "<a href='https://www.instagram.com/theaterrambazamba/' target='_blank'><i class='fab fa-instagram mr--2 text--lg-sm' aria-hidden='true'></i></a> <a href='https://de-de.facebook.com/TheaterRambaZamba/' target='_blank'><i class='fab fa-facebook-f mr--2 text--lg-sm' aria-hidden='true'></i></a> <a href='https://twitter.com/TRambazamba' target='_blank'><i class='fab fa-twitter text--lg-sm' aria-hidden='true'></i></a>",
       allow:
         '<a aria-label="allow cookies" tabindex="0" class="cc-btn cc-allow">{{allow}}</a>',
       deny:

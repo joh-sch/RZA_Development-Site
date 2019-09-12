@@ -335,6 +335,10 @@ a.lg,
   font-size: 2rem;
 }
 
+a.glow:hover {
+  text-shadow: 0px 0px 2px var(--color_rz-red_dim);
+}
+
 span.list {
   margin-right: 0.5rem;
 }
@@ -454,6 +458,9 @@ button.vjs-big-play-button {
 .mr--1 {
   margin-right: 1rem;
 }
+.mr--2 {
+  margin-right: 2rem;
+}
 
 .pl--1 {
   padding-left: 1rem;
@@ -544,6 +551,10 @@ button.vjs-big-play-button {
 h1,
 .text--lg {
   font-size: 2.25rem !important;
+}
+
+.text--lg-sm {
+  font-size: 2rem;
 }
 
 h2,
@@ -737,6 +748,7 @@ h2 {
 }
 
 .cc-link {
+  opacity: 1 !important;
   text-decoration: none !important;
   text-transform: uppercase;
   color: var(--color_rz-red) !important;
