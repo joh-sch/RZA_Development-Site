@@ -24,7 +24,7 @@ setup_postdata($post);
 <div class="content-item">
   <button class="collapsible--button text text--lg text--b">Impressum</button>
   <div class="collapsible--content text--def">
-    <p><?php the_field('impressum') ?></p>
+    <?php the_field('impressum') ?>
   </div>
   <button class="collapsible--button text text--lg text--b">Datenschutz</button>
   <div class="collapsible--content text--def">

@@ -192,8 +192,8 @@ body.home {
   margin-bottom: 1.33rem;
   overflow: hidden;
 }
-.noActor p,
-.noActor h2 {
+.noActor.news p,
+.noActor.news h2 {
   display: inline;
   float: none;
 }
@@ -556,6 +556,16 @@ h2,
 .text--il p,
 .text--il span {
   display: inline;
+}
+
+p {
+  margin-bottom: 1.33rem !important;
+}
+p strong {
+  font-family: "Agipo Bold", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 p,
