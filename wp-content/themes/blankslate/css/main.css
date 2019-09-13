@@ -83,10 +83,6 @@ body.home {
 #header_mob_wrapper div {
   background: white;
 }
-/* #header_mob_wrapper div:last-of-type {
-  background: transparent !important;
-} */
-
 #header_mob_content {
   padding: var(--m_def_mob);
 }
@@ -120,6 +116,18 @@ body.home {
 
 #header_mob_wrapper {
   width: 100%;
+}
+
+.glow--menu {
+  height: 1rem;
+  width: 100%;
+
+  position: absolute;
+
+  left: 0;
+  bottom: -1rem;
+
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
 }
 /* ****************************** */
 

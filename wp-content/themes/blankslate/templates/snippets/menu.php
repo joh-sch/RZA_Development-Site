@@ -50,4 +50,6 @@
     <a id="brand_link" class="nobreak" href="<?php echo get_home_url(); ?>">RZ A</a>
   </div> 
   
+  <!-- Gradient -->
+  <div class="glow--menu"></div>
 </header>
