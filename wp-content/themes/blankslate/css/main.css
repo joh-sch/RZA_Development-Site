@@ -825,17 +825,62 @@ h2 {
 
 /* ****************************** */
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1281px) {
+  html {
+    font-size: 75% !important;
+    -webkit-text-size-adjust: 75% !important;
+    -ms-text-size-adjust: 75% !important;
+  }
+
+  /* ***** */
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+  .grid-item.actor {
+    min-width: 130px;
+  }
 }
 
 /* ****************************** */
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1441px) {
+  html {
+    font-size: 87.5% !important;
+    -webkit-text-size-adjust: 87.5% !important;
+    -ms-text-size-adjust: 87.5% !important;
+  }
+
+  /* ***** */
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .grid-item.actor {
+    min-width: 150px;
+  }
 }
 
 /* ****************************** */
 
-@media only screen and (min-width: 1680px) {
+@media only screen and (min-width: 1681px) {
+  html {
+    font-size: 100% !important;
+    -webkit-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+  }
+
+  /* ***** */
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  }
+  .grid-item.actor {
+    min-width: 175px;
+  }
+
+  /* ***** */
+
   .zigzag-container img.active {
     filter: drop-shadow(0px 1px 6px #ff1412);
   }
