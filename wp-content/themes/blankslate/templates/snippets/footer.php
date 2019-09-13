@@ -9,7 +9,8 @@
 
   <!-- Global Inits -->
   <script>
-    jQuery(document).ready(function($) {
+    jQuery(window).bind("load", function() {
+      resize_zigzag();
       init_cookieConsent();
     });
   </script>

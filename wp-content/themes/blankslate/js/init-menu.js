@@ -88,7 +88,7 @@ function resize_zigzag() {
   var zigzag_width = zigzag.width();
   var zigzag_position = master_width - zigzag_width;
   //
-  zigzag.css("left", zigzag_position);
+  zigzag.css("left", zigzag_position + 1);
 }
 
 //
