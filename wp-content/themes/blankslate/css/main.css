@@ -594,8 +594,6 @@ h2 {
 
 /* ****************************** */
 
-.actor-carousel {
-}
 .carousel-cell {
   width: 100%;
   height: 50vh;
@@ -756,10 +754,6 @@ h2 {
 
 /* ****************************** */
 
-@media only screen and (min-width: 0) {
-}
-/* ****************************** */
-
 @media only screen and (min-width: 768px) {
   #content_right,
   .gutter {
@@ -815,6 +809,7 @@ h2 {
     flex-direction: column;
   }
 }
+
 /* ****************************** */
 
 @media only screen and (min-width: 1024px) {
