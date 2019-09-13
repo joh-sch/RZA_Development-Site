@@ -9,6 +9,8 @@ Main styling & visual behavior
 /* ****************************** */
 
 :root {
+  /* Scaling Factors */
+
   /* Margins/Paddings */
   --m_def_desk-lg: 2rem;
   --m_left_r_desk-lg: 4rem;
@@ -594,8 +596,6 @@ h2 {
 
 /* ****************************** */
 
-.actor-carousel {
-}
 .carousel-cell {
   width: 100%;
   height: 50vh;
@@ -756,10 +756,6 @@ h2 {
 
 /* ****************************** */
 
-@media only screen and (min-width: 0) {
-}
-/* ****************************** */
-
 @media only screen and (min-width: 768px) {
   #content_right,
   .gutter {
@@ -815,6 +811,7 @@ h2 {
     flex-direction: column;
   }
 }
+
 /* ****************************** */
 
 @media only screen and (min-width: 1024px) {
@@ -825,17 +822,78 @@ h2 {
 
 /* ****************************** */
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1281px) {
+  html {
+    font-size: 75% !important;
+    -webkit-text-size-adjust: 75% !important;
+    -ms-text-size-adjust: 75% !important;
+  }
+
+  /* ***** */
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+  .grid-item.actor {
+    min-width: 130px;
+  }
+
+  /* ***** */
+
+  .zigzag-container img {
+    content: url("../images/rz_zigzag_rot_v_sm_300ppi.png");
+  }
 }
 
 /* ****************************** */
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1441px) {
+  html {
+    font-size: 87.5% !important;
+    -webkit-text-size-adjust: 87.5% !important;
+    -ms-text-size-adjust: 87.5% !important;
+  }
+
+  /* ***** */
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .grid-item.actor {
+    min-width: 150px;
+  }
+
+  /* ***** */
+
+  .zigzag-container img {
+    content: url("../images/rz_zigzag_rot_v_md_300ppi.png");
+  }
 }
 
 /* ****************************** */
 
-@media only screen and (min-width: 1680px) {
+@media only screen and (min-width: 1681px) {
+  html {
+    font-size: 100% !important;
+    -webkit-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+  }
+
+  /* ***** */
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  }
+  .grid-item.actor {
+    min-width: 175px;
+  }
+
+  /* ***** */
+
+  .zigzag-container img {
+    content: url("../images/rz_zigzag_rot_v_lg_300ppi.png");
+  }
+
   .zigzag-container img.active {
     filter: drop-shadow(0px 1px 6px #ff1412);
   }
