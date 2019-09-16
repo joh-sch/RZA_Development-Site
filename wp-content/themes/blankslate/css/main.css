@@ -83,10 +83,6 @@ body.home {
 #header_mob_wrapper div {
   background: white;
 }
-/* #header_mob_wrapper div:last-of-type {
-  background: transparent !important;
-} */
-
 #header_mob_content {
   padding: var(--m_def_mob);
 }
@@ -120,6 +116,20 @@ body.home {
 
 #header_mob_wrapper {
   width: 100%;
+}
+
+.glow--menu {
+  height: 1rem;
+  width: 100%;
+
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+}
+#header.off .glow--menu {
+  visibility: hidden;
 }
 /* ****************************** */
 
@@ -767,7 +777,7 @@ h2 {
   }
 
   #content_left.noActor {
-    padding-top: 10.75rem;
+    padding-top: 11.75rem;
     padding-left: var(--m_def_desk-lg);
     padding-right: var(--m_left_r_desk-lg);
   }
