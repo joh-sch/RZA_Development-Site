@@ -2,11 +2,9 @@ RZA Website
 
 ******************************
 
-Build version:  UNSTBL 00.6.3
+Build version:  UNSTBL 00.6.4
 
-Last changes:   — Menu-Glow
-                — responsive Zick-Zack
-                — Database-update
+Last changes:   
 
 Date:           16.09.2019
 
