@@ -4,7 +4,9 @@ RZA Website
 
 Build version:  UNSTBL 00.6.3
 
-Last changes:   Menu-Glow, responsive Zick-Zack
+Last changes:   — Menu-Glow
+                — responsive Zick-Zack
+                — Database-update
 
 Date:           16.09.2019
 
