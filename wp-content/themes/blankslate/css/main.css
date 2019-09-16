@@ -123,11 +123,13 @@ body.home {
   width: 100%;
 
   position: absolute;
-
   left: 0;
   bottom: -1rem;
 
   background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+}
+#header.off .glow--menu {
+  visibility: hidden;
 }
 /* ****************************** */
 
