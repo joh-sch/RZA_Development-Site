@@ -1,0 +1,393 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-1 START @ 05:49:46
+* VERSION: 1.3.18
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ CURRENT SERVER                         |ORIGINAL SERVER
+PHP VERSION_________: 7.1.30-nmm1                           |7.2.14
+OS__________________: Linux                                 |Darwin
+CREATED_____________: 2019-09-16 05:46:27
+WP VERSION__________: 5.2.3
+DUP VERSION_________: 1.3.18
+DB__________________: 5.7.26
+DB TABLES___________: 13
+DB ROWS_____________: 949
+DB FILE SIZE________: 1.19MB
+********************************************************************************
+SERVER INFO
+PHP_________________: 7.2.14 | SAPI: apache2handler
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+SERVER______________: Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.14 mod_ssl/2.2.34 OpenSSL/1.0.2o DAV/2 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.9 Perl/v5.24.0
+DOC ROOT____________: "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site"
+DOC ROOT 755________: true
+LOG FILE 644________: true
+REQUEST URL_________: "http://localhost/dup-installer/main.installer.php"
+********************************************************************************
+USER INPUTS
+ARCHIVE ENGINE______: "shellexec_unzip"
+SET DIR PERMS_______: 1
+DIR PERMS VALUE_____: 1363
+SET FILE PERMS______: 1
+FILE PERMS VALUE____: 1204
+SAFE MODE___________: "0"
+LOGGING_____________: "1"
+CONFIG MODE_________: "NEW"
+FILE TIME___________: "current"
+********************************************************************************
+
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME________________: "16_09_19_rambazambaagentur_database_7f6125202f6846317240_20190916054627_archive.zip"
+SIZE________________: 1.36MB
+
+PRE-EXTRACT-CHECKS
+- PASS: Apache '.htaccess' backed-up to .htaccess-190916054946-5d7f227ad79ed-duplicator.bak
+- PASS: Existing Apache '.htaccess' was removed
+- PASS: Microsoft IIS 'web.config' not found - no backup needed.
+- PASS: WordFence '.user.ini' not found - no backup needed.
+
+
+START ZIP FILE EXTRACTION SHELLEXEC >>> 
+>>> Starting Shell-Exec Unzip:
+Command: unzip -o -qq '/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/16_09_19_rambazambaagentur_database_7f6125202f6846317240_20190916054627_archive.zip' -d '/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site' 2>&1
+<<< Shell-Exec Unzip Complete.
+--------------------------------------
+POST-EXTACT-CHECKS
+--------------------------------------
+PERMISSION UPDATES:
+    -DIRS:  '755'
+    -FILES: '644'
+
+STEP-1 COMPLETE @ 05:49:48 - RUNTIME: 1.3779 sec.
+[PHP ERR][WARN] MSG:mysqli_connect(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known [CODE:2|FILE:/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/dup-installer/classes/class.db.php|LINE:43]
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known [CODE:2|FILE:/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/dup-installer/classes/class.db.php|LINE:43]
+DATABASE CONNECTION ERROR: php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known[ERRNO:2002]
+[PHP ERR][WARN] MSG:mysqli_connect(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known [CODE:2|FILE:/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/dup-installer/classes/class.db.php|LINE:43]
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known [CODE:2|FILE:/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/dup-installer/classes/class.db.php|LINE:43]
+DATABASE CONNECTION ERROR: php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known[ERRNO:2002]
+[PHP ERR][WARN] MSG:mysqli_connect(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known [CODE:2|FILE:/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/dup-installer/classes/class.db.php|LINE:43]
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known [CODE:2|FILE:/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/dup-installer/classes/class.db.php|LINE:43]
+DATABASE CONNECTION ERROR: php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known[ERRNO:2002]
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) [CODE:2|FILE:/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/dup-installer/classes/class.db.php|LINE:43]
+DATABASE CONNECTION ERROR: Access denied for user 'root'@'localhost' (using password: NO)[ERRNO:1045]
+
+
+
+********************************************************************************
+* DUPLICATOR-LITE INSTALL-LOG
+* STEP-2 START @ 05:52:36
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+NON-BREAKING SPACES_: false
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8"
+COLLATE_____________: "utf8_general_ci"
+COLLATE FB__________: false
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.7.25 -- Build Server: 5.7.26
+FILE SIZE:	dup-database__7f61252-16054627.sql (525.06KB)
+TIMEOUT:	5000
+MAXPACK:	4194304
+SQLMODE:	ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/dup-installer/dup-installer-data__7f61252-16054627.sql]
+COLLATE FB:	Off
+
+NOTICE: This servers version [5.7.25] is less than the build version [5.7.26].  
+If you find issues after testing your site please referr to this FAQ item.
+https://snapcreek.com/duplicator/docs/faqs-tech/#faq-installer-260-q
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+DB VIEWS:	enabled
+DB PROCEDURES:	enabled
+ERRORS FOUND:	0
+DROPPED TABLES:	13
+RENAMED TABLES:	0
+QUERIES RAN:	124
+
+wp_commentmeta: (0)
+wp_comments: (0)
+wp_duplicator_packages: (0)
+wp_links: (0)
+wp_options: (135)
+wp_postmeta: (633)
+wp_posts: (117)
+wp_term_relationships: (21)
+wp_term_taxonomy: (7)
+wp_termmeta: (0)
+wp_terms: (7)
+wp_usermeta: (53)
+wp_users: (2)
+Removed '31' cache/transient rows
+
+INSERT DATA RUNTIME: 0.3309 sec.
+STEP-2 COMPLETE @ 05:52:37 - RUNTIME: 0.4393 sec.
+
+====================================
+SET SEARCH AND REPLACE LIST
+====================================
+
+
+********************************************************************************
+DUPLICATOR PRO INSTALL-LOG
+STEP-3 START @ 05:53:16
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8"
+CHARSET CLIENT:	"utf8"
+********************************************************************************
+OPTIONS:
+blogname______________: "RambaZamba Agentur"
+postguid______________: false
+fullsearch____________: false
+path_old______________: "/www/htdocs/w018b6e2/dev.rza.js-devel.com/"
+path_new______________: "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/"
+siteurl_______________: "http://localhost:8888"
+url_old_______________: "http://dev.rza.js-devel.com"
+url_new_______________: "http://localhost:8888"
+maxSerializeStrlen____: 4000000
+replaceMail___________: false
+dbhost________________: "localhost"
+dbuser________________: "root"
+dbname________________: "rza_devel"
+dbcharset_____________: "utf8"
+dbcollate_____________: "utf8_general_ci"
+wp_username___________: "johannes"
+wp_mail_______________: "does@not.matter"
+wp_nickname___________: ""
+wp_first_name_________: ""
+wp_last_name__________: ""
+ssl_admin_____________: false
+cache_wp______________: false
+cache_path____________: false
+exe_safe_mode_________: false
+config_mode___________: "NEW"
+********************************************************************************
+
+
+====================================
+RUN SEARCH AND REPLACE
+====================================
+
+EVALUATE TABLE: "wp_commentmeta"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_comments"_____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_duplicator_packages"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_links"________________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_options"______________________________________[ROWS:   135][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/htdocs/w018b6e2/dev.rza.js-devel.com/" ======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/"
+	SEARCH  2:"\/www\/htdocs\/w018b6e2\/dev.rza.js-devel.com\/" => "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site\/"
+	SEARCH  3:"%2Fwww%2Fhtdocs%2Fw018b6e2%2Fdev.rza.js-devel.com%2F" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site%2F"
+	SEARCH  4:"\www\htdocs\w018b6e2\dev.rza.js-devel.com" =======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site"
+	SEARCH  5:"\\www\\htdocs\\w018b6e2\\dev.rza.js-devel.com" ===> "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site"
+	SEARCH  6:"%5Cwww%5Chtdocs%5Cw018b6e2%5Cdev.rza.js-devel.com" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site"
+	SEARCH  7:"//dev.rza.js-devel.com" ==========================> "//localhost:8888"
+	SEARCH  8:"\/\/dev.rza.js-devel.com" ========================> "\/\/localhost:8888"
+	SEARCH  9:"%2F%2Fdev.rza.js-devel.com" ======================> "%2F%2Flocalhost%3A8888"
+	SEARCH 10:"https://localhost:8888" ==========================> "http://localhost:8888"
+	SEARCH 11:"https:\/\/localhost:8888" ========================> "http:\/\/localhost:8888"
+	SEARCH 12:"https%3A%2F%2Flocalhost%3A8888" ==================> "http%3A%2F%2Flocalhost%3A8888"
+
+EVALUATE TABLE: "wp_postmeta"_____________________________________[ROWS:   633][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/htdocs/w018b6e2/dev.rza.js-devel.com/" ======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/"
+	SEARCH  2:"\/www\/htdocs\/w018b6e2\/dev.rza.js-devel.com\/" => "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site\/"
+	SEARCH  3:"%2Fwww%2Fhtdocs%2Fw018b6e2%2Fdev.rza.js-devel.com%2F" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site%2F"
+	SEARCH  4:"\www\htdocs\w018b6e2\dev.rza.js-devel.com" =======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site"
+	SEARCH  5:"\\www\\htdocs\\w018b6e2\\dev.rza.js-devel.com" ===> "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site"
+	SEARCH  6:"%5Cwww%5Chtdocs%5Cw018b6e2%5Cdev.rza.js-devel.com" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site"
+	SEARCH  7:"//dev.rza.js-devel.com" ==========================> "//localhost:8888"
+	SEARCH  8:"\/\/dev.rza.js-devel.com" ========================> "\/\/localhost:8888"
+	SEARCH  9:"%2F%2Fdev.rza.js-devel.com" ======================> "%2F%2Flocalhost%3A8888"
+	SEARCH 10:"https://localhost:8888" ==========================> "http://localhost:8888"
+	SEARCH 11:"https:\/\/localhost:8888" ========================> "http:\/\/localhost:8888"
+	SEARCH 12:"https%3A%2F%2Flocalhost%3A8888" ==================> "http%3A%2F%2Flocalhost%3A8888"
+
+EVALUATE TABLE: "wp_posts"________________________________________[ROWS:   117][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/htdocs/w018b6e2/dev.rza.js-devel.com/" ======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/"
+	SEARCH  2:"\/www\/htdocs\/w018b6e2\/dev.rza.js-devel.com\/" => "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site\/"
+	SEARCH  3:"%2Fwww%2Fhtdocs%2Fw018b6e2%2Fdev.rza.js-devel.com%2F" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site%2F"
+	SEARCH  4:"\www\htdocs\w018b6e2\dev.rza.js-devel.com" =======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site"
+	SEARCH  5:"\\www\\htdocs\\w018b6e2\\dev.rza.js-devel.com" ===> "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site"
+	SEARCH  6:"%5Cwww%5Chtdocs%5Cw018b6e2%5Cdev.rza.js-devel.com" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site"
+	SEARCH  7:"//dev.rza.js-devel.com" ==========================> "//localhost:8888"
+	SEARCH  8:"\/\/dev.rza.js-devel.com" ========================> "\/\/localhost:8888"
+	SEARCH  9:"%2F%2Fdev.rza.js-devel.com" ======================> "%2F%2Flocalhost%3A8888"
+	SEARCH 10:"https://localhost:8888" ==========================> "http://localhost:8888"
+	SEARCH 11:"https:\/\/localhost:8888" ========================> "http:\/\/localhost:8888"
+	SEARCH 12:"https%3A%2F%2Flocalhost%3A8888" ==================> "http%3A%2F%2Flocalhost%3A8888"
+
+EVALUATE TABLE: "wp_term_relationships"___________________________[ROWS:    21][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/htdocs/w018b6e2/dev.rza.js-devel.com/" ======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/"
+	SEARCH  2:"\/www\/htdocs\/w018b6e2\/dev.rza.js-devel.com\/" => "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site\/"
+	SEARCH  3:"%2Fwww%2Fhtdocs%2Fw018b6e2%2Fdev.rza.js-devel.com%2F" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site%2F"
+	SEARCH  4:"\www\htdocs\w018b6e2\dev.rza.js-devel.com" =======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site"
+	SEARCH  5:"\\www\\htdocs\\w018b6e2\\dev.rza.js-devel.com" ===> "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site"
+	SEARCH  6:"%5Cwww%5Chtdocs%5Cw018b6e2%5Cdev.rza.js-devel.com" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site"
+	SEARCH  7:"//dev.rza.js-devel.com" ==========================> "//localhost:8888"
+	SEARCH  8:"\/\/dev.rza.js-devel.com" ========================> "\/\/localhost:8888"
+	SEARCH  9:"%2F%2Fdev.rza.js-devel.com" ======================> "%2F%2Flocalhost%3A8888"
+	SEARCH 10:"https://localhost:8888" ==========================> "http://localhost:8888"
+	SEARCH 11:"https:\/\/localhost:8888" ========================> "http:\/\/localhost:8888"
+	SEARCH 12:"https%3A%2F%2Flocalhost%3A8888" ==================> "http%3A%2F%2Flocalhost%3A8888"
+
+EVALUATE TABLE: "wp_term_taxonomy"________________________________[ROWS:     7][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/htdocs/w018b6e2/dev.rza.js-devel.com/" ======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/"
+	SEARCH  2:"\/www\/htdocs\/w018b6e2\/dev.rza.js-devel.com\/" => "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site\/"
+	SEARCH  3:"%2Fwww%2Fhtdocs%2Fw018b6e2%2Fdev.rza.js-devel.com%2F" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site%2F"
+	SEARCH  4:"\www\htdocs\w018b6e2\dev.rza.js-devel.com" =======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site"
+	SEARCH  5:"\\www\\htdocs\\w018b6e2\\dev.rza.js-devel.com" ===> "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site"
+	SEARCH  6:"%5Cwww%5Chtdocs%5Cw018b6e2%5Cdev.rza.js-devel.com" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site"
+	SEARCH  7:"//dev.rza.js-devel.com" ==========================> "//localhost:8888"
+	SEARCH  8:"\/\/dev.rza.js-devel.com" ========================> "\/\/localhost:8888"
+	SEARCH  9:"%2F%2Fdev.rza.js-devel.com" ======================> "%2F%2Flocalhost%3A8888"
+	SEARCH 10:"https://localhost:8888" ==========================> "http://localhost:8888"
+	SEARCH 11:"https:\/\/localhost:8888" ========================> "http:\/\/localhost:8888"
+	SEARCH 12:"https%3A%2F%2Flocalhost%3A8888" ==================> "http%3A%2F%2Flocalhost%3A8888"
+
+EVALUATE TABLE: "wp_termmeta"_____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_terms"________________________________________[ROWS:     7][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/htdocs/w018b6e2/dev.rza.js-devel.com/" ======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/"
+	SEARCH  2:"\/www\/htdocs\/w018b6e2\/dev.rza.js-devel.com\/" => "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site\/"
+	SEARCH  3:"%2Fwww%2Fhtdocs%2Fw018b6e2%2Fdev.rza.js-devel.com%2F" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site%2F"
+	SEARCH  4:"\www\htdocs\w018b6e2\dev.rza.js-devel.com" =======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site"
+	SEARCH  5:"\\www\\htdocs\\w018b6e2\\dev.rza.js-devel.com" ===> "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site"
+	SEARCH  6:"%5Cwww%5Chtdocs%5Cw018b6e2%5Cdev.rza.js-devel.com" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site"
+	SEARCH  7:"//dev.rza.js-devel.com" ==========================> "//localhost:8888"
+	SEARCH  8:"\/\/dev.rza.js-devel.com" ========================> "\/\/localhost:8888"
+	SEARCH  9:"%2F%2Fdev.rza.js-devel.com" ======================> "%2F%2Flocalhost%3A8888"
+	SEARCH 10:"https://localhost:8888" ==========================> "http://localhost:8888"
+	SEARCH 11:"https:\/\/localhost:8888" ========================> "http:\/\/localhost:8888"
+	SEARCH 12:"https%3A%2F%2Flocalhost%3A8888" ==================> "http%3A%2F%2Flocalhost%3A8888"
+
+EVALUATE TABLE: "wp_usermeta"_____________________________________[ROWS:    53][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/htdocs/w018b6e2/dev.rza.js-devel.com/" ======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/"
+	SEARCH  2:"\/www\/htdocs\/w018b6e2\/dev.rza.js-devel.com\/" => "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site\/"
+	SEARCH  3:"%2Fwww%2Fhtdocs%2Fw018b6e2%2Fdev.rza.js-devel.com%2F" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site%2F"
+	SEARCH  4:"\www\htdocs\w018b6e2\dev.rza.js-devel.com" =======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site"
+	SEARCH  5:"\\www\\htdocs\\w018b6e2\\dev.rza.js-devel.com" ===> "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site"
+	SEARCH  6:"%5Cwww%5Chtdocs%5Cw018b6e2%5Cdev.rza.js-devel.com" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site"
+	SEARCH  7:"//dev.rza.js-devel.com" ==========================> "//localhost:8888"
+	SEARCH  8:"\/\/dev.rza.js-devel.com" ========================> "\/\/localhost:8888"
+	SEARCH  9:"%2F%2Fdev.rza.js-devel.com" ======================> "%2F%2Flocalhost%3A8888"
+	SEARCH 10:"https://localhost:8888" ==========================> "http://localhost:8888"
+	SEARCH 11:"https:\/\/localhost:8888" ========================> "http:\/\/localhost:8888"
+	SEARCH 12:"https%3A%2F%2Flocalhost%3A8888" ==================> "http%3A%2F%2Flocalhost%3A8888"
+
+EVALUATE TABLE: "wp_users"________________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/htdocs/w018b6e2/dev.rza.js-devel.com/" ======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site/"
+	SEARCH  2:"\/www\/htdocs\/w018b6e2\/dev.rza.js-devel.com\/" => "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site\/"
+	SEARCH  3:"%2Fwww%2Fhtdocs%2Fw018b6e2%2Fdev.rza.js-devel.com%2F" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site%2F"
+	SEARCH  4:"\www\htdocs\w018b6e2\dev.rza.js-devel.com" =======> "/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1914_RZA/RZA_Development-Site"
+	SEARCH  5:"\\www\\htdocs\\w018b6e2\\dev.rza.js-devel.com" ===> "\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1914_RZA\/RZA_Development-Site"
+	SEARCH  6:"%5Cwww%5Chtdocs%5Cw018b6e2%5Cdev.rza.js-devel.com" => "%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1914_RZA%2FRZA_Development-Site"
+	SEARCH  7:"//dev.rza.js-devel.com" ==========================> "//localhost:8888"
+	SEARCH  8:"\/\/dev.rza.js-devel.com" ========================> "\/\/localhost:8888"
+	SEARCH  9:"%2F%2Fdev.rza.js-devel.com" ======================> "%2F%2Flocalhost%3A8888"
+	SEARCH 10:"https://localhost:8888" ==========================> "http://localhost:8888"
+	SEARCH 11:"https:\/\/localhost:8888" ========================> "http:\/\/localhost:8888"
+	SEARCH 12:"https%3A%2F%2Flocalhost%3A8888" ==================> "http%3A%2F%2Flocalhost%3A8888"
+--------------------------------------
+SCANNED:	Tables:13 	|	 Rows:975 	|	 Cells:6135 
+UPDATED:	Tables:2 	|	 Rows:121 	|	 Cells:125 
+ERRORS:		0 
+RUNTIME:	0.091800 sec
+
+====================================
+REMOVE LICENSE KEY
+====================================
+
+====================================
+CREATE NEW ADMIN USER
+====================================
+
+NEW WP-ADMIN USER:
+ - Username 'johannes' already exists in the database.  Unable to create new account.
+
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	UPDATE DB_NAME ""rza_devel""
+	UPDATE DB_USER ""root""
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""localhost""
+	REMOVE WPCACHEHOME
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE MODE: "NEW"
+====================================
+- PASS: Successfully created a new .htaccess file.
+- PASS: Existing Apache 'htaccess.orig' was removed
+
+====================================
+GENERAL UPDATES & CLEANUP
+====================================
+
+====================================
+NOTICES TEST
+====================================
+
+====================================
+CLEANUP TMP FILES
+====================================
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 05:53:16 - RUNTIME: 0.1560 sec. 
+
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+-----------------------
+[INFO] Info
+	SECTIONS: general
+	LONG MSG:             The following is a list of notices that may need to be fixed in order to finalize your setup.  These values should only be investigated if your running into
+            issues with your site. For more details see the <a href="https://codex.wordpress.org/Editing_wp-config.php" target="_blank">WordPress Codex</a>.
+
+-----------------------
+[INFO] No errors in database
+	SECTIONS: database
+
+-----------------------
+[INFO] No search and replace data errors
+	SECTIONS: search_replace
+
+-----------------------
+[INFO] No files extraction errors
+	SECTIONS: files
+
+-----------------------
+[WARNING] New admin user create error
+	SECTIONS: general
+	LONG MSG: 
+NEW WP-ADMIN USER:
+ - Username 'johannes' already exists in the database.  Unable to create new account.
+
+
+====================================
