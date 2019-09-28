@@ -6,6 +6,7 @@ Build version:  UNSTBL 00.6.4.1
 
 Last changes:   – Fixed aspect ratio for grid-item
                 – Glow on slider-overlay elements
+                – Revised video-UI
 
 Date:           28.09.2019
 

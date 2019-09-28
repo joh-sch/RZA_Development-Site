@@ -681,11 +681,30 @@ h2 {
 .actor-carousel-overlay button.fullscreen::after {
   content: "Vollbild";
 }
+.actor-carousel-overlay button.play::after,
+.actor-carousel-overlay .playing button.play::after {
+  content: "";
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 28px;
+  width: 22px;
+  background-position: center;
+  display: block;
+  filter: drop-shadow(0px 0px 7px white);
+}
 .actor-carousel-overlay button.play::after {
-  content: "Abspielen";
+  background-image: url("../images/rz_play.svg");
+}
+.actor-carousel-overlay button.play:hover::after {
+  background-image: url("../images/rz_play_hover.svg");
+  filter: drop-shadow(0px 0px 0px white);
 }
 .actor-carousel-overlay .playing button.play::after {
-  content: "Pause";
+  background-image: url("../images/rz_pause.svg");
+}
+.actor-carousel-overlay .playing button.play:hover::after {
+  background-image: url("../images/rz_pause_hover.svg");
+  filter: drop-shadow(0px 0px 0px white);
 }
 
 .slider-counter {

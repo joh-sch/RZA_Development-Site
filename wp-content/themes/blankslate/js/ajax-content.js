@@ -45,13 +45,13 @@ function check_slide_video() {
   var controls = jQuery("#slider_overlay .video-controls");
   //
   if (currentSlide.hasClass("video-cell")) {
-    var ui_colorSetting = "color_white";
+    // var ui_colorSetting = "color_white";
     controls.removeClass("hidden--off");
-    toggle_ui_actor(ui_colorSetting);
+    // toggle_ui_actor(ui_colorSetting);
   } else {
-    var ui_colorSetting = "color_black";
+    // var ui_colorSetting = "color_black";
     controls.addClass("hidden--off");
-    toggle_ui_actor(ui_colorSetting);
+    // toggle_ui_actor(ui_colorSetting);
     if (video.hasClass("vjs-playing")) {
       players[0].stop();
       controls.removeClass("playing");
@@ -326,11 +326,6 @@ function init_cookieConsent() {
                 .querySelector("#slider_overlay button.play")
                 .addEventListener("click", function() {
                   video_playToggle();
-                });
-              document
-                .querySelector("#slider_overlay button.fullscreen")
-                .addEventListener("click", function() {
-                  alert("Dieser Button funktioniert noch nicht… aber bald!");
                 });
               // End of Video
               players[0].on("ended", event => {
