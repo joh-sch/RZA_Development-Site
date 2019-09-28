@@ -327,11 +327,6 @@ function init_cookieConsent() {
                 .addEventListener("click", function() {
                   video_playToggle();
                 });
-              document
-                .querySelector("#slider_overlay button.fullscreen")
-                .addEventListener("click", function() {
-                  alert("Dieser Button funktioniert noch nicht… aber bald!");
-                });
               // End of Video
               players[0].on("ended", event => {
                 // Reset play-button & video
