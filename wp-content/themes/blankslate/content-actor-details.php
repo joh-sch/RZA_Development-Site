@@ -45,6 +45,43 @@
       <span>*<?php the_field('geburtsjahr'); ?></span>
     </div>
 
+    <!-- Meta-Infos -->
+    <section class="mb--1">
+      <div class="text--il">
+        <p class="h2 list">Größe    </p><span> <?php the_field('groesse'); ?>m</span>
+      </div>
+      <div class="text--il">
+        <p class="h2 list">Haarfarbe</p><span> <?php the_field('haarfarbe'); ?></span>
+      </div>
+      <div class="text--il">
+        <p class="h2 list">Augenfarbe</p><span> <?php the_field('augenfarbe'); ?></span>
+      </div>
+    </section>
+
+    <section class="mb--1">
+      <?php if( have_rows('faehigkeiten') ): ?>
+        <?php while ( have_rows('faehigkeiten') ) : the_row(); ?>
+          <div class="text--il">
+            <p class="h2 list"><?php the_sub_field('kategorie'); ?></p><span> <?php the_sub_field('faehigkeiten_list'); ?></span>
+          </div>
+        <?php endwhile ?>
+      <?php endif ?>
+
+      <div class="text--il">
+        <p class="h2 list">Besonderheiten</p><span> <?php the_field('besonderheiten'); ?></span>
+      </div>
+    </section>
+
+    <section class="mb--2">
+      <div class="text--il">
+        <p class="h2 list">Wohnort</p><span> <?php the_field('wohnort'); ?></span>
+      </div>
+    </section>
+
+    <!-- Lebenslauf -->
+    <div class="mb--1">
+      <h1 class="text--b">Filme</h1>
+    </div>
     <?php if( have_rows('lebenslauf') ): ?>
       <?php $all_items_count = count(get_field('lebenslauf'));
             $item_count = 1;
@@ -55,8 +92,8 @@
 
           <?php if( have_rows('produktionen') ): ?>
             <?php while ( have_rows('produktionen') ) : the_row(); ?>
-              <div class="text--il">
-                <p class="h2"><?php the_sub_field('titel'); ?></p>
+              <div>
+                <p class="h2 list"><?php the_sub_field('titel'); ?></p>
                 <span>Regie: <?php the_sub_field('regie'); ?></span>
               </div>
             <?php endwhile ?>
@@ -68,7 +105,9 @@
       <?php endwhile ?>
     <?php endif ?>
 
-    <h2 class="mb--1">Weitere Produktionen</h2>
+    <div class="mb--1">
+      <h1 class="text--b">Weitere Produktionen</h1>
+    </div>
 
     <?php if( have_rows('lebenslauf_weitere') ): ?>
       <?php while ( have_rows('lebenslauf_weitere') ) : the_row(); ?>
