@@ -4,7 +4,7 @@ RZA Website
 
 Build version:  UNSTBL 00.6.4
 
-Last changes:   
+Last changes:   – Fixed aspect ratio for grid-item
 
 Date:           16.09.2019
 
