@@ -55,8 +55,11 @@ Main styling & visual behavior
   color: black !important;
 }
 
+.glow--txt--white--sm {
+  text-shadow: 0px 0px 3px white;
+}
 .glow--txt--white {
-  text-shadow: 0px 0px 2px white;
+  text-shadow: 0px 0px 4.5px white;
 }
 
 /* ****************************** */

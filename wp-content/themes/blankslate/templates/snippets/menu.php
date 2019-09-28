@@ -1,7 +1,7 @@
 <header id="header" class="z--high hidden--mobile <?php if(is_single()): ?>off<?php endif ?>">
 
   <!-- Menu-button -->
-  <button id="button_nav" class="text text--lg <?php if(!is_single()): ?>hidden--off<?php endif ?>">+</button>
+  <button id="button_nav" class="text text--lg glow--txt--white--sm <?php if(!is_single()): ?>hidden--off<?php endif ?>">+</button>
   
   <!-- Menu -->
   <div id="nav_main" class="d--flex btw text--lg text--b w--100 <?php if(is_single()): ?>hidden--off<?php endif ?>">

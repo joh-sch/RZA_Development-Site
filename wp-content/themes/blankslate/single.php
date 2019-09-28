@@ -16,7 +16,7 @@
           <header>
             <!-- Slider-Overlay -->
             <div id="slider_overlay" class="actor-carousel-overlay z--up text--def color_black">
-              <div class="slider-counter">1/3</div>
+              <div class="slider-counter glow--txt--white">1/3</div>
               <button class="slider-button prev" onclick="slider_prev()"></button>
               <button class="slider-button next" onclick="slider_next()"></button>
               <div class="video-controls hidden--off">
