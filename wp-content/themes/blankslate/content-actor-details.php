@@ -6,12 +6,15 @@
   <header>
     <!-- Slider-Overlay -->
     <div id="slider_overlay" class="actor-carousel-overlay z--up text--def color_black">
+      <!-- Slider Controls -->
       <div class="slider-counter glow--txt--white">1/3</div>
       <button class="slider-button prev" onclick="slider_prev()"></button>
       <button class="slider-button next" onclick="slider_next()"></button>
+      
+      <!-- Video Controls -->
       <div class="video-controls hidden--off">
         <button class="play mr--05"></button>
-        <button class="fullscreen"></button>
+        <!-- <button class="fullscreen"></button> -->
       </div>
     </div>
 
