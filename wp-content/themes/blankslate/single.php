@@ -23,9 +23,7 @@
 
               <!-- Video Controls -->
               <div class="video-controls hidden--off">
-                <button class="play mr--1">
-
-                </button>
+                <button class="play mr--1"></button>
                 <!-- <button class="fullscreen"></button> -->
               </div>
             </div>
@@ -63,6 +61,34 @@
               $post = get_post($post_id); 
               setup_postdata($post);
             ?>
+
+            <!-- Meta-Infos -->
+            <section class="mb--1">
+              <div class="text--il">
+                <p class="h2 list">Größe    </p><span> <?php the_field('groesse'); ?>m</span>
+              </div>
+              <div class="text--il">
+                <p class="h2 list">Haarfarbe</p><span> <?php the_field('haarfarbe'); ?></span>
+              </div>
+              <div class="text--il">
+                <p class="h2 list">Augenfarbe</p><span> <?php the_field('augenfarbe'); ?></span>
+              </div>
+
+              <?php if( have_rows('faehigkeiten') ): ?>
+                <?php while ( have_rows('faehigkeiten') ) : the_row(); ?>
+                  <div class="text--il">
+                    <p class="h2 list"><?php the_sub_field('kategorie'); ?></p><span> <?php the_sub_field('faehigkeiten_list'); ?></span>
+                  </div>
+                <?php endwhile ?>
+              <?php endif ?>
+
+              <div class="text--il">
+                <p class="h2 list">Besonderheiten</p><span> <?php the_field('besonderheiten'); ?></span>
+              </div>
+              <div class="text--il">
+                <p class="h2 list">Wohnort</p><span> <?php the_field('wohnort'); ?></span>
+              </div>
+            </section>
             
             <?php if( have_rows('lebenslauf') ): ?>
               <?php $all_items_count = count(get_field('lebenslauf'));

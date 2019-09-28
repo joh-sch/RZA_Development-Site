@@ -617,6 +617,9 @@ h2,
 p {
   margin-bottom: 1.33rem !important;
 }
+p.list {
+  margin-bottom: 0 !important;
+}
 p strong {
   font-family: "Agipo Bold", sans-serif;
   font-weight: normal;
