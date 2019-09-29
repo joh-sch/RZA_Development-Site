@@ -100,25 +100,21 @@
               <h1 class="text--b">Filme</h1>
             </div>
             <?php if( have_rows('lebenslauf') ): ?>
-              <?php $all_items_count = count(get_field('lebenslauf'));
-                    $item_count = 1;
-                    ?>
               <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
-                <section class="mb--1 <?php if ($item_count == $all_items_count): ?>mb--2 <?php endif ?>">
+                <section class="mb--2">
                   <h2><?php the_sub_field('jahr'); ?></h2>
-
+                  <?php $all_items_count = count(get_sub_field('produktionen'));
+                        $item_count = 1; ?>
                   <?php if( have_rows('produktionen') ): ?>
                     <?php while ( have_rows('produktionen') ) : the_row(); ?>
-                      <div>
+                      <div class="<?php if ($item_count == $all_items_count): ?>mb--0<?php else: ?>mb--1<?php endif ?>">
                         <p class="h2 list"><?php the_sub_field('titel'); ?></p>
                         <span>Regie: <?php the_sub_field('regie'); ?></span>
                       </div>
+                      <?php $item_count++; ?>
                     <?php endwhile ?>
                   <?php endif ?>
-
                 </section> 
-                <?php $item_count++; ?>
-
               <?php endwhile ?>
             <?php endif ?>
 
