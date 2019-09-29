@@ -12,7 +12,6 @@ register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'blankslate' 
 }
 add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
 
-
 // Load additional CSS & JS
   function blankslate_load_scripts() {
     wp_enqueue_style( 'blankslate-style', get_stylesheet_uri() );
@@ -113,7 +112,22 @@ function my_ajax_actors() {
   die();
 }
 
+//////////////////////////////
 
+// Custom Admin-Menu entries
+function add_actors_admin_menu_item() {
+  add_menu_page(__('Schauspieler'), __('Schauspieler'), 'read', '/edit.php?category_name=schauspieler');
+}
+function add_actresses_admin_menu_item() {
+  add_menu_page(__('Schauspielerinnen'), __('Schauspielerinnen'), 'read', '/edit.php?category_name=schauspielerinnen');
+}
+function add_news_admin_menu_item() {
+  add_menu_page(__('News'), __('News'), 'read', '/edit.php?category_name=news');
+}
+
+add_action('admin_menu', 'add_actors_admin_menu_item');
+add_action('admin_menu', 'add_actresses_admin_menu_item');
+add_action('admin_menu', 'add_news_admin_menu_item');
 //////////////////////////////
 
 add_action( 'wp_footer', 'blankslate_footer_scripts' );
