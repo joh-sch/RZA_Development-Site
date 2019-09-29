@@ -740,6 +740,7 @@ h2 {
   background-position: 50%;
 
   position: relative;
+  z-index: 1;
 }
 
 .gutter.gutter-horizontal {
