@@ -72,10 +72,14 @@
       </div>
     </section>
 
-    <section class="mb--2">
+    <section class="mb--1">
       <div class="text--il">
         <p class="h2 list">Wohnort</p><span> <?php the_field('wohnort'); ?></span>
       </div>
+    </section>
+
+    <section class="mb--2">
+        <p class="h2"><?php the_field('weiteres'); ?></p>
     </section>
 
     <!-- Lebenslauf -->
