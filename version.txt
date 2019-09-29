@@ -8,6 +8,7 @@ Last changes:   – Fixed aspect ratio for grid-item
                 – Glow on slider-overlay elements
                 – Revised video-UI
                 – Revised actor-page arch. + new custom fields
+                – Adminimize + custom admin-menu entries
 
 Date:           29.09.2019
 
