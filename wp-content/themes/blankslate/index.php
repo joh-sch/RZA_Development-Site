@@ -26,6 +26,8 @@
           <?php endif ?>
         <?php endwhile; ?>
       </section>
+      <!-- Scroll-Shadow -->
+      <div class="glow--scrollshadow"></div>
     </section>
 
     <!-- Zig-Zag -->
