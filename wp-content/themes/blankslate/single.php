@@ -23,9 +23,7 @@
 
               <!-- Video Controls -->
               <div class="video-controls hidden--off">
-                <button class="play mr--1">
-
-                </button>
+                <button class="play mr--1"></button>
                 <!-- <button class="fullscreen"></button> -->
               </div>
             </div>
@@ -63,31 +61,70 @@
               $post = get_post($post_id); 
               setup_postdata($post);
             ?>
-            
-            <?php if( have_rows('lebenslauf') ): ?>
-              <?php $all_items_count = count(get_field('lebenslauf'));
-                    $item_count = 1;
-                    ?>
-              <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
-                <section class="mb--1 <?php if ($item_count == $all_items_count): ?>mb--2 <?php endif ?>">
-                  <h2><?php the_sub_field('jahr'); ?></h2>
 
+            <!-- Meta-Infos -->
+            <section class="mb--1">
+              <div class="text--il">
+                <p class="h2 list">Größe    </p><span> <?php the_field('groesse'); ?>m</span>
+              </div>
+              <div class="text--il">
+                <p class="h2 list">Haarfarbe</p><span> <?php the_field('haarfarbe'); ?></span>
+              </div>
+              <div class="text--il">
+                <p class="h2 list">Augenfarbe</p><span> <?php the_field('augenfarbe'); ?></span>
+              </div>
+            </section>
+
+            <section class="mb--1">
+              <?php if( have_rows('faehigkeiten') ): ?>
+                <?php while ( have_rows('faehigkeiten') ) : the_row(); ?>
+                  <div class="text--il">
+                    <p class="h2 list"><?php the_sub_field('kategorie'); ?></p><span> <?php the_sub_field('faehigkeiten_list'); ?></span>
+                  </div>
+                <?php endwhile ?>
+              <?php endif ?>
+
+              <div class="text--il">
+                <p class="h2 list">Besonderheiten</p><span> <?php the_field('besonderheiten'); ?></span>
+              </div>
+            </section>
+
+            <section class="mb--1">
+              <div class="text--il">
+                <p class="h2 list">Wohnort</p><span> <?php the_field('wohnort'); ?></span>
+              </div>
+            </section>
+
+            <section class="mb--2">
+              <p class="h2"><?php the_field('weiteres'); ?></p>
+            </section>
+
+            <!-- Lebenslauf -->
+            <div class="mb--1">
+              <h1 class="text--b">Filme</h1>
+            </div>
+            <?php if( have_rows('lebenslauf') ): ?>
+              <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
+                <section class="mb--2">
+                  <h2><?php the_sub_field('jahr'); ?></h2>
+                  <?php $all_items_count = count(get_sub_field('produktionen'));
+                        $item_count = 1; ?>
                   <?php if( have_rows('produktionen') ): ?>
                     <?php while ( have_rows('produktionen') ) : the_row(); ?>
-                      <div class="text--il">
-                        <p class="h2"><?php the_sub_field('titel'); ?></p>
+                      <div class="<?php if ($item_count == $all_items_count): ?>mb--0<?php else: ?>mb--1<?php endif ?>">
+                        <p class="h2 list"><?php the_sub_field('titel'); ?></p>
                         <span>Regie: <?php the_sub_field('regie'); ?></span>
                       </div>
+                      <?php $item_count++; ?>
                     <?php endwhile ?>
                   <?php endif ?>
-
                 </section> 
-                <?php $item_count++; ?>
-
               <?php endwhile ?>
             <?php endif ?>
 
-            <h2 class="mb--1">Weitere Produktionen</h2>
+            <div class="mb--1">
+              <h1 class="text--b">Weitere Produktionen</h1>
+            </div>
 
             <?php if( have_rows('lebenslauf_weitere') ): ?>
               <?php while ( have_rows('lebenslauf_weitere') ) : the_row(); ?>
@@ -110,7 +147,8 @@
 
         </article>
       </section>
-
+      <!-- Scroll-Shadow -->
+      <div class="glow--scrollshadow"></div>
     </section>
 
     <!-- Zig-Zag -->

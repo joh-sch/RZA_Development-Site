@@ -2,12 +2,13 @@ RZA Website
 
 ******************************
 
-Build version:  UNSTBL 00.6.4.1
+Build version:  UNSTBL 00.6.4.2
 
 Last changes:   – Fixed aspect ratio for grid-item
                 – Glow on slider-overlay elements
                 – Revised video-UI
+                – Revised actor-page arch. + new custom fields
 
-Date:           28.09.2019
+Date:           29.09.2019
 
 ******************************
