@@ -315,6 +315,7 @@ body.home {
   padding: 0;
 }
 .grid-container.mobile.off {
+  grid-gap: 0 !important;
   grid-template-columns: 1fr !important;
 }
 
