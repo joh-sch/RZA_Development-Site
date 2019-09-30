@@ -306,14 +306,11 @@ body.home {
 }
 .grid-container {
   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
-  /* grid-auto-rows: 350px; */
-
   grid-gap: 1.33rem 1.66rem;
-
   padding: 2rem;
 }
 .grid-container.mobile {
-  grid-gap: 1rem;
+  grid-gap: 0.75rem;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   padding: 0;
 }
@@ -836,7 +833,6 @@ h2 {
 
 @media only screen and (min-width: 768px) {
   /* Left & Right Content Panes */
-
   #content_right,
   .gutter {
     display: block;
@@ -857,7 +853,6 @@ h2 {
   }
 
   /* Actor Grid */
-
   .grid-item.actor::before {
     padding-bottom: calc(100% * (17 / 10));
   }
@@ -867,7 +862,6 @@ h2 {
   }
 
   /* Hiding Classes */
-
   .hidden--mobile {
     display: block !important;
   }
@@ -877,7 +871,6 @@ h2 {
   }
 
   /* Spacing/Positioning Utilities */
-
   .mt--mob-6-desk-0 {
     margin-top: 0;
   }
