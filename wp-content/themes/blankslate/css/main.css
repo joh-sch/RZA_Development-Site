@@ -99,7 +99,6 @@ body.home {
 }
 #nav_links_mob {
   padding: var(--m_def-plus_mob);
-  padding-top: 0;
 }
 
 #header {
@@ -250,6 +249,7 @@ body.home {
 
 .content-item-text {
   padding: 16px;
+  line-height: 1.2;
 }
 
 /* ****************************** */
@@ -606,6 +606,9 @@ h2,
   font-size: 1.5rem;
 }
 
+.text--lg-plus {
+  font-size: 3rem !important;
+}
 .text--lg-xl {
   font-size: 4rem !important;
 }
@@ -645,6 +648,10 @@ h2 {
 
 .nobreak {
   white-space: nowrap;
+}
+
+.text--kompress {
+  line-height: 1 !important;
 }
 
 /* ****************************** */
