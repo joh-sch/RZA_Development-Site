@@ -9,8 +9,6 @@ Main styling & visual behavior
 /* ****************************** */
 
 :root {
-  /* Scaling Factors */
-
   /* Margins/Paddings */
   --m_def_desk-lg: 2rem;
   --m_left_r_desk-lg: 4rem;
@@ -20,7 +18,7 @@ Main styling & visual behavior
 
   --m_header_mob: 0.75rem 1.1rem 0.95rem 1.1rem;
 
-  --m_btn_absolute_leftbottom: 0 0 2rem 2rem;
+  --m_btn_absolute_leftbottom: 0 0 16px 16px;
   --m_btn_absolute_rightbottom: 0 2rem 2rem 0;
 
   /* Colors */
@@ -46,6 +44,10 @@ Main styling & visual behavior
   font-style: normal;
   font-weight: bold;
   font-stretch: normal;
+}
+
+html {
+  font-size: 12px !important;
 }
 
 /* ****************************** */
@@ -97,7 +99,6 @@ body.home {
 }
 #nav_links_mob {
   padding: var(--m_def-plus_mob);
-  padding-top: 0;
 }
 
 #header {
@@ -151,9 +152,7 @@ body.home {
 /* ****************************** */
 
 #content_right {
-  /* MOBILE */
   display: none;
-  /* ****** */
 
   background: var(--color_rz-red);
   min-height: 100vh;
@@ -162,9 +161,7 @@ body.home {
 }
 
 #content_left {
-  /* MOBILE */
   min-width: 100%;
-  /* ****** */
 }
 #content_left.grid {
   background: var(--color_rz-red);
@@ -179,11 +176,9 @@ body.home {
   overflow: scroll;
 }
 #content_left.noActor {
-  /* MOBILE */
   padding-top: calc(8rem);
-  padding-left: 1rem;
-  padding-right: 1rem;
-  /* ****** */
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 #content_left div,
@@ -252,6 +247,11 @@ body.home {
   display: inline;
 }
 
+.content-item-text {
+  padding: 16px;
+  line-height: 1.2;
+}
+
 /* ****************************** */
 
 .actor #nav_main {
@@ -310,7 +310,7 @@ body.home {
   padding: 2rem;
 }
 .grid-container.mobile {
-  grid-gap: 0.75rem;
+  grid-gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   padding: 0;
 }
@@ -594,15 +594,24 @@ button.vjs-big-play-button {
 
 /* ****************************** */
 
-.text--xlg {
-  font-size: 4rem !important;
-}
-
 h1,
+.h1,
 .text--lg {
   font-size: 2.25rem !important;
 }
 
+h2,
+.h2,
+.text--def {
+  font-size: 1.5rem;
+}
+
+.text--lg-plus {
+  font-size: 3rem !important;
+}
+.text--lg-xl {
+  font-size: 4rem !important;
+}
 .text--lg-sm {
   font-size: 2rem;
 }
@@ -611,10 +620,6 @@ h2,
 .h2,
 .text--b {
   font-family: "Agipo Bold" !important;
-}
-
-.text--def {
-  font-size: 1.5rem;
 }
 
 .text--il p,
@@ -643,6 +648,10 @@ h2 {
 
 .nobreak {
   white-space: nowrap;
+}
+
+.text--kompress {
+  line-height: 1 !important;
 }
 
 /* ****************************** */
@@ -729,9 +738,7 @@ h2 {
 /* ****************************** */
 
 .gutter {
-  /* MOBILE */
   display: none;
-  /* ****** */
 
   background-color: transparent;
   background-repeat: no-repeat;
@@ -832,6 +839,16 @@ h2 {
 /* ********************************************** */
 
 @media only screen and (min-width: 768px) {
+  :root {
+    --m_btn_absolute_leftbottom: 0 0 2rem 2rem;
+    --m_btn_absolute_rightbottom: 0 2rem 2rem 0;
+  }
+
+  /* Typography */
+  html {
+    font-size: 16px !important;
+  }
+
   /* Left & Right Content Panes */
   #content_right,
   .gutter {
@@ -859,6 +876,11 @@ h2 {
   .grid-item-image {
     width: 100%;
     height: calc(100% - (3rem + 0.66rem));
+  }
+
+  /* Content */
+  .content-item-text {
+    padding: 2rem;
   }
 
   /* Hiding Classes */
@@ -899,7 +921,7 @@ h2 {
 
 /* ****************************** */
 
-@media only screen and (min-width: 1281px) {
+@media only screen and (min-width: 1200px) {
   html {
     font-size: 75% !important;
     -webkit-text-size-adjust: 75% !important;
