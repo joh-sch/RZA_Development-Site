@@ -18,7 +18,7 @@ Main styling & visual behavior
 
   --m_header_mob: 0.75rem 1.1rem 0.95rem 1.1rem;
 
-  --m_btn_absolute_leftbottom: 0 0 2rem 2rem;
+  --m_btn_absolute_leftbottom: 0 0 16px 16px;
   --m_btn_absolute_rightbottom: 0 2rem 2rem 0;
 
   /* Colors */
@@ -153,9 +153,7 @@ body.home {
 /* ****************************** */
 
 #content_right {
-  /* MOBILE */
   display: none;
-  /* ****** */
 
   background: var(--color_rz-red);
   min-height: 100vh;
@@ -164,9 +162,7 @@ body.home {
 }
 
 #content_left {
-  /* MOBILE */
   min-width: 100%;
-  /* ****** */
 }
 #content_left.grid {
   background: var(--color_rz-red);
@@ -735,9 +731,7 @@ h2 {
 /* ****************************** */
 
 .gutter {
-  /* MOBILE */
   display: none;
-  /* ****** */
 
   background-color: transparent;
   background-repeat: no-repeat;
@@ -838,6 +832,11 @@ h2 {
 /* ********************************************** */
 
 @media only screen and (min-width: 768px) {
+  :root {
+    --m_btn_absolute_leftbottom: 0 0 2rem 2rem;
+    --m_btn_absolute_rightbottom: 0 2rem 2rem 0;
+  }
+
   /* Typography */
   html {
     font-size: 16px !important;
@@ -870,6 +869,11 @@ h2 {
   .grid-item-image {
     width: 100%;
     height: calc(100% - (3rem + 0.66rem));
+  }
+
+  /* Content */
+  .content-item-text {
+    padding: 2rem;
   }
 
   /* Hiding Classes */
