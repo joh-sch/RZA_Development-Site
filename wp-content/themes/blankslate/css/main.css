@@ -18,6 +18,8 @@ Main styling & visual behavior
   --m_def_mob: 1.1rem;
   --m_def-plus_mob: 1.25rem;
 
+  --m_header_mob: 0.75rem 1.1rem 0.95rem 1.1rem;
+
   --m_btn_absolute_leftbottom: 0 0 2rem 2rem;
   --m_btn_absolute_rightbottom: 0 2rem 2rem 0;
 
@@ -91,7 +93,7 @@ body.home {
   background: white;
 }
 #header_mob_content {
-  padding: var(--m_def_mob);
+  padding: var(--m_header_mob);
 }
 #nav_links_mob {
   padding: var(--m_def-plus_mob);
