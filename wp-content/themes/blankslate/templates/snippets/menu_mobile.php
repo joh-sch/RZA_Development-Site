@@ -3,7 +3,7 @@
   <!-- Header Content -->
   <div id="header_mob_content" class="d--flex btw">
     <!-- Menu-Button -->
-    <button id="button_nav_mob" class="text--xlg mb--05"></button>
+    <button id="button_nav_mob" class="text--lg-xl mb--05"></button>
 
     <!-- Brand -->
     <a id="brand_link_mob" class="nobreak" href="<?php echo get_home_url(); ?>">RZ A</a>
