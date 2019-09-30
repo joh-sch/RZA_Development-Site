@@ -331,7 +331,7 @@ body.home {
   display: inline-block;
   width: 1px;
   height: 0;
-  padding-bottom: calc(100% * (17 / 10));
+  padding-bottom: calc(100% * (19 / 10));
 }
 
 .grid-item.actor figure {
@@ -342,7 +342,7 @@ body.home {
 }
 .grid-item-image {
   width: 100%;
-  height: calc(100% - (3rem + 0.66rem));
+  height: calc(100% - (2rem + 0.66rem));
 }
 
 .grid-item:hover {
@@ -828,9 +828,15 @@ h2 {
   color: var(--color_rz-red) !important;
 }
 
-/* ****************************** */
+/* ******************************************************************************************** */
+
+/* ********************************************** */
+/* *************** Tablet Devices *************** */
+/* ********************************************** */
 
 @media only screen and (min-width: 768px) {
+  /* Left & Right Content Panes */
+
   #content_right,
   .gutter {
     display: block;
@@ -850,43 +856,47 @@ h2 {
     content: ",";
   }
 
-  /* ***** */
+  /* Actor Grid */
+
+  .grid-item.actor::before {
+    padding-bottom: calc(100% * (17 / 10));
+  }
+  .grid-item-image {
+    width: 100%;
+    height: calc(100% - (3rem + 0.66rem));
+  }
+
+  /* Hiding Classes */
 
   .hidden--mobile {
     display: block !important;
   }
-
   .hidden--desktop,
   .hidden--desktop--flex {
     display: none !important;
   }
 
-  /* ***** */
+  /* Spacing/Positioning Utilities */
 
   .mt--mob-6-desk-0 {
     margin-top: 0;
   }
 
-  /* ***** */
-
   .px--mob-1-desk-2 {
     padding: 0 2rem;
   }
-
-  /* ***** */
-
   .p--mob-1-desk-2 {
     padding: 2rem;
   }
-
-  /* ***** */
 
   .d--flex.mob-vr-desk-v {
     flex-direction: column;
   }
 }
 
-/* ****************************** */
+/* ************** Layout Variables ************** */
+/* *************** Small Screens **************** */
+/* ********************************************** */
 
 @media only screen and (min-width: 1024px) {
   .zigzag-container img.active {
