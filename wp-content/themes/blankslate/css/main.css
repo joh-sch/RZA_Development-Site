@@ -491,6 +491,9 @@ button.vjs-big-play-button {
 .mb--1 {
   margin-bottom: 1rem;
 }
+.mb--1-plus {
+  margin-bottom: 1.33rem;
+}
 .mb--2 {
   margin-bottom: 2rem;
 }
@@ -631,6 +634,7 @@ h2,
 p {
   margin-bottom: 1.33rem !important;
 }
+p:last-child,
 p.list {
   margin-bottom: 0 !important;
 }
