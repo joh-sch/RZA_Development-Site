@@ -71,7 +71,8 @@ html {
 body.blog,
 body.single,
 body.page,
-body.home {
+body.home,
+body.category {
   font-family: "Agipo Regular";
 }
 
