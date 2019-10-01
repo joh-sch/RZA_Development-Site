@@ -34,7 +34,7 @@
   </div>
 
   <!-- Zick-Zack -->
-  <img class="w--100" id="zigzag_mob_w" src="wp-content/uploads/2019/09/rz_zigzag_weiss.png">
-  <img class="w--100" id="zigzag_mob_r" src="wp-content/uploads/2019/09/rz_zigzag_mob_rot.png">
+  <img class="w--100" id="zigzag_mob_w" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/09/rz_zigzag_weiss.png">
+  <img class="w--100" id="zigzag_mob_r" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/09/rz_zigzag_mob_rot.png">
 
 </header>

@@ -17,7 +17,7 @@
               $loop = new WP_Query($args); ?>
 
         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-          <?php get_template_part( 'content-actor-gridItem-mobile' ); ?>
+          <?php get_template_part( 'templates/grids/content-actor-gridItem-mobile' ); ?>
         <?php endwhile; ?>
       </section>
 

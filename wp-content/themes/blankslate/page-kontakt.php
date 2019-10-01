@@ -2,8 +2,12 @@
 
   <main id="content" class="d--flex">
     
-    <!-- Nav-Menu -->
-    <?php get_template_part( 'templates/snippets/menu'); ?>
+    <!-- Navigation Menu -->
+    <?php if(wp_is_mobile()) {
+      get_template_part( 'templates/snippets/menu_mobile');
+    } else {
+      get_template_part( 'templates/snippets/menu');
+    } ?>
     
     <!-- Content Sections -->
     <section id="content_left" data-namespace="<?php echo get_the_title(); ?>" class="w--50 noActor <?php if (wp_is_mobile()): ?> grid<?php endif ?>">
