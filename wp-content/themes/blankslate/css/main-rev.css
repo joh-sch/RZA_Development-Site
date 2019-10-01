@@ -52,7 +52,15 @@ section.bg--red {
 
 .default-container.mobile {
   margin: 95px 0 0 0;
+}
+.actor-container.mobile {
+  margin: 65px 0 0 0;
+}
+.default-container.mobile {
   padding: 0 12px 12px 12px;
+}
+.actor-container.mobile {
+  padding: 0;
 }
 
 .content-item {
