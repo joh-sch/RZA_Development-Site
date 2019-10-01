@@ -298,9 +298,6 @@ body.home {
 /* ****************************** */
 
 .grid-container {
-  display: grid;
-}
-.grid-container {
   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   grid-gap: 1.33rem 1.66rem;
   padding: 2rem;
@@ -309,14 +306,6 @@ body.home {
 .grid-item.actor {
   min-width: 175px;
   position: relative;
-}
-
-.grid-item.actor::before {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 0;
-  padding-bottom: calc(100% * (19 / 10));
 }
 
 .grid-item.actor figure {

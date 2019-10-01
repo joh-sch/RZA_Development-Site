@@ -60,3 +60,14 @@ TABLE OF CONTENTS
 .grid-item.actor.mobile {
   min-width: 110px;
 }
+
+.grid-item.actor::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0;
+  padding-bottom: calc(100% * (17 / 10));
+}
+.grid-item.actor.mobile::before {
+  padding-bottom: calc(100% * (16 / 10));
+}
