@@ -1,4 +1,5 @@
-<header id="header_mob_wrapper" class="z--high d--flex v btw <?php if(get_the_title() == "Kontakt" || "Agentur"): ?>red<?php else: ?>white<?php endif; ?>">
+<?php $current_category = single_cat_title("", false); ?>
+<header id="header_mob_wrapper" class="z--high d--flex v btw <?php if( get_the_title() == "Kontakt" || get_the_title() == "Agentur" || $current_category == "News" ): ?>red<?php else: ?>white<?php endif; ?>">
 
   <div id="header_mob_content" class="d--flex btw">
     <button id="button_nav_mob" class="text--lg-xl mb--05"></button>
@@ -13,9 +14,7 @@
       //
       foreach ( (array) $menu_items as $key => $menu_item ) {
         $title = $menu_item->title;
-        $url = $menu_item->url;
-        $cat = $menu_item->object_id;
-        $menu_link = '<a class="actor-link mobile mb--1" data-content-cat="' . $cat . '">' . $title . '</a>';
+        $menu_link = '<a class="navigation-link mb--1" href="/page/' . strtolower($title) . '">' . $title . '</a>';
         //
         echo $menu_link;
       } 
