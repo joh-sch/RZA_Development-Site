@@ -72,7 +72,7 @@ section.bg--red {
 }
 
 .grid-container.mobile {
-  padding: 12px;
+  padding: 95px 12px 12px 12px;
   grid-gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
 }
