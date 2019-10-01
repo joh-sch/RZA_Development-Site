@@ -27,7 +27,8 @@
 
       foreach ( (array) $menu_items as $key => $menu_item ) {
         $title = $menu_item->title;
-        $menu_link = '<a class="navigation-link mb--1" href="/' . strtolower($title) . '" >' . $title . '</a>';
+        if($title == "News"){ $link_prefix = "/page";};
+        $menu_link = '<a class="navigation-link mb--1" href="' . $link_prefix . '/' . strtolower($title) . '" >' . $title . '</a>';
         echo $menu_link;
       }
     ?>
