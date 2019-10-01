@@ -6,6 +6,8 @@ TABLE OF CONTENTS
 01  NORMALIZE/RESET
 02  TYPOGRAPHY
 03  ELEMENTS
+    03.1  CONTENT-ELEMENTS
+    03.2  GRID(S)
 
 ----------------------------------------------- */
 
@@ -30,6 +32,31 @@ TABLE OF CONTENTS
 03  ELEMENTS
 ----------------------------------------------- */
 
+/* ----------------------
+03.1 CONTENT-ELEMENTS
+---------------------- */
+
 #content_mobile {
+  min-height: 100vh;
+  min-width: 100%;
+
   background: var(--color_rz-red);
+}
+
+/* ----------------------
+03.2 GRID(S)
+---------------------- */
+
+.grid-container {
+  display: grid;
+}
+
+.grid-container.mobile {
+  padding: 12px;
+  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+}
+
+.grid-item.actor.mobile {
+  min-width: 110px;
 }

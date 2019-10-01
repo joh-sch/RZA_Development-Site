@@ -1,1 +1,1 @@
-:root{--color_rz-red: rgb(255, 20, 18);--color_rz-red_dim: rgba(255, 22, 18, 0.5)}#content_mobile{background:var(--color_rz-red)}
+:root{--color_rz-red: rgb(255, 20, 18);--color_rz-red_dim: rgba(255, 22, 18, 0.5)}#content_mobile{min-height:100vh;min-width:100%;background:var(--color_rz-red)}.grid-container{display:grid}.grid-container.mobile{padding:12px;grid-gap:12px;grid-template-columns:repeat(auto-fit, minmax(110px, 1fr))}.grid-item.actor.mobile{min-width:110px}
