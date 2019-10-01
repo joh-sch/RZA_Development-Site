@@ -12,7 +12,7 @@
     <!-- Site Content -->
     <?php if(wp_is_mobile()): ?>
 
-      <section id="content_mobile" data-namespace="Actors" class="text--def grid-container mobile">
+      <section id="content_mobile" data-namespace="Actors" class="text--def bg--red grid-container mobile">
         <?php $args = array('cat' => array(7,8));
               $loop = new WP_Query($args); ?>
 

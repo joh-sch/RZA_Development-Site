@@ -1,4 +1,4 @@
-<header id="header_mob_wrapper" class="z--high d--flex v btw">
+<header id="header_mob_wrapper" class="z--high d--flex v btw <?php if(get_the_title() == "Kontakt"): ?>red<?php else: ?>white<?php endif; ?>">
 
   <div id="header_mob_content" class="d--flex btw">
     <button id="button_nav_mob" class="text--lg-xl mb--05"></button>
