@@ -71,16 +71,13 @@ html {
 body.blog,
 body.single,
 body.page,
-body.home {
-  height: 100vh;
-  overflow: hidden;
-
+body.home,
+body.category {
   font-family: "Agipo Regular";
 }
 
 /* ****************************** */
 
-#header_mob_wrapper,
 #header {
   position: fixed;
 }
@@ -88,15 +85,7 @@ body.home {
   background: white;
   padding: var(--m_def_desk-lg);
 }
-#header_mob_wrapper {
-  background: transparent;
-}
-#header_mob_wrapper div {
-  background: white;
-}
-#header_mob_content {
-  padding: var(--m_header_mob);
-}
+
 #nav_links_mob {
   padding: var(--m_def-plus_mob);
 }
@@ -115,17 +104,9 @@ body.home {
 #header.noActor {
   background: white;
 }
-#header_mob_wrapper.noActor div {
-  background: var(--color_rz-red);
-  color: white;
-}
 
 #nav_main {
   display: flex !important;
-}
-
-#header_mob_wrapper {
-  width: 100%;
 }
 
 .glow--menu {
@@ -203,21 +184,8 @@ body.home {
   height: 100vh;
 }
 
-#header_mob_wrapper #zigzag_mob_r,
-#header_mob_wrapper.noActor #zigzag_mob_w {
-  display: none;
-}
-#header_mob_wrapper.noActor #zigzag_mob_r,
-#header_mob_wrapper #zigzag_mob_w {
-  display: block;
-}
-
 /* ****************************** */
 
-.content-item {
-  margin-bottom: 1.33rem;
-  overflow: hidden;
-}
 .noActor.news p,
 .noActor.news h2 {
   display: inline;
@@ -300,36 +268,15 @@ body.home {
 
 /* ****************************** */
 
-.grid-container,
-.grid-container.mobile {
-  display: grid;
-}
 .grid-container {
   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   grid-gap: 1.33rem 1.66rem;
   padding: 2rem;
 }
-.grid-container.mobile {
-  grid-gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  padding: 0;
-}
-.grid-container.mobile.off {
-  grid-gap: 0 !important;
-  grid-template-columns: 1fr !important;
-}
 
 .grid-item.actor {
   min-width: 175px;
   position: relative;
-}
-
-.grid-item.actor::before {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 0;
-  padding-bottom: calc(100% * (19 / 10));
 }
 
 .grid-item.actor figure {
@@ -357,10 +304,6 @@ body.home {
 .carousel-cell img {
   max-width: 100%;
   line-height: 0;
-}
-
-.grid-container.mobile .grid-item.actor {
-  min-width: 80px;
 }
 
 /* ****************************** */
