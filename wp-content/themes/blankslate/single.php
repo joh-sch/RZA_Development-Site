@@ -13,13 +13,18 @@
     <?php if(wp_is_mobile()): ?>
       <section id="content_mobile" data-namespace="actor" class="text--def bg--white actor-container mobile">
         <article id="post-<?php the_ID(); ?>" class="content-item actor text--def">
+
           <?php $images = get_field('bildergalerie');?>
+          <?php $image_max = count($images); 
+                if(get_field("video")) {$image_max++; }
+          ?>
+          
           <!-- Photo & Video Content -->
           <header>
             <!-- Slider-Overlay -->
             <div id="slider_overlay" class="actor-carousel-overlay z--up text--def color_black">
               <!-- Slider Controls -->
-              <div class="slider-counter glow--txt--white">1/3</div>
+              <div class="slider-counter glow--txt--white">1/<?php echo $image_max;?></div>
               <button class="slider-button prev" onclick="slider_prev()"></button>
               <button class="slider-button next" onclick="slider_next()"></button>
 
@@ -150,13 +155,16 @@
           <article id="post-<?php the_ID(); ?>" class="content-item actor text--def">
             
             <?php $images = get_field('bildergalerie');?>
-
+            <?php $image_max = count($images); 
+                  if(get_field("video")) {$image_max++; }
+            ?>
+    
             <!-- Photo & Video Content -->
             <header>
               <!-- Slider-Overlay -->
               <div id="slider_overlay" class="actor-carousel-overlay z--up text--def color_black">
                 <!-- Slider Controls -->
-                <div class="slider-counter glow--txt--white">1/3</div>
+                <div class="slider-counter glow--txt--white">1/<?php echo $image_max;?></div>
                 <button class="slider-button prev" onclick="slider_prev()"></button>
                 <button class="slider-button next" onclick="slider_next()"></button>
 
