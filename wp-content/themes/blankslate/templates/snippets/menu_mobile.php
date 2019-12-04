@@ -1,4 +1,4 @@
-<header id="header_mob_wrapper" class="z--high d--flex v btw <?php if(is_category(array("Schauspieler", "Schauspielerinnen")) || is_front_page()): ?>white<?php else: ?>red<?php endif; ?>" data-dev="<?php if(is_front_page()): ?>homepage<?php endif; ?>">
+<header id="header_mob_wrapper" class="z--high d--flex v btw <?php if(is_category(array("Schauspieler", "Schauspielerinnen")) || is_front_page()): ?>white<?php else: ?>red<?php endif; ?>">
 
   <div id="header_mob_content" class="d--flex btw">
     <button id="button_nav_mob" class="text--lg-xl mb--05"></button>
