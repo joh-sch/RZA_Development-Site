@@ -8,6 +8,7 @@ Last changes:   – cleaned up mobile arch.
                 – classic/non-AJAX mobile navigation
                   + revised/adapted mobile menu
                 – standalone mobile page templates
+                – standalone mobile single-page template
 
 Date:           01.10.2019
 
