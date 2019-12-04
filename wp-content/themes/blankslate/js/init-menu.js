@@ -118,4 +118,36 @@ jQuery(document).ready(function($) {
   $("#button_nav_mob").click(function() {
     toggle_mobile_menu();
   });
+  //
+
+  $(".zigzag-container").mousedown(function() {
+    console.log("Mouse down on ZigZag.");
+    jQuery(".gutter").trigger("mousedown");
+  });
+  $(".zigzag-container").mouseup(function() {
+    console.log("Mouse up on ZigZag.");
+    jQuery(".gutter").trigger("mouseup");
+  });
+
+  $(".zigzag-container").mousemove(function() {
+    console.log("Mouse moving on ZigZag.");
+    jQuery(".gutter")
+      .trigger("mousedown")
+      .trigger("mousemove");
+  });
+
+  // $(".zigzag-container").mousedown(function() {
+  //   console.log("ZigZag clicked.");
+  //   jQuery(".gutter").trigger("mousedown");
+  // });
+
+  // $(".zigzag-container").mouseover(function() {
+  //   console.log("ZigZag hovered.");
+  //   jQuery(".gutter").trigger("mouseover");
+  // });
+
+  // $(".zigzag-container").mouseleave(function() {
+  //   console.log("Left ZigZag.");
+  //   jQuery(".gutter").trigger("mouseleave");
+  // });
 });

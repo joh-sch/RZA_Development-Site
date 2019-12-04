@@ -177,8 +177,6 @@ body.category {
   left: 50%;
 
   z-index: 999999;
-
-  pointer-events: none;
 }
 .zigzag-container img {
   height: 100vh;
