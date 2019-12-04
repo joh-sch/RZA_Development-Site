@@ -23,11 +23,11 @@ setup_postdata($post);
 <!-- Imprint & PP -->
 <div class="content-item">
   <button class="collapsible--button text text--lg text--b">Impressum</button>
-  <div class="collapsible--content text--def">
+  <div class="collapsible--content text--def mb--1-plus">
     <?php the_field('impressum') ?>
   </div>
   <button class="collapsible--button text text--lg text--b">Datenschutz</button>
   <div class="collapsible--content text--def">
-    <p><?php the_field('datenschutz') ?></p>
+    <?php the_field('datenschutz') ?>
   </div>
 </div>

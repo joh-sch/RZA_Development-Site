@@ -2,14 +2,14 @@ RZA Website
 
 ******************************
 
-Build version:  UNSTBL 00.6.4.2
+Build version:  UNSTBL 00.6.5.1
 
-Last changes:   – Fixed aspect ratio for grid-item
-                – Glow on slider-overlay elements
-                – Revised video-UI
-                – Revised actor-page arch. + new custom fields
-                – Adminimize + custom admin-menu entries
+Last changes:   – cleaned up mobile arch.
+                – classic/non-AJAX mobile navigation
+                  + revised/adapted mobile menu
+                – standalone mobile page templates
+                – standalone mobile single-page template
 
-Date:           29.09.2019
+Date:           01.10.2019
 
 ******************************
