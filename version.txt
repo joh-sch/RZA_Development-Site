@@ -9,7 +9,8 @@ Last changes:   – cleaned up mobile arch.
                   + revised/adapted mobile menu
                 – standalone mobile page templates
                 – standalone mobile single-page template
+                – fixes for wrong menu color
 
-Date:           01.10.2019
+Date:           04.12.2019
 
 ******************************
