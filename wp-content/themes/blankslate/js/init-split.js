@@ -12,6 +12,14 @@ jQuery(document).ready(function($) {
       resize_zigzag();
     }
   });
+  window.addEventListener(
+    "resize",
+    function() {
+      resize_menu();
+      resize_zigzag();
+    },
+    true
+  );
   // Init scrollbars
   window.os_left = $("#content_left")
     .overlayScrollbars({

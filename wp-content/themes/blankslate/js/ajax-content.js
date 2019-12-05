@@ -39,22 +39,24 @@ function toggle_ui_actor(color) {
   ui_elements.addClass(color);
 }
 function check_slide_video() {
-  var sliderInstance = $sliderActor.data("flickity");
-  var currentSlide = jQuery(sliderInstance.selectedElement);
-  var video = jQuery(players[0].videojs.el_);
-  var controls = jQuery("#slider_overlay .video-controls");
-  //
-  if (currentSlide.hasClass("video-cell")) {
-    // var ui_colorSetting = "color_white";
-    controls.removeClass("hidden--off");
-    // toggle_ui_actor(ui_colorSetting);
-  } else {
-    // var ui_colorSetting = "color_black";
-    controls.addClass("hidden--off");
-    // toggle_ui_actor(ui_colorSetting);
-    if (video.hasClass("vjs-playing")) {
-      players[0].stop();
-      controls.removeClass("playing");
+  if (document.querySelector(".video-cell")) {
+    var sliderInstance = $sliderActor.data("flickity");
+    var currentSlide = jQuery(sliderInstance.selectedElement);
+    var video = jQuery(players[0].videojs.el_);
+    var controls = jQuery("#slider_overlay .video-controls");
+    //
+    if (currentSlide.hasClass("video-cell")) {
+      // var ui_colorSetting = "color_white";
+      controls.removeClass("hidden--off");
+      // toggle_ui_actor(ui_colorSetting);
+    } else {
+      // var ui_colorSetting = "color_black";
+      controls.addClass("hidden--off");
+      // toggle_ui_actor(ui_colorSetting);
+      if (video.hasClass("vjs-playing")) {
+        players[0].stop();
+        controls.removeClass("playing");
+      }
     }
   }
 }
