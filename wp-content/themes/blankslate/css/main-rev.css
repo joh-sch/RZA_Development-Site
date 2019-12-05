@@ -10,6 +10,7 @@ TABLE OF CONTENTS
     03.2  GRID(S)
 04  NAVIGATION
     04.1  MOBILE NAVIGATION
+05  RESPONSIVE BEHAVIOR
 
 ----------------------------------------------- */
 
@@ -137,4 +138,80 @@ section.bg--red {
 #header_mob_wrapper.red #zigzag_mob_r,
 #header_mob_wrapper.white #zigzag_mob_w {
   display: block;
+}
+
+/* -----------------------------------------------
+05  RESPONSIVE BEHAVIOR
+----------------------------------------------- */
+
+/* ----------------------
+05.1.1 upwards from: 
+       SMALL SCREENS
+---------------------- */
+@media only screen and (min-width: 768px) {
+  #content_right,
+  .gutter {
+    display: block;
+  }
+  #content_left,
+  #content_right {
+    min-width: 25vw;
+  }
+
+  #content_left.noActor {
+    padding-top: 11.75rem;
+    padding-left: var(--m_def_desk-lg);
+    padding-right: var(--m_left_r_desk-lg);
+  }
+
+  span.list::after {
+    content: ",";
+  }
+
+  /*****/
+
+  .content-item.columns {
+    columns: 2 calc(33vw - 6rem);
+  }
+}
+
+/* ----------------------
+05.2.1 LARGE SCREENS
+---------------------- */
+
+@media only screen and (min-width: 1600px) {
+}
+
+@media only screen and (min-width: 1681px) {
+  html {
+    font-size: 100% !important;
+    -webkit-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+  }
+
+  /* ***** */
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  }
+  .grid-item.actor {
+    min-width: 175px;
+  }
+
+  /* ***** */
+
+  .zigzag-container img {
+    content: url("../images/rz_zigzag_rot_v_lg_300ppi.png");
+  }
+
+  .zigzag-container img.active {
+    filter: drop-shadow(0px 1px 6px #ff1412);
+  }
+}
+
+/* ----------------------
+05.2.2 VERY LARGE SCREENS
+---------------------- */
+
+@media only screen and (min-width: 1800px) {
 }

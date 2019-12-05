@@ -12,7 +12,7 @@
     <!-- Site Content -->
     <?php if(wp_is_mobile()): ?>
       <section id="content_mobile" data-namespace="<?php echo get_the_title(); ?>" class="text--def bg--white default-container mobile">
-        <!-- »Kontakt« content -->
+        <!-- »Agentur« content -->
         <?php $page = get_page_by_title('Agentur');
               $content = '<div class="content-item text--def">' . $page->post_content . '</div>';
               echo $content ?>
@@ -22,10 +22,10 @@
       <section id="content_left" data-namespace="<?php echo get_the_title(); ?>" class="w--50 noActor <?php if (wp_is_mobile()): ?> grid<?php endif ?>">
         <section id="content_left_items" class="<?php if (wp_is_mobile()): ?> grid-container mobile<?php endif ?>">
           
-          <!-- Load »Agentur« content -->
+          <!-- »Agentur« content -->
           <?php 
             $page = get_page_by_title('Agentur');
-            $content = '<div class="content-item text--def">' . $page->post_content . '</div>';
+            $content = '<div class="content-item columns text--def">' . $page->post_content . '</div>';
             echo $content
           ?>
 
