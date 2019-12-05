@@ -186,40 +186,6 @@ body.category {
 
 /* ****************************** */
 
-.noActor.news p,
-.noActor.news h2 {
-  display: inline;
-  float: none;
-}
-.content-item img {
-  float: right;
-  margin-left: 5px;
-}
-
-.mobile .content-item img {
-  float: none;
-  margin: 0;
-
-  width: 100%;
-}
-
-.content-item.actor {
-  margin-bottom: 0;
-}
-
-.content-item.actor header {
-  position: relative;
-}
-
-.content-item.actor h1 {
-  display: inline;
-}
-
-.content-item-text {
-  padding: 16px;
-  line-height: 1.2;
-}
-
 /* ****************************** */
 
 .actor #nav_main {
