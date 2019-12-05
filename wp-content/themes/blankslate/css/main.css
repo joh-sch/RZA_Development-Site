@@ -507,67 +507,6 @@ button.vjs-big-play-button {
 
 /* ****************************** */
 
-h1,
-.h1,
-.text--lg {
-  font-size: 2.25rem !important;
-}
-
-h2,
-.h2,
-.text--def {
-  font-size: 1.5rem;
-}
-
-.text--lg-plus {
-  font-size: 3rem !important;
-}
-.text--lg-xl {
-  font-size: 4rem !important;
-}
-.text--lg-sm {
-  font-size: 2rem;
-}
-
-h2,
-.h2,
-.text--b {
-  font-family: "Agipo Bold" !important;
-}
-
-.text--il p,
-.text--il span {
-  display: inline;
-}
-
-p {
-  margin-bottom: 1.33rem !important;
-}
-p:last-child,
-p.list {
-  margin-bottom: 0 !important;
-}
-p strong {
-  font-family: "Agipo Bold", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-p,
-h2 {
-  line-height: 1.866rem !important;
-  letter-spacing: 0.01rem !important;
-}
-
-.nobreak {
-  white-space: nowrap;
-}
-
-.text--kompress {
-  line-height: 1 !important;
-}
-
 /* ****************************** */
 
 .carousel-cell {
