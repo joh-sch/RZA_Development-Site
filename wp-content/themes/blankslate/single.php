@@ -242,54 +242,16 @@
                 </div>
               </section>
 
-              <section class="mb--2">
+              <section class="mb--1">
                 <p class="h2"><?php the_field('weiteres'); ?></p>
               </section>
+            </div>
 
-              <!-- Lebenslauf -->
-              <div class="mb--1 text--kompress">
-                <h1 class="text--b">Filme</h1>
+            <div class="content-item-text">
+              <button class="collapsible--button text text--lg text--b">Filme</button>
+              <div class="collapsible--content text--def mb--1-plus">
+                text
               </div>
-              <?php if( have_rows('lebenslauf') ): ?>
-                <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
-                  <section class="mb--2">
-                    <h2><?php the_sub_field('jahr'); ?></h2>
-                    <?php $all_items_count = count(get_sub_field('produktionen'));
-                          $item_count = 1; ?>
-                    <?php if( have_rows('produktionen') ): ?>
-                      <?php while ( have_rows('produktionen') ) : the_row(); ?>
-                        <div class="<?php if ($item_count == $all_items_count): ?>mb--0<?php else: ?>mb--1<?php endif ?>">
-                          <p class="h2 list"><?php the_sub_field('titel'); ?></p>
-                          <span>Regie: <?php the_sub_field('regie'); ?></span>
-                        </div>
-                        <?php $item_count++; ?>
-                      <?php endwhile ?>
-                    <?php endif ?>
-                  </section> 
-                <?php endwhile ?>
-              <?php endif ?>
-
-              <div class="mb--1">
-                <h1 class="text--b">Weitere Produktionen</h1>
-              </div>
-
-              <?php if( have_rows('lebenslauf_weitere') ): ?>
-                <?php while ( have_rows('lebenslauf_weitere') ) : the_row(); ?>
-                  <section class="mb--1">
-                    <h2><?php the_sub_field('jahr'); ?></h2>
-
-                    <?php if( have_rows('produktionen') ): ?>
-                      <?php while ( have_rows('produktionen') ) : the_row(); ?>
-                        <div class="text--il">
-                          <p class="h2"><?php the_sub_field('titel'); ?></p>
-                          <span><?php the_sub_field('regie'); ?></span>
-                        </div>
-                      <?php endwhile ?>
-                    <?php endif ?>
-
-                  </section> 
-                <?php endwhile ?>
-              <?php endif ?>
             </div>
 
           </article>
@@ -317,7 +279,7 @@
     <?php endif ?>
   </main>
 
-  <!-- Standalone slider-init -->
+  <!-- Standalone Inits -->
   <script>
     // Flickity init
     window.$sliderActor = jQuery(".actor-carousel").flickity({
@@ -339,9 +301,9 @@
       document.querySelector("#slider_overlay button.play").addEventListener("click", function() {
         video_playToggle();
       });
-      document.querySelector("#slider_overlay button.fullscreen").addEventListener("click", function() {
-        alert("Dieser Button funktioniert noch nicht… aber bald!")
-      });
+      // document.querySelector("#slider_overlay button.fullscreen").addEventListener("click", function() {
+      //   alert("Dieser Button funktioniert noch nicht… aber bald!")
+      // });
       // End of Video
       players[0].on("ended", event => {
         // Reset play-button & video
@@ -352,6 +314,10 @@
     } else {
       console.log("No video slides found.")
     }
+    // Collapsibles
+    jQuery(document).ready(function($) {
+      init_collapsibles()
+    });
   </script>
 
 <?php get_template_part( 'templates/snippets/footer'); ?>
