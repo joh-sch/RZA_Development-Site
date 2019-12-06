@@ -2,8 +2,8 @@
 
   <div>
     <img src="<?php the_post_thumbnail_url(); ?>">
-    <h2><?php the_title(); ?></h2>
-    <?php the_content(); ?>
+    <p class="mr--05"><?php echo get_the_date(); ?></p> <h2><?php the_title(); ?></h2>
+    <?php the_content("d m y"); ?>
   </div>
   
 </article> 

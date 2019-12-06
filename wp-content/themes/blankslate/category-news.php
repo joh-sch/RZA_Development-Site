@@ -11,7 +11,6 @@
 
     <!-- Site Content -->
     <?php if(wp_is_mobile()): ?>
-
       <section id="content_mobile" data-namespace="Actors" class="text--def bg--white default-container mobile">
         <?php $args = array('cat' => array(6));
               $loop = new WP_Query($args); ?>
@@ -20,7 +19,6 @@
           <?php get_template_part( 'templates/content/content-item_news' ); ?>
         <?php endwhile; ?>
       </section>
-
     <?php else: ?>
 
     <?php endif ?>

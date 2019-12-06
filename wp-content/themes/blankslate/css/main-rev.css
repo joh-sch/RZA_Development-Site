@@ -8,8 +8,10 @@ TABLE OF CONTENTS
 03  ELEMENTS
     03.1  CONTENT-ELEMENTS
     03.2  GRID(S)
+    03.3  BUTTONS
 04  NAVIGATION
     04.1  MOBILE NAVIGATION
+05  RESPONSIVE BEHAVIOR
 
 ----------------------------------------------- */
 
@@ -29,6 +31,68 @@ TABLE OF CONTENTS
 /* -----------------------------------------------
 02  TYPOGRAPHY
 ----------------------------------------------- */
+
+h1,
+.h1,
+.text--lg {
+  font-size: 2.25rem !important;
+}
+
+h2,
+.h2,
+.text--def {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.text--lg-plus {
+  font-size: 3rem !important;
+}
+.text--lg-xl {
+  font-size: 4rem !important;
+}
+.text--lg-sm {
+  font-size: 2rem;
+}
+
+h2,
+.h2,
+.text--b {
+  font-family: "Agipo Bold" !important;
+}
+
+.text--il p,
+.text--il span {
+  display: inline;
+}
+
+p {
+  margin-bottom: 1.33rem !important;
+}
+p:last-child,
+p.list {
+  margin-bottom: 0 !important;
+}
+p strong {
+  font-family: "Agipo Bold", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+p,
+h2 {
+  line-height: 1.866rem !important;
+  letter-spacing: 0.01rem !important;
+}
+
+.nobreak {
+  white-space: nowrap;
+}
+
+.text--kompress {
+  line-height: 1 !important;
+}
 
 /* -----------------------------------------------
 03  ELEMENTS
@@ -64,11 +128,56 @@ section.bg--red {
 }
 
 .content-item {
-  margin-bottom: 16px;
+  margin-bottom: 2rem;
   overflow: hidden;
 }
 .content-item:last-child {
   margin-bottom: 0;
+}
+
+.noActor.news p,
+.noActor.news h2 {
+  display: inline;
+  float: none;
+}
+
+.content-item img {
+  float: right;
+  margin-left: 5px;
+}
+.mobile .content-item img {
+  float: none;
+  margin: 0;
+  width: 100%;
+}
+
+.content-item.actor {
+  margin-bottom: 0;
+}
+
+.content-item.actor header {
+  position: relative;
+}
+
+.content-item.actor h1 {
+  display: inline;
+}
+
+.content-item-text {
+  padding: 16px;
+  line-height: 1.2;
+}
+.content-item-actor {
+  padding: 0 1.33rem;
+  margin-bottom: 0.665rem;
+  line-height: 1.2;
+}
+.content-item-actor:first-of-type {
+  padding-top: 1.33rem;
+  margin-bottom: 1rem;
+}
+.content-item-actor:last-of-type {
+  margin-bottom: 1.33rem;
 }
 
 /* ----------------------
@@ -98,6 +207,67 @@ section.bg--red {
 }
 .grid-item.actor.mobile::before {
   padding-bottom: calc(100% * (16 / 10));
+}
+
+/* ----------------------
+03.3 BUTTONS
+---------------------- */
+
+button {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 100%;
+  color: unset;
+}
+
+button.text:hover {
+  cursor: pointer;
+  color: var(--color_rz-red);
+}
+
+#button_nav {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+
+#button_nav_mob {
+  line-height: 0;
+}
+#button_nav_mob::after {
+  content: "+";
+}
+#button_nav_mob.active::after {
+  content: "×";
+}
+
+button.vjs-big-play-button {
+  display: none !important;
+}
+
+.collapsible--button {
+  display: block;
+}
+.collapsible--button::before {
+  content: "+ ";
+  color: black;
+}
+.collapsible--button.active::before {
+  content: "× ";
+}
+.collapsible--button:hover::before {
+  color: var(--color_rz-red);
+}
+.collapsible--content {
+  display: none;
+  overflow: hidden;
+}
+.content-item-actor > .collapsible--button.active {
+  margin-bottom: 1rem;
 }
 
 /* -----------------------------------------------
@@ -137,4 +307,80 @@ section.bg--red {
 #header_mob_wrapper.red #zigzag_mob_r,
 #header_mob_wrapper.white #zigzag_mob_w {
   display: block;
+}
+
+/* -----------------------------------------------
+05  RESPONSIVE BEHAVIOR
+----------------------------------------------- */
+
+/* ----------------------
+05.1.1 upwards from: 
+       SMALL SCREENS
+---------------------- */
+@media only screen and (min-width: 768px) {
+  #content_right,
+  .gutter {
+    display: block;
+  }
+  #content_left,
+  #content_right {
+    min-width: 25vw;
+  }
+
+  #content_left.noActor {
+    padding-top: 11.75rem;
+    padding-left: var(--m_def_desk-lg);
+    padding-right: var(--m_left_r_desk-lg);
+  }
+
+  span.list::after {
+    content: ",";
+  }
+
+  /*****/
+
+  .content-item.columns {
+    columns: 2 calc(33vw - 6rem);
+  }
+}
+
+/* ----------------------
+05.2.1 LARGE SCREENS
+---------------------- */
+
+@media only screen and (min-width: 1600px) {
+}
+
+@media only screen and (min-width: 1681px) {
+  html {
+    font-size: 100% !important;
+    -webkit-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+  }
+
+  /* ***** */
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  }
+  .grid-item.actor {
+    min-width: 175px;
+  }
+
+  /* ***** */
+
+  .zigzag-container img {
+    content: url("../images/rz_zigzag_rot_v_lg_300ppi.png");
+  }
+
+  .zigzag-container img.active {
+    filter: drop-shadow(0px 1px 6px #ff1412);
+  }
+}
+
+/* ----------------------
+05.2.2 VERY LARGE SCREENS
+---------------------- */
+
+@media only screen and (min-width: 1800px) {
 }
