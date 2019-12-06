@@ -8,6 +8,7 @@ TABLE OF CONTENTS
 03  ELEMENTS
     03.1  CONTENT-ELEMENTS
     03.2  GRID(S)
+    03.3  BUTTONS
 04  NAVIGATION
     04.1  MOBILE NAVIGATION
 05  RESPONSIVE BEHAVIOR
@@ -166,6 +167,16 @@ section.bg--red {
   padding: 16px;
   line-height: 1.2;
 }
+.content-item-actor {
+  padding: 0.665rem 1.33rem;
+  line-height: 1.2;
+}
+.content-item-actor:first-of-type {
+  padding-top: 1.33rem;
+}
+.content-item-actor:last-of-type {
+  padding-bottom: 1.33rem;
+}
 
 /* ----------------------
 03.2 GRID(S)
@@ -194,6 +205,67 @@ section.bg--red {
 }
 .grid-item.actor.mobile::before {
   padding-bottom: calc(100% * (16 / 10));
+}
+
+/* ----------------------
+03.3 BUTTONS
+---------------------- */
+
+button {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 100%;
+  color: unset;
+}
+
+button.text:hover {
+  cursor: pointer;
+  color: var(--color_rz-red);
+}
+
+#button_nav {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+
+#button_nav_mob {
+  line-height: 0;
+}
+#button_nav_mob::after {
+  content: "+";
+}
+#button_nav_mob.active::after {
+  content: "×";
+}
+
+button.vjs-big-play-button {
+  display: none !important;
+}
+
+.collapsible--button {
+  display: block;
+}
+.collapsible--button::before {
+  content: "+ ";
+  color: black;
+}
+.collapsible--button.active::before {
+  content: "× ";
+}
+.collapsible--button:hover::before {
+  color: var(--color_rz-red);
+}
+.collapsible--content {
+  display: none;
+  overflow: hidden;
+}
+.content-item-actor > .collapsible--button.active {
+  margin-bottom: 1rem;
 }
 
 /* -----------------------------------------------

@@ -195,8 +195,8 @@
               </div>
             </header>
 
-            <!-- Text Content -->
-            <div class="content-item-text">
+            <!-- Basic Info -->
+            <div class="content-item-actor">
               <div class="mb--1 text--kompress">
                 <h1 class="text--b"><?php the_title(); ?></h1>
                 <span>*<?php the_field('geburtsjahr'); ?></span>
@@ -242,15 +242,58 @@
                 </div>
               </section>
 
-              <section class="mb--1">
+              <section class="mb--0">
                 <p class="h2"><?php the_field('weiteres'); ?></p>
               </section>
             </div>
+            <!-- Filme -->
+            <div class="content-item-actor">
+              <button class="collapsible--button actor text text--lg text--b">Filme</button>
+              <div class="collapsible--content text--def">
+                <?php if( have_rows('lebenslauf') ): ?>
+                  <?php $all_items_count = count(get_field('lebenslauf'));
+                        $item_count = 1;
+                        ?>
+                  <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
+                <section class="<?php if ($item_count == $all_items_count): ?>mb--0 <?php else: ?>mb--1 <?php endif ?>">
+                      <h2><?php the_sub_field('jahr'); ?></h2>
 
-            <div class="content-item-text">
-              <button class="collapsible--button text text--lg text--b">Filme</button>
-              <div class="collapsible--content text--def mb--1-plus">
-                text
+                      <?php if( have_rows('produktionen') ): ?>
+                        <?php while ( have_rows('produktionen') ) : the_row(); ?>
+                          <div>
+                            <p class="h2 list"><?php the_sub_field('titel'); ?></p>
+                            <span>Regie: <?php the_sub_field('regie'); ?></span>
+                          </div>
+                        <?php endwhile ?>
+                      <?php endif ?>
+
+                    </section> 
+                    <?php $item_count++; ?>
+
+                  <?php endwhile ?>
+                <?php endif ?>
+              </div>
+            </div>
+            <!-- Weitere Prod. -->
+            <div class="content-item-actor">
+              <button class="collapsible--button text text--lg text--b">Weitere Produktionen</button>
+              <div class="collapsible--content text--def">
+                <?php if( have_rows('lebenslauf_weitere') ): ?>
+                  <?php $all_items_count = count(get_field('lebenslauf_weitere'));
+                        $item_count = 1;
+                        ?>
+                  <?php while ( have_rows('lebenslauf_weitere') ) : the_row(); ?>
+                    <section class="<?php if ($item_count == $all_items_count): ?>mb--0 <?php else: ?>mb--1 <?php endif ?>">
+                      <h2><?php the_sub_field('jahr'); ?></h2>
+                      <?php if( have_rows('produktionen') ): ?>
+                        <?php while ( have_rows('produktionen') ) : the_row(); ?>
+                          <div><p class="h2 list"><?php the_sub_field('titel'); ?></p></div>
+                        <?php endwhile ?>
+                      <?php endif ?>
+                    </section> 
+                    <?php $item_count++; ?>
+                  <?php endwhile ?>
+                <?php endif ?>
               </div>
             </div>
 
