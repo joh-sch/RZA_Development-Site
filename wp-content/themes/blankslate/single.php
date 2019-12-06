@@ -254,7 +254,7 @@
                         $item_count = 1;
                         ?>
                   <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
-                <section class="<?php if ($item_count == $all_items_count): ?>mb--05 <?php else: ?>mb--1 <?php endif ?>">
+                    <section class="<?php if ($item_count == $all_items_count): ?>mb--05 <?php else: ?>mb--1 <?php endif ?>">
                       <h2><?php the_sub_field('jahr'); ?></h2>
 
                       <?php if( have_rows('produktionen') ): ?>
