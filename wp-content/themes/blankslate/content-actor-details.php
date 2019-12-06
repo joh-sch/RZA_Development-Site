@@ -41,8 +41,8 @@
     </div>
   </header>
 
-  <!-- Text Content -->
-  <div class="content-item-text">
+  <!-- Bio. Info -->
+  <div class="content-item-actor">
     <div class="mb--1">
       <h1 class="text--b"><?php the_title(); ?></h1>
       <span>*<?php the_field('geburtsjahr'); ?></span>
@@ -81,58 +81,59 @@
       </div>
     </section>
 
-    <section class="mb--2">
+    <section class="mb--0">
         <p class="h2"><?php the_field('weiteres'); ?></p>
     </section>
-
-    <!-- Lebenslauf -->
-    <div class="mb--1">
-      <h1 class="text--b">Filme</h1>
-    </div>
-    <?php if( have_rows('lebenslauf') ): ?>
-      <?php $all_items_count = count(get_field('lebenslauf'));
-            $item_count = 1;
-            ?>
-      <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
-        <section class="mb--1 <?php if ($item_count == $all_items_count): ?>mb--2 <?php endif ?>">
-          <h2><?php the_sub_field('jahr'); ?></h2>
-
-          <?php if( have_rows('produktionen') ): ?>
-            <?php while ( have_rows('produktionen') ) : the_row(); ?>
-              <div>
-                <p class="h2 list"><?php the_sub_field('titel'); ?></p>
-                <span>Regie: <?php the_sub_field('regie'); ?></span>
-              </div>
-            <?php endwhile ?>
-          <?php endif ?>
-
-        </section> 
-        <?php $item_count++; ?>
-
-      <?php endwhile ?>
-    <?php endif ?>
-
-    <div class="mb--1">
-      <h1 class="text--b">Weitere Produktionen</h1>
-    </div>
-
-    <?php if( have_rows('lebenslauf_weitere') ): ?>
-      <?php while ( have_rows('lebenslauf_weitere') ) : the_row(); ?>
-        <section class="mb--1">
-          <h2><?php the_sub_field('jahr'); ?></h2>
-
-          <?php if( have_rows('produktionen') ): ?>
-            <?php while ( have_rows('produktionen') ) : the_row(); ?>
-              <div class="text--il">
-                <p class="h2"><?php the_sub_field('titel'); ?></p>
-                <span><?php the_sub_field('regie'); ?></span>
-              </div>
-            <?php endwhile ?>
-          <?php endif ?>
-
-        </section> 
-      <?php endwhile ?>
-    <?php endif ?>
   </div>
-  
+  <!-- Filme -->
+  <div class="content-item-actor">
+    <button class="collapsible--button text text--lg text--b">Filme</button>
+    <div class="collapsible--content text--def">
+      <?php if( have_rows('lebenslauf') ): ?>
+        <?php $all_items_count = count(get_field('lebenslauf'));
+              $item_count = 1;
+              ?>
+        <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
+      <section class="<?php if ($item_count == $all_items_count): ?>mb--05 <?php else: ?>mb--1 <?php endif ?>">
+            <h2><?php the_sub_field('jahr'); ?></h2>
+
+            <?php if( have_rows('produktionen') ): ?>
+              <?php while ( have_rows('produktionen') ) : the_row(); ?>
+                <div>
+                  <p class="h2 list"><?php the_sub_field('titel'); ?></p>
+                  <span>Regie: <?php the_sub_field('regie'); ?></span>
+                </div>
+              <?php endwhile ?>
+            <?php endif ?>
+
+          </section> 
+          <?php $item_count++; ?>
+
+        <?php endwhile ?>
+      <?php endif ?>
+    </div>
+  </div>
+  <!-- Weitere Prod. -->
+  <div class="content-item-actor">
+    <button class="collapsible--button text text--lg text--b">Weitere Produktionen</button>
+    <div class="collapsible--content text--def">
+      <?php if( have_rows('lebenslauf_weitere') ): ?>
+        <?php $all_items_count = count(get_field('lebenslauf_weitere'));
+              $item_count = 1;
+              ?>
+        <?php while ( have_rows('lebenslauf_weitere') ) : the_row(); ?>
+          <section class="<?php if ($item_count == $all_items_count): ?>mb--05 <?php else: ?>mb--1 <?php endif ?>">
+            <h2><?php the_sub_field('jahr'); ?></h2>
+            <?php if( have_rows('produktionen') ): ?>
+              <?php while ( have_rows('produktionen') ) : the_row(); ?>
+                <div><p class="h2 list"><?php the_sub_field('titel'); ?></p></div>
+              <?php endwhile ?>
+            <?php endif ?>
+          </section> 
+          <?php $item_count++; ?>
+        <?php endwhile ?>
+      <?php endif ?>
+    </div>
+  </div>
+
 </article> 

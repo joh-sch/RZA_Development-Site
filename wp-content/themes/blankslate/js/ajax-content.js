@@ -341,6 +341,7 @@ function init_cookieConsent() {
             }
             //
             reset_scrollbars_left();
+            init_collapsibles();
             section.removeClass("hidden--content");
           }, 300);
         } else {
@@ -370,6 +371,7 @@ function init_cookieConsent() {
             });
             //
             reset_scrollbars_left();
+
             section.removeClass("hidden--content");
           }, 300);
         }
