@@ -168,14 +168,16 @@ section.bg--red {
   line-height: 1.2;
 }
 .content-item-actor {
-  padding: 0.665rem 1.33rem;
+  padding: 0 1.33rem;
+  margin-bottom: 0.665rem;
   line-height: 1.2;
 }
 .content-item-actor:first-of-type {
   padding-top: 1.33rem;
+  margin-bottom: 1rem;
 }
 .content-item-actor:last-of-type {
-  padding-bottom: 1.33rem;
+  margin-bottom: 1.33rem;
 }
 
 /* ----------------------

@@ -195,7 +195,7 @@
               </div>
             </header>
 
-            <!-- Basic Info -->
+            <!-- Bio. Info -->
             <div class="content-item-actor">
               <div class="mb--1 text--kompress">
                 <h1 class="text--b"><?php the_title(); ?></h1>
@@ -208,7 +208,7 @@
                 $post = get_post($post_id); 
                 setup_postdata($post);
               ?>
-              
+
               <section class="mb--1">
                 <div class="text--il">
                   <p class="h2 list">Größe    </p><span> <?php the_field('groesse'); ?>m</span>
@@ -254,7 +254,7 @@
                         $item_count = 1;
                         ?>
                   <?php while ( have_rows('lebenslauf') ) : the_row(); ?>
-                <section class="<?php if ($item_count == $all_items_count): ?>mb--0 <?php else: ?>mb--1 <?php endif ?>">
+                <section class="<?php if ($item_count == $all_items_count): ?>mb--05 <?php else: ?>mb--1 <?php endif ?>">
                       <h2><?php the_sub_field('jahr'); ?></h2>
 
                       <?php if( have_rows('produktionen') ): ?>
@@ -282,7 +282,7 @@
                         $item_count = 1;
                         ?>
                   <?php while ( have_rows('lebenslauf_weitere') ) : the_row(); ?>
-                    <section class="<?php if ($item_count == $all_items_count): ?>mb--0 <?php else: ?>mb--1 <?php endif ?>">
+                    <section class="<?php if ($item_count == $all_items_count): ?>mb--05 <?php else: ?>mb--1 <?php endif ?>">
                       <h2><?php the_sub_field('jahr'); ?></h2>
                       <?php if( have_rows('produktionen') ): ?>
                         <?php while ( have_rows('produktionen') ) : the_row(); ?>
