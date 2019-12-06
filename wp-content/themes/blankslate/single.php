@@ -208,8 +208,7 @@
                 $post = get_post($post_id); 
                 setup_postdata($post);
               ?>
-
-              <!-- Meta-Infos -->
+              
               <section class="mb--1">
                 <div class="text--il">
                   <p class="h2 list">Größe    </p><span> <?php the_field('groesse'); ?>m</span>
@@ -248,7 +247,7 @@
             </div>
             <!-- Filme -->
             <div class="content-item-actor">
-              <button class="collapsible--button actor text text--lg text--b">Filme</button>
+              <button class="collapsible--button text text--lg text--b">Filme</button>
               <div class="collapsible--content text--def">
                 <?php if( have_rows('lebenslauf') ): ?>
                   <?php $all_items_count = count(get_field('lebenslauf'));
